@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Денис Биленко](https://up.htmlacademy.ru/htmlcss/26/user/1163011).
-* Наставник: `Неизвестно`.
+* Наставник: [Лиза Позднякова](https://up.htmlacademy.ru/profile/lizzy).
 
 ---
 
