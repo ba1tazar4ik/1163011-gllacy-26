@@ -1,12 +1,79 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Глейси</title>
-  </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
-
-  </body>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/style.css">
+	<title>GllacyShop</title>
+</head>
+<body>
+	<header>
+		<nav>
+			<!-- возможно logo будет svg -->
+			<div class="logo"> <img src="logo.svg" alt=""> </div>
+			<ul>
+				<li><a href="catalog.html">Каталог</a></li>
+				<li><a href="">Доставка и оплата</a></li>
+				<li><a href="">О Компании</a></li>
+			</ul>
+			<!-- возможно потом сделаю тут форму с конпками -->
+			<section class="bottons">
+				<botton>Поиск</botton>
+				<botton>Вход</botton>
+				<botton>Корзина</botton>
+			</section>
+		</nav>
+	</header>
+	<main>
+		<section>
+		<!-- часть которую не надо пока верстать. состоять видимо будет из несолкьких section-->
+		</section>
+		<section>
+			<h1>Преимущества магазина</h1>
+			<p>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
+			<ul>
+				<li><img src="img.svg" alt=""><span>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</span></li>
+				<li><img src="img.svg" alt=""><span>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</span></li>
+				<li><img src="img.svg" alt=""><span>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</span></li>
+				<li><img src="img.svg" alt=""><span>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус</span></li>
+			</ul>
+		</section>
+		<!-- картинка будет бекгранудом-->
+		<section>
+			<h2>Новое в нашем блоге</h2>
+			<a href="">10 способов сервировки фруктовых щербетов к столу</a>
+		</section>
+		<!-- тут 100% будет форма и я попробую ее сразу разметить-->
+		<section>
+			<h2>Рассылка</h2>
+			<form action="gllacyshop.ru">
+				<label for="email">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</label>
+				<input type="text" value="email@example.com">
+				<input type="submit" value="Отправить">
+			</form>
+		</section>
+		<section>
+			<!-- Google Map-->
+		</section>
+	</main>
+	<footer>
+		<section>
+			<a href=""><img src="twitter.svg" alt=""></a>
+			<a href=""><img src="instagram.svg" alt=""></a>
+			<a href=""><img src="facbook.svg" alt=""></a>
+			<a href=""><img src="vkontakte.svg" alt=""></a>
+		</section>
+		<section>
+			<ul>
+				<li><a href=""><img src="heart.svg" alt="">Для поставщиков</a></li>
+				<li><a href="">О производстве</a></li>
+				<li><a href="">Наши документы</a></li>
+				<li><a href="">Экологические стандарты</a></li>
+			</ul>
+		</section>
+		<section>
+			<img src="htmlacademy.svg" alt="">
+			<p>Сделано в HTML Academy © 2019</p>
+		</section>
+	</footer>
+</body>
 </html>
