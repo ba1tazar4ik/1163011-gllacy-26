@@ -7,9 +7,8 @@
 </head>
 <body>
 	<header>
+		<a href="index.html"><img src="logo.svg" alt=""></a>
 		<nav>
-			<!-- возможно logo будет svg -->
-			<section class="logo"> <a href="index.html"><img src="logo.svg" alt=""></a></section>
 			<ul>
 				<li><a href="catalog.html">Каталог</a></li>
 				<li><a href="#">Доставка и оплата</a></li>
@@ -22,21 +21,27 @@
 				<botton>Корзина</botton>
 			</section>
 		</nav>
-		<!-- не знаю как этот кусок буду втыкать над слайдером видимо через position: absolut; -->
 		<section>
 			<p>С 10 до 20, ежедневно</p>
 			<p>8 812 450-25-25</p>
 		</section>
 	</header>
 	<main>
-		<!-- секция опять же для того что бы потом css потом писать. -->
-		<section>
-			<a href="index.html">Главная</a>  »  <a href="#">Каталог</a>  »  <a href="#">Сливочное</a>
-		</section>
+		<ul>
+			<li>
+				<a href="index.html">Главная »</a>
+			</li>
+			<li>
+				<a href="#">Каталог  »</a>
+			</li>
+			<li>
+				<a href="#">Сливочное</a>
+			</li>
+		</ul>
 		<section>
 			<h1>Сливочное мороженое</h1>
 			<!--  в див обернул что бы потом сделать трочно блочным-->
-			<div>
+			<section>
 				<article> <img src="morogenko.jpg" alt=""><span>310 ₽/кг</span><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></article>
 				<article> <img src="morogenko.jpg" alt=""><span>380 ₽/кг</span><a href="#">Сливочно-кофейное с кусочками шоколада</a></article>
 				<article> <img src="morogenko.jpg" alt=""><span>355 ₽/кг</span><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></article>
@@ -49,25 +54,41 @@
 				<article> <img src="morogenko.jpg" alt=""><span>435 ₽/кг</span><a href="#">Сливочноe с ментоловым сиропом</a></article>
 				<article> <img src="morogenko.jpg" alt=""><span>355 ₽/кг</span><a href="#">Сливочное с кусочками черного шоколада</a></article>
 				<article> <img src="morogenko.jpg" alt=""><span>420 ₽/кг</span><a href="#">Сливочное с мятным сиропом</a></article>
-			</div>
+			</section>
 		</section>
 		<section>
 			<!-- блок с номерами страниц который пока не надо размечать-->
 		</section>
 	</main>
 	<footer>
-		<section>
-			<a href="#"><img src="twitter.svg" alt=""></a>
-			<a href="#"><img src="instagram.svg" alt=""></a>
-			<a href="#"><img src="facbook.svg" alt=""></a>
-			<a href="#"><img src="vkontakte.svg" alt=""></a>
-		</section>
+		<ul>
+			<li>
+				<a href="#"><img src="twitter.svg" alt=""></a>
+			</li>
+			<li>
+				<a href="#"><img src="instagram.svg" alt=""></a>
+			</li>
+			<li>
+				<a href="#"><img src="facbook.svg" alt=""></a>
+			</li>
+			<li>
+				<a href="#"><img src="vkontakte.svg" alt=""></a>
+			</li>
+		</ul>
 		<section>
 			<ul>
-				<li><a href="#"><img src="heart.svg" alt="">Для поставщиков</a></li>
-				<li><a href="#">О производстве</a></li>
-				<li><a href="#">Наши документы</a></li>
-				<li><a href="#">Экологические стандарты</a></li>
+				<li>
+					<a href="#"><img src="heart.svg" alt="">Для поставщиков</a>
+				</li>
+				<li>
+					<a href="#">О производстве</a>
+				</li>
+				<li>
+					<a href="#">Наши документы</a>
+				</li>
+				<li>
+					<a href="#">Экологические стандарты</a>
+				</li>
 			</ul>
 		</section>
 		<section>
