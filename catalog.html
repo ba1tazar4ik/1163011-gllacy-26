@@ -30,8 +30,29 @@
 			</ul>
 			<section class="bottons">
 				<botton tabindex="0"><img src="img/svg/loupe.svg" alt="Поиск"></botton>
+				<!-- модальное окно Поиска-->
+				<section>
+					<h2 class="visually-hidden">Форма поиска</h2>
+					<input type="text" name="search" placeholder="Крем-брюле">
+				</section>
 				<botton tabindex="0"><img src="img/svg/entrance.svg" alt="Вход">Вход</botton>
+				<!-- модальное окно Вход в личный кабинет-->
+				<section>
+					<h2 class="visually-hidden">Личный кабинет</h2>
+					<form action="gllacyshop.ru" type="post">					
+						<label for="user-login" class="visually-hidden">Логин</label>
+						<input type="text" name="login" id="user-login" placeholder="email@example.com">
+						<label for="user-password" class="visually-hidden">Пароль</label>
+						<input type="text" name="password" id="user-password" placeholder="••••••••">
+						<input type="submit" value="Вход">
+						<a href="#">Забыли пароль?</a>
+						<a href="#">Новая регистрация</a>
+					</form>
+				</section>
 				<botton tabindex="0"><img src="img/svg/basket-red.svg" alt="Корзина">2 товара</botton>
+				<section>
+					
+				</section>
 			</section>
 		</nav>
 		<section>
@@ -169,8 +190,7 @@
 			<li>
 				<a href="#"><img src="img/svg/vk.svg" alt="GllacyShop во Вконтакте"></a>
 			</li>
-		</ul>
-		
+		</ul>		
 		<ul>
 			<li>
 				<a href="#"><img src="img/svg/heart.svg" alt="">Для поставщиков</a>
@@ -184,8 +204,7 @@
 			<li>
 				<a href="#">Экологические стандарты</a>
 			</li>
-		</ul>
-		
+		</ul>		
 		<div>
 			<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/svg/logo-htmlacademy.svg" alt="HTML Academy"></a>
 			<p>Сделано в HTML Academy © 2019</p>
