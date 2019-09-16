@@ -12,7 +12,7 @@
 		<nav>
 			<ul>
 				<li>
-					<a href="catalog.html">Каталог</a>
+					<a href="catalog.html" tabindex="0">Каталог</a>
 					<ul>
 						<li>Новинки</li>
 						<li>Сливочное</li>
@@ -30,13 +30,13 @@
 			</ul>
 			<section class="bottons">
 				<botton tabindex="0"><img src="img/svg/loupe.svg" alt="Поиск"></botton>
-				<!-- модальное окно Поиска-->
+				<!-- Ховер Поиск-->
 				<section>
 					<h2 class="visually-hidden">Форма поиска</h2>
 					<input type="text" name="search" placeholder="Крем-брюле">
 				</section>
 				<botton tabindex="0"><img src="img/svg/entrance.svg" alt="Вход">Вход</botton>
-				<!-- модальное окно Вход в личный кабинет-->
+				<!-- Ховер Вход в личный кабинет-->
 				<section>
 					<h2 class="visually-hidden">Личный кабинет</h2>
 					<form action="gllacyshop.ru" type="post">					
@@ -50,8 +50,30 @@
 					</form>
 				</section>
 				<botton tabindex="0"><img src="img/svg/basket-red.svg" alt="Корзина">2 товара</botton>
+				<!-- Ховер Корзина-->
 				<section>
-					
+					<div>
+						<ul>
+							<li>
+								<img src="img/svg/cross-small.svg" alt="">
+								<img src="img/ice-cream-orange.png" alt="">
+								<span>Пломбир с апельсиновым джемом</span>
+								<span>1,5 кг х</span>
+								<span>200 руб.</span>
+								<span>300 руб.</span>
+							</li>
+							<li>
+								<img src="img/svg/cross-small.svg" alt="">
+								<img src="img/ice-cream-strawberry.png" alt="">
+								<span>Клубничный пломбир с присыпкой из белого шоколада</span>
+								<span>1,5 кг х</span>
+								<span>300 руб.</span>
+								<span>450 руб.</span>
+							</li>
+						</ul>
+					</div>
+					<p>Итого:750 руб.</p>
+					<a href="#">Оформить заказ</a>
 				</section>
 			</section>
 		</nav>
@@ -83,8 +105,15 @@
 					<option value="price-down">сначала дорогие</option>
 					<option value="fatness">по жирности</option>
 				</select>
-				<!-- не знаю как делать слайдер для цены-->
-				<label>Цена: 100 руб. – 500 руб.</label>
+				<label>
+					Цена: 100 руб. – 500 руб.
+					<div>
+						<img src="img/line.png" alt="">
+						<img src="img/line-center.png" alt="">
+						<button><img src="img/svg/filter-button.svg" alt=""></button>
+						<button><img src="img/svg/filter-button.svg" alt=""></button>
+					</div>
+				</label>
 				<label>
 					Жирность:
 					<label ><input type="radio" name="fatness" value="0%">0%</label>
