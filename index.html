@@ -14,11 +14,10 @@
 				<li><a href="#">Доставка и оплата</a></li>
 				<li><a href="#">О Компании</a></li>
 			</ul>
-			<!-- возможно потом сделаю тут форму с конпками -->
 			<section class="bottons">
-				<botton><img src="img/svg/loupe.svg" alt="Поиск"></botton>
-				<botton><img src="img/svg/entrance.svg" alt="Вход">Вход</botton>
-				<botton><img src="img/svg/basket.svg" alt="Корзина">Пусто</botton>
+				<botton tabindex="0"><img src="img/svg/loupe.svg" alt="Поиск"></botton>
+				<botton tabindex="0"><img src="img/svg/entrance.svg" alt="Вход">Вход</botton>
+				<botton tabindex="0"><img src="img/svg/basket-red.svg" alt="Корзина">Пусто</botton>
 			</section>
 		</nav>
 		<section>
@@ -50,20 +49,22 @@
 			</ul>
 		</section>
 		<section>
+			<h2 class="visually-hidden">Акции</h2>
 			<article>
 				<img src="img/background-raspberry.jpg" alt="">
-				<h2>Малинка даром!</h2>
+				<h3>Малинка даром!</h3>
 				<p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
 				<a href="#">Хочу варенье!</a>
 			</article>
 			<article>
 				<img src="img/background-choco.jpg" alt="">
-				<h2>Шоколадки даром!</h2>
+				<h3>Шоколадки даром!</h3>
 				<p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
 				<a href="#">Хочу шоколадки!</a>
 			</article>
 		</section>
 		<section>
+			<h2 class="visually-hidden">Хит продаж</h2>
 			<article>
 				<img src="img/svg/hit.svg" alt="Хит">
 				<img src="img/ice-cream-orange.png" alt="Фото мороженного">
@@ -121,7 +122,7 @@
 		<!-- тут 100% будет форма и я попробую ее сразу разметить-->
 		<section>
 			<img src="img/background-postal.jpg" alt="">
-			<h2>Рассылка</h2>
+			<h2 class="visually-hidden">Рассылка</h2>
 			<form action="gllacyshop.ru">
 				<label for="email">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</label>
 				<input type="text" value="email@example.com">
@@ -132,15 +133,13 @@
 			<!--GoogleMap я потом сделаю живую сейчас нет ситлей и вообще контента поэтому пока картинка просто-->
 			<img src="img/map.jpg" alt="">
 			<img src="img/svg/pin.svg" alt="">
-			<!-- тут тоже будет форма 100% так что тожепопробую ее разметить сразу-->
 			<form action="gllacyshop.ru">
 				<label>
 					<h2>Адрес главного офиса и офлайн-магазина:</h2>
 					<p>ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
 					<h2>Для заказов по телефону:</h2>
 					<p>8 812 450-25-25 (с 10 до 20 ежедневно)</p>
-					<!-- эта кнока будет попап открывать как я понимаю, мы это не проходили так что пока так, в любом случае тип кнопки можно поменять будет если надо или селать ее просто ссылкой. Но я бы на эту кнопку вешал попап окно с самой формой обратной связи имхо это логично по мне так-->
-					<input type="button" value="Форма обратной связи">
+					<button>Форма обратной связи</button>
 				</label>
 			</form>
 		</section>
@@ -148,16 +147,16 @@
 	<footer>
 		<ul>
 			<li>
-				<a href="#"><img src="img/svg/twitter.svg" alt=""></a>
+				<a href="#"><img src="img/svg/twitter.svg" alt="GllacyShop в twitter"></a>
 			</li>
 			<li>
-				<a href="#"><img src="img/svg/instagram.svg" alt=""></a>
+				<a href="#"><img src="img/svg/instagram.svg" alt="GllacyShop в instagram"></a>
 			</li>
 			<li>
-				<a href="#"><img src="img/svg/fb.svg" alt=""></a>
+				<a href="#"><img src="img/svg/fb.svg" alt="GllacyShop в Facebook"></a>
 			</li>
 			<li>
-				<a href="#"><img src="img/svg/vk.svg" alt=""></a>
+				<a href="#"><img src="img/svg/vk.svg" alt="GllacyShop во Вконтакте"></a>
 			</li>
 		</ul>
 		

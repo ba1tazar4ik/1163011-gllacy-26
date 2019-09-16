@@ -15,11 +15,10 @@
 				<li><a href="#">Доставка и оплата</a></li>
 				<li><a href="#">О Компании</a></li>
 			</ul>
-			<!-- возможно потом сделаю тут форму с конпками -->
 			<section class="bottons">
-				<botton><img src="img/svg/loupe.svg" alt="Поиск"></botton>
-				<botton><img src="img/svg/entrance.svg" alt="Вход">Вход</botton>
-				<botton><img src="img/svg/basket.svg" alt="Корзина">Пусто</botton>
+				<botton tabindex="0"><img src="img/svg/loupe.svg" alt="Поиск"></botton>
+				<botton tabindex="0"><img src="img/svg/entrance.svg" alt="Вход">Вход</botton>
+				<botton tabindex="0"><img src="img/svg/basket-red.svg" alt="Корзина">2 товара</botton>
 			</section>
 		</nav>
 		<section>
@@ -40,13 +39,30 @@
 			</li>
 		</ul>
 		<section>
-			<h1>Сливочное мороженое</h1>
-			<!-- форма сложная лучше размечу ее когда посомотрю лекцию про формы но скелет формы будет таким скорее всего-->
-			<form action="gllacyshop.ru">
-				<label>Сортировка:</label>
+			<h1>Сливочное мороженое</h1>			
+			<form action="gllacyshop.ru" type="get">
+				<h2 class="visually-hidden">Фильтр мороженного</h2>
+				<label for="sort">Сортировка:</label>
+				<select name="sort" id="sort">
+					<option value="popularity">по популярности</option>
+				</select>
+				<!-- не знаю как делать слайдер для цены-->
 				<label>Цена: 100 руб. – 500 руб.</label>
-				<label>Жирность:</label>
-				<label>Наполнители:</label>
+				<label>
+					Жирность:
+					<label ><input type="radio" name="fatness" value="0%">0%</label>
+					<label ><input type="radio" name="fatness" value="to 10%">до 10%</label>
+					<label ><input type="radio" name="fatness" value="to 30%">до 30%</label>
+					<label ><input type="radio" name="fatness" value="above 30%">выше 30%</label>
+				</label>
+				<label>
+					Наполнители:
+					<label><input type="checkbox" name="filler" value="chocolate" checked>шоколадные</label>
+					<label><input type="checkbox" name="filler" value="sugar powder" checked>сахарные присыпки</label>
+					<label><input type="checkbox" name="filler" value="fruit">фрукты</label>
+					<label><input type="checkbox" name="filler" value="syrup">сиропы</label>
+					<label><input type="checkbox" name="filler" value="jam">джемы</label>
+				</label>
 				<input type="submit" value="Отправить">
 			</form>			
 			<section>
@@ -126,16 +142,16 @@
 	<footer>
 		<ul>
 			<li>
-				<a href="#"><img src="img/svg/twitter.svg" alt=""></a>
+				<a href="#"><img src="img/svg/twitter.svg" alt="GllacyShop в twitter"></a>
 			</li>
 			<li>
-				<a href="#"><img src="img/svg/instagram.svg" alt=""></a>
+				<a href="#"><img src="img/svg/instagram.svg" alt="GllacyShop в instagram"></a>
 			</li>
 			<li>
-				<a href="#"><img src="img/svg/fb.svg" alt=""></a>
+				<a href="#"><img src="img/svg/fb.svg" alt="GllacyShop в Facebook"></a>
 			</li>
 			<li>
-				<a href="#"><img src="img/svg/vk.svg" alt=""></a>
+				<a href="#"><img src="img/svg/vk.svg" alt="GllacyShop во Вконтакте"></a>
 			</li>
 		</ul>
 		
