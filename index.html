@@ -13,11 +13,11 @@
 				<li>
 					<a href="catalog.html">Каталог</a>
 					<ul>
-						<li>Новинки</li>
-						<li>Сливочное</li>
-						<li>Щербеты</li>
-						<li>Фруктовый лед</li>
-						<li>Мелорин</li>
+						<li><a href="#">>Новинки</a></li>
+						<li><a href="#">Сливочное</a></li>
+						<li><a href="#">Щербеты</a></li>
+						<li><a href="#">Фруктовый лед</a></li>
+						<li><a href="#">Мелорин</a></li>
 					</ul>
 				</li>
 				<li>
@@ -27,28 +27,28 @@
 					<a href="#">О Компании</a>
 				</li>
 			</ul>
-			<section class="bottons">
-				<botton tabindex="0"><img src="img/svg/loupe.svg" alt="Поиск"></botton>
+			<section class="buttons">
+				<button type="button"><img src="img/svg/loupe.svg" alt="Поиск"></button>
 				<!-- модальное окно Поиска-->
 				<section>
 					<h2 class="visually-hidden">Форма поиска</h2>
 					<input type="text" name="search" placeholder="Крем-брюле">
 				</section>
-				<botton tabindex="0"><img src="img/svg/entrance.svg" alt="Вход">Вход</botton>
+				<button type="button"><img src="img/svg/entrance.svg" alt="Вход">Вход</button>
 				<!-- модальное окно Вход в личный кабинет-->
 				<section>
 					<form action="gllacyshop.ru" type="post">
 						<h2 class="visually-hidden">Личный кабинет</h2>
 						<label for="user-login" class="visually-hidden">Логин</label>
-						<input type="text" name="login" id="user-login" placeholder="email@example.com">
+						<input type="email" name="login" id="user-login" placeholder="email@example.com">
 						<label for="user-password" class="visually-hidden">Пароль</label>
-						<input type="text" name="password" id="user-password" placeholder="••••••••">
-						<input type="submit" value="Вход">
+						<input type="password" name="password" id="user-password" placeholder="••••••••">
+						<button type="submit" value="Вход">Вход</button>
 						<a href="#">Забыли пароль?</a>
 						<a href="#">Новая регистрация</a>
 					</form>
 				</section>
-				<botton tabindex="0"><img src="img/svg/basket.svg" alt="Корзина">Пусто</botton>
+				<button type="button"><img src="img/svg/basket.svg" alt="Корзина">Пусто</button>
 			</section>
 		</nav>
 		<section>
@@ -155,22 +155,20 @@
 			<form action="gllacyshop.ru" type="post">
 				<label for="email">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</label>
 				<input type="text" value="email@example.com">
-				<input type="submit" value="Отправить">
+				<button type="submit" value="Отправить">Отправить</button>
 			</form>
 		</section>
 		<section>
 			<!--GoogleMap я потом сделаю живую сейчас нет ситлей и вообще контента поэтому пока картинка просто-->
 			<img src="img/map.jpg" alt="">
 			<img src="img/svg/pin.svg" alt="">
-			<form action="gllacyshop.ru">
-				<label>
-					<h2>Адрес главного офиса и офлайн-магазина:</h2>
-					<p>ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
-					<h2>Для заказов по телефону:</h2>
-					<p>8 812 450-25-25 (с 10 до 20 ежедневно)</p>
-					<button type="button">Форма обратной связи</button>
-				</label>
-			</form>
+			<div>				
+				<h2>Адрес главного офиса и офлайн-магазина:</h2>
+				<p>ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
+				<h2>Для заказов по телефону:</h2>
+				<p>8 812 450-25-25 (с 10 до 20 ежедневно)</p>
+				<button type="button">Форма обратной связи</button>				
+			</div>
 		</section>		
 		<!-- модальное окно Формы обратной связи-->
 		<section>
@@ -183,7 +181,7 @@
 			<input type="text" name="login" id="user-login" placeholder="email@example.com">
 			<label for="user-login" class="visually-hidden">Ваш вопрос или пожелание в свободной форме</label>
 			<input type="text" name="login" id="user-login" placeholder="В свободной форме">
-			<input type="submit" value="Отправить">
+			<button type="submit" value="Отправить">Отправить</button>
 		</section>
 	</main>
 	<footer>
