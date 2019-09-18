@@ -5,14 +5,15 @@
 	<link rel="stylesheet" href="css/style.css">
 	<title>GllacyShop</title>
 </head>
+<!-- Пока CSS не трогали сунул стиль в разметку, потом уберу. То что так делать не надо я помню =)-->
 <body style="background-image: url(img/background-jam.jpg);">
 	<header>
-		<a><img src="img/svg/logo.svg" width="154" height="64" alt="Глейси"></a>
+		<a><img src="img/svg/logo.svg" width="154" height="64" alt="Логотип магазина Глейси"></a>
 		<nav>
-			<ul>
+			<ul class="main-menu">
 				<li>
 					<a href="catalog.html">Каталог</a>
-					<ul>
+					<ul class="sub-menu">
 						<li><a href="#">Новинки</a></li>
 						<li><a href="catalog.html">Сливочное</a></li>
 						<li><a href="#">Щербеты</a></li>
@@ -29,25 +30,25 @@
 			</ul>
 			<section class="buttons">
 				<button type="button"><img src="img/svg/loupe.svg" alt="Поиск"></button>
-				<!-- модальное окно Поиска-->
-				<section>
-					<h2 class="visually-hidden">Форма поиска</h2>
-					<input type="text" name="search" placeholder="Крем-брюле">
-				</section>
+				<!-- Ховер Поиск-->
+				<form action="gllacyshop.ru" type="post" name="search-form">
+					<label for="search"class="visually-hidden">Форма поиска</label>
+					<input type="text" name="search" id="search" placeholder="Крем-брюле">	
+				</form>
 				<button type="button"><img src="img/svg/entrance.svg" alt="Вход">Вход</button>
-				<!-- модальное окно Вход в личный кабинет-->
-				<section>
-					<form action="gllacyshop.ru" type="post">
-						<h2 class="visually-hidden">Личный кабинет</h2>
+				<!-- Ховер Вход в личный кабинет-->
+				<form action="gllacyshop.ru" type="post" name="account-form">
+					<fieldset name="user-data">
+						<legend class="visually-hidden">Личный кабинет</legend>	
 						<label for="user-login" class="visually-hidden">Логин</label>
-						<input type="email" name="login" id="user-login" placeholder="email@example.com">
+						<input type="email" name="user-login" id="user-login" placeholder="email@example.com">
 						<label for="user-password" class="visually-hidden">Пароль</label>
 						<input type="password" name="password" id="user-password" placeholder="••••••••">
-						<button type="submit" value="Вход">Вход</button>
+						<button type="submit" value="login">Вход</button>
 						<a href="#">Забыли пароль?</a>
 						<a href="#">Новая регистрация</a>
-					</form>
-				</section>
+					</fieldset>
+				</form>
 				<button type="button"><img src="img/svg/basket.svg" alt="Корзина">Пусто</button>
 			</section>
 		</nav>
@@ -58,6 +59,7 @@
 	</header>
 	<main>
 		<section class="slider">
+			<h2 class="visually-hidden">Слайдер с акциями</h2>
 			<div>
 				<img src="img/ice-cream-jam.png" alt="Мороженное">
 				<p>Крем-брюле и пломбир с малиновым джемом</p>
@@ -153,8 +155,9 @@
 			<img src="img/background-postal.jpg" alt="">
 			<h2 class="visually-hidden">Рассылка</h2>
 			<form action="gllacyshop.ru" type="post">
-				<label for="email">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</label>
-				<input type="text" value="email@example.com">
+				<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+				<label for="email" class="visually-hidden">Введите Ваш e-mail</label>
+				<input type="email" id="email" placeholder="email@example.com">
 				<button type="submit" value="Отправить">Отправить</button>
 			</form>
 		</section>
@@ -171,32 +174,34 @@
 			</div>
 		</section>		
 		<!-- модальное окно Формы обратной связи-->
-		<section>
-			<h2 class="visually-hidden">Форма обратной связи</h2>
-			<p>Мы обязательно вам ответим!</p>
-			<button type="button" tabindex="0"><img src="img/svg/cross-big.svg" alt="Кнопка закрыть"></button>
-			<label for="user-login" class="visually-hidden">Ваше имя</label>
-			<input type="text" name="login" id="user-login" placeholder="Имя Фамилия">
-			<label for="user-login" class="visually-hidden">Ваш e-mail</label>
-			<input type="text" name="login" id="user-login" placeholder="email@example.com">
-			<label for="user-login" class="visually-hidden">Ваш вопрос или пожелание в свободной форме</label>
-			<input type="text" name="login" id="user-login" placeholder="В свободной форме">
-			<button type="submit" value="Отправить">Отправить</button>
-		</section>
+		<form action="gllacyshop.ru" type="post">
+			<fieldset>
+				<legend class="visually-hidden">Форма обратной связи</legend>
+				<p>Мы обязательно вам ответим!</p>
+				<button type="button"><img src="img/svg/cross-big.svg" alt="Кнопка закрыть"></button>
+				<label for="user-name" class="visually-hidden">Ваше имя и фамилия</label>
+				<input type="text" name="name" id="user-name" placeholder="Имя Фамилия">
+				<label for="user-email" class="visually-hidden">Ваш e-mail</label>
+				<input type="text" name="email" id="user-email" placeholder="email@example.com">
+				<label for="user-text" class="visually-hidden">Ваш вопрос или пожелание в свободной форме</label>
+				<textarea name="text" id="user-text" cols="100" rows="5" placeholder="В свободной форме"></textarea>
+				<button type="submit" value="send">Отправить</button>
+			</fieldset>
+		</form>
 	</main>
 	<footer>
 		<ul>
 			<li>
-				<a href="#"><img src="img/svg/twitter.svg" alt="GllacyShop в twitter"></a>
+				<a href="#"><img src="img/svg/twitter.svg" alt="Gllacy Shop в twitter"></a>
 			</li>
 			<li>
-				<a href="#"><img src="img/svg/instagram.svg" alt="GllacyShop в instagram"></a>
+				<a href="#"><img src="img/svg/instagram.svg" alt="Gllacy Shop в instagram"></a>
 			</li>
 			<li>
-				<a href="#"><img src="img/svg/fb.svg" alt="GllacyShop в Facebook"></a>
+				<a href="#"><img src="img/svg/fb.svg" alt="Gllacy Shop в Facebook"></a>
 			</li>
 			<li>
-				<a href="#"><img src="img/svg/vk.svg" alt="GllacyShop во Вконтакте"></a>
+				<a href="#"><img src="img/svg/vk.svg" alt="Gllacy Shop во Вконтакте"></a>
 			</li>
 		</ul>		
 		<ul>

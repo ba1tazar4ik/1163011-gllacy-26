@@ -8,13 +8,13 @@
 <!-- Пока CSS не трогали сунул стиль в разметку, потом уберу. То что так делать не надо я помню =)-->
 <body style="background-image: url(img/background-jam.jpg);">
 	<header>
-		<a> <img src="img/svg/logo.svg" width="100" height="50" alt="Глейси"></a>
+		<a><img src="img/svg/logo.svg" width="100" height="50" alt="Логотип магазина Глейси"></a>
 		<nav>
-			<ul>
+			<ul class="main-menu">
 				<li>
 					<a href="catalog.html">Каталог</a>
-					<ul>
-						<li><a href="#">>Новинки</a></li>
+					<ul class="sub-menu">
+						<li><a href="#">Новинки</a></li>
 						<li><a>Сливочное</a></li>
 						<li><a href="#">Щербеты</a></li>
 						<li><a href="#">Фруктовый лед</a></li>
@@ -31,59 +31,53 @@
 			<section class="buttons">
 				<button type="button"><img src="img/svg/loupe.svg" alt="Поиск"></button>
 				<!-- Ховер Поиск-->
-				<form>
-					<label for="search"class="visually-hidden">Форма поиска</label>
+				<form action="gllacyshop.ru" type="post" name="search-form">
+					<label for="search" class="visually-hidden">Форма поиска</label>
 					<input type="text" name="search" id="search" placeholder="Крем-брюле">	
 				</form>
 				<button type="button"><img src="img/svg/entrance.svg" alt="Вход">Вход</button>
 				<!-- Ховер Вход в личный кабинет-->
-				<section>
-					<h2 class="visually-hidden">Личный кабинет</h2>
-					<form action="gllacyshop.ru" type="post">					
-						<label for="user-login" class="visually-hidden">Логин</label>
-						<input type="text" name="login" id="user-login" placeholder="email@example.com">
+				<form action="gllacyshop.ru" type="post" name="account-form">
+					<fieldset name="user-data">
+						<legend class="visually-hidden">Личный кабинет</legend>	
+						<label for="user-login-lk" class="visually-hidden">Логин</label>
+						<input type="email" name="user-login" id="user-login-lk" placeholder="email@example.com">
 						<label for="user-password" class="visually-hidden">Пароль</label>
-						<input type="text" name="password" id="user-password" placeholder="••••••••">
-						<button type="submit" value="Вход">Вход</button>
+						<input type="password" name="password" id="user-password" placeholder="••••••••">
+						<button type="submit" value="login">Вход</button>
 						<a href="#">Забыли пароль?</a>
 						<a href="#">Новая регистрация</a>
-					</form>
-				</section>
+					</fieldset>
+				</form>
 				<button type="button"><img src="img/svg/basket-red.svg" alt="Корзина">2 товара</button>
 				<!-- Ховер Корзина-->
-				<section>
-					<div>
-						<ul>
-							<li>
-								<img src="img/svg/cross-small.svg" alt="">
-								<img src="img/ice-cream-orange.png" alt="">
-								<span>Пломбир с апельсиновым джемом</span>
-								<span>1,5 кг х</span>
-								<span>200 руб.</span>
-								<span>300 руб.</span>
-							</li>
-							<li>
-								<img src="img/svg/cross-small.svg" alt="">
-								<img src="img/ice-cream-strawberry.png" alt="">
-								<span>Клубничный пломбир с присыпкой из белого шоколада</span>
-								<span>1,5 кг х</span>
-								<span>300 руб.</span>
-								<span>450 руб.</span>
-							</li>
-						</ul>
-					</div>
+				<form action="gllacyshop.ru" type="post" name="basket-form">
+					<h2 class="visually-hidden">Ваша корзина</h2>
+					<ul>
+						<li>
+							<button type="button" value="delet-item"><img src="img/svg/cross-small.svg" alt=""></button>
+							<img src="img/ice-cream-orange.png" alt="">
+							<p>Пломбир с апельсиновым джемом 1,5 кг х 200 руб. 300 руб.</p>
+						</li>
+						<li>
+							<button type="button" value="delet-item"><img src="img/svg/cross-small.svg" alt=""></button>
+							<img src="img/ice-cream-strawberry.png" alt="">
+							<p>Клубничный пломбир с присыпкой из белого шоколада 1,5 кг х 300 руб. 450 руб.</p>
+						</li>
+					</ul>
 					<p>Итого:750 руб.</p>
 					<a href="#">Оформить заказ</a>
-				</section>
+				</form>
 			</section>
 		</nav>
 		<section>
+			<h2 class="visually-hidden"> Режим работы и телефон магазина</h2>
 			<p>С 10 до 20, ежедневно</p>
 			<p>8 812 450-25-25</p>
 		</section>
 	</header>
 	<main>
-		<ul>
+		<ul class="breadcrumb-menu">
 			<li>
 				<a href="index.html">Главная »</a>
 			</li>
@@ -96,37 +90,44 @@
 		</ul>
 		<section>
 			<h1>Сливочное мороженое</h1>			
-			<form action="gllacyshop.ru" type="get">
+			<form action="gllacyshop.ru" type="get" name="filters">
 				<h2 class="visually-hidden">Фильтр мороженного</h2>
-				<label for="sort">Сортировка:</label>
-				<select name="sort" id="sort">
+				<label for="sort-filter">Сортировка:</label>
+				<select name="sort" id="sort-filter">
 					<option value="popularity">по популярности</option>
 					<option value="price-up">сначала недорогие</option>
 					<option value="price-down">сначала дорогие</option>
 					<option value="fatness">по жирности</option>
 				</select>
 				<div>
+					<h2 class="visually-hidden">Цена:</h2>
 					<p>Цена: 100 руб. – 500 руб.</p>
-					<div>
+					<div class="range">
 						<div class="range-line"></div>
+						
 						<button type="button"><img src="img/svg/filter-button.svg" alt=""></button>
 						<button type="button"><img src="img/svg/filter-button.svg" alt=""></button>
 					</div>
 				</div>
-				<label for="fatness">Жирность:</label>					
-				<label ><input type="radio" name="fatness" id="fatness" value="0%">0%</label>
-				<label ><input type="radio" name="fatness" id="fatness" value="to 10%">до 10%</label>
-				<label ><input type="radio" name="fatness" id="fatness" value="to 30%">до 30%</label>
-				<label ><input type="radio" name="fatness" id="fatness" value="above 30%">выше 30%</label>				
-				<label>Наполнители:</label>					
-				<label><input type="checkbox" name="filler" value="chocolate" checked>шоколадные</label>
-				<label><input type="checkbox" name="filler" value="sugar powder" checked>сахарные присыпки</label>
-				<label><input type="checkbox" name="filler" value="fruit">фрукты</label>
-				<label><input type="checkbox" name="filler" value="syrup">сиропы</label>
-				<label><input type="checkbox" name="filler" value="jam">джемы</label>				
-				<button type="submit" value="Отправить">Отправить</button>
+				<fieldset name="fatness-filter">
+					<legend>Жирность:</legend>					
+					<label ><input type="radio" name="fatness" value="0%">0%</label>
+					<label ><input type="radio" name="fatness" value="to 10%">до 10%</label>
+					<label ><input type="radio" name="fatness" value="to 30%">до 30%</label>
+					<label ><input type="radio" name="fatness" value="above 30%">выше 30%</label>
+				</fieldset>
+				<fieldset name="filler-filter">
+					<legend>Наполнители:</legend>					
+					<label><input type="checkbox" name="filler" value="chocolate" checked>шоколадные</label>
+					<label><input type="checkbox" name="filler" value="sugar powder" checked>сахарные присыпки</label>
+					<label><input type="checkbox" name="filler" value="fruit">фрукты</label>
+					<label><input type="checkbox" name="filler" value="syrup">сиропы</label>
+					<label><input type="checkbox" name="filler" value="jam">джемы</label>
+				</fieldset>
+				<button type="submit" value="use-filters">Отправить</button>
 			</form>			
 			<section>
+				<h2 class="visually-hidden">Каталог мороженного</h2>
 				<article>
 					<img src="img/ice-cream-orange.png" alt="Фото мороженного">
 					<span>310 ₽/кг</span>
@@ -189,6 +190,7 @@
 			</section>
 		</section>
 		<section>
+			<h2 class="visually-hidden">Страницы каталога</h2>
 			<a href="#"><img src="img/svg/icon-right-small.svg" alt=""></a>
 			<ul>
 				<li><a href="#">1</a></li>
