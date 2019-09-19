@@ -30,7 +30,7 @@
 			</ul>
 			<section class="buttons">
 				<div>
-					<button type="button"><img src="img/svg/loupe.svg" alt="Поиск"></button>
+					<button type="button"><img src="img/svg/loupe.svg" width="17" height="17" alt="Поиск"></button>
 					<!-- Ховер Поиск-->
 					<form action="gllacyshop.ru" type="post" name="search-form">
 						<fieldset>
@@ -40,7 +40,7 @@
 					</form>
 				</div>
 				<div>
-					<button type="button"><img src="img/svg/entrance.svg" alt="Вход">Вход</button>
+					<button type="button"><img src="img/svg/entrance.svg" width="17" height="17" alt="Вход">Вход</button>
 					<!-- Ховер Вход в личный кабинет-->
 					<form action="gllacyshop.ru" type="post" name="account-form">
 						<fieldset name="user-data">
@@ -56,7 +56,7 @@
 					</form>
 				</div>
 				<div>
-					<button type="button"><img src="img/svg/basket-red.svg" alt="Корзина">2 товара</button>
+					<button type="button"><img src="img/svg/basket-red.svg" width="17" height="17" alt="Корзина">2 товара</button>
 					<!-- Ховер Корзина-->
 					<form action="gllacyshop.ru" type="post" name="basket-form">
 						<fieldset>
@@ -71,12 +71,12 @@
 									<th class="visually-hidden">Стоимость товара</th>
 								</tr>
 								<tr>
-									<!-- текст и кнопки уберу в CSS считаю не очень логичным если читалка прочитает картинку как кнопка удаления товара(будет непонятно кнопка это или всетаки просто картинка кнопки)-->
+									<!-- текст и картинку уберу в CSS считаю не очень логичным если читалка прочитает картинку как кнопка удаления товара(будет непонятно кнопка это или всетаки просто картинка кнопки)-->
 									<td>
-										<button type="button" value="delet-item"><img src="img/svg/cross-small.svg" alt="">удалить товар</button>
+										<button type="button" value="delet-item"><img src="img/svg/cross-small.svg" width="11" height="11" alt="">удалить товар</button>
 									</td>
 									<td>
-										<img src="img/ice-cream-orange.png" alt="Фото мороженного">
+										<img src="img/ice-cream-orange.png" width="33" height="33" alt="Фото мороженного">
 									</td>
 									<!--Через JS в инпут будем вставлять значение кода товара из базы данных и этот же код будет служить уникальным ID для связки лейбла вставляемый так же с помощью замены ID у элемента через JS. Итак же с остальными полями значения и ID через JS-->
 									<td>
@@ -96,12 +96,12 @@
 									</td>
 								</tr>
 								<tr>
-									<!-- текст и кнопки уберу в CSS считаю не очень логичным если читалка прочитает картинку как кнопка удаления товара(будет непонятно кнопка это или всетаки просто картинка кнопки)-->
+									<!-- текст и картинку уберу в CSS считаю не очень логичным если читалка прочитает картинку как кнопка удаления товара(будет непонятно кнопка это или всетаки просто картинка кнопки)-->
 									<td>
-										<button type="button" value="delet-item"><img src="img/svg/cross-small.svg" alt="">удалить товар</button>
+										<button type="button" value="delet-item"><img src="img/svg/cross-small.svg" width="11" height="11" alt="">удалить товар</button>
 									</td>
 									<td>
-										<img src="img/ice-cream-strawberry.png" alt="Фото мороженного">
+										<img src="img/ice-cream-strawberry.png" width="33" height="33" alt="Фото мороженного">
 									</td>
 									<!--Через JS в инпут будем вставлять значение кода товара из базы данных и этот же код будет служить уникальным ID для связки лейбла вставляемый так же с помощью замены ID у элемента через JS. Итак же с остальными полями значения и ID через JS-->
 									<td>
@@ -171,6 +171,7 @@
 					<div class="range">
 						<div class="range-line"></div>
 						<div class="range-line-strong"></div>
+						<!-- убрать картинки из разметки в CSS -->
 						<button type="button"><img src="img/svg/filter-button.svg" alt=""></button>
 						<button type="button"><img src="img/svg/filter-button.svg" alt=""></button>
 					</div>
@@ -195,67 +196,69 @@
 			<section>
 				<h2 class="visually-hidden">Каталог мороженного</h2>
 				<article>
-					<img src="img/ice-cream-orange.png" alt="Фото мороженного">
+					<img src="img/ice-cream-orange.png" width="267" height="267" alt="Фото мороженного">
 					<span>310 ₽/кг</span>
 					<a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
 				</article>
 				<article>
-					<img src="img/ice-cream-choco.png" alt="Фото мороженного">
+					<img src="img/ice-cream-choco.png" width="267" height="267" alt="Фото мороженного">
 					<span>380 ₽/кг</span>
 					<a href="#">Сливочно-кофейное с кусочками шоколада</a>
 				</article>
 				<article>
-					<img src="img/ice-cream-strawberry.png" alt="Фото мороженного"><span>355 ₽/кг</span>
+					<img src="img/ice-cream-strawberry.png" width="267" height="267" alt="Фото мороженного">
+					<span>355 ₽/кг</span>
 					<a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
 				</article>
 				<article>
-					<img src="img/ice-cream-caramel.png" alt="Фото мороженного">
+					<img src="img/ice-cream-caramel.png" width="267" height="267" alt="Фото мороженного">
 					<span>415 ₽/кг</span>
 					<a href="#">Сливочное крем-брюле с карамельной подливкой</a>
 				</article>
 				<article>
-					<img src="img/ice-cream-cowberry.png" alt="Фото мороженного">
+					<img src="img/ice-cream-cowberry.png" width="267" height="267" alt="Фото мороженного">
 					<span>325 ₽/кг</span>
 					<a href="#">Сливочное с брусничным джемом</a>
 				</article>
 				<article>
-					<img src="img/ice-cream-blueberry.png" alt="Фото мороженного">
+					<img src="img/ice-cream-blueberry.png" width="267" height="267" alt="Фото мороженного">
 					<span>410 ₽/кг</span>
 					<a href="#">Сливочно-черничное с цельными ягодами черники</a>
 				</article>
 				<article>
-					<img src="img/ice-cream-lemon.png" alt="Фото мороженного">
+					<img src="img/ice-cream-lemon.png" width="267" height="267" alt="Фото мороженного">
 					<span>375 ₽/кг</span>
 					<a href="#">Сливочно-лимонное с карамельной присыпкой</a>
 				</article>
 				<article>
-					<img src="img/ice-cream-choco-chip.png" alt="Фото мороженного">
+					<img src="img/ice-cream-choco-chip.png" width="267" height="267" alt="Фото мороженного">
 					<span>320 ₽/кг</span>
 					<a href="#">Сливочное с шоколадной стружкой</a>
 				</article>
 				<article>
-					<img src="img/ice-cream-vanilla.png" alt="Фото мороженного">
+					<img src="img/ice-cream-vanilla.png" width="267" height="267" alt="Фото мороженного">
 					<span>440 ₽/кг</span>
 					<a href="#">Сливочно-ванильное с кусочками шоколада</a>
 				</article>
 				<article>
-					<img src="img/ice-cream-menthol.png" alt="Фото мороженного">
+					<img src="img/ice-cream-menthol.png" width="267" height="267" alt="Фото мороженного">
 					<span>435 ₽/кг</span>
 					<a href="#">Сливочноe с ментоловым сиропом</a>
 				</article>
 				<article>
-					<img src="img/ice-cream-choco-black.png" alt="Фото мороженного">
+					<img src="img/ice-cream-choco-black.png" width="267" height="267" alt="Фото мороженного">
 					<span>355 ₽/кг</span>
 					<a href="#">Сливочное с кусочками черного шоколада</a>
 				</article>
 				<article>
-					<img src="img/ice-cream-mint.png" alt="Фото мороженного">
+					<img src="img/ice-cream-mint.png" width="267" height="267" alt="Фото мороженного">
 					<span>420 ₽/кг</span>
 					<a href="#">Сливочное с мятным сиропом</a>
 				</article>
 			</section>
 		</section>
 		<section>
+			<!-- убрать картинки из разметки в CSS -->
 			<h2 class="visually-hidden">Страницы каталога</h2>
 			<a href="#"><img src="img/svg/icon-right-small.svg" alt=""></a>
 			<ul>
@@ -271,20 +274,21 @@
 	<footer>
 		<ul>
 			<li>
-				<a href="#"><img src="img/svg/twitter.svg" alt="GllacyShop в twitter"></a>
+				<a href="#"><img src="img/svg/twitter.svg" width="32" height="32" alt="GllacyShop в twitter"></a>
 			</li>
 			<li>
-				<a href="#"><img src="img/svg/instagram.svg" alt="GllacyShop в instagram"></a>
+				<a href="#"><img src="img/svg/instagram.svg" width="32" height="32" alt="GllacyShop в instagram"></a>
 			</li>
 			<li>
-				<a href="#"><img src="img/svg/fb.svg" alt="GllacyShop в Facebook"></a>
+				<a href="#"><img src="img/svg/fb.svg" width="32" height="32" alt="GllacyShop в Facebook"></a>
 			</li>
 			<li>
-				<a href="#"><img src="img/svg/vk.svg" alt="GllacyShop во Вконтакте"></a>
+				<a href="#"><img src="img/svg/vk.svg" width="32" height="32" alt="GllacyShop во Вконтакте"></a>
 			</li>
 		</ul>		
 		<ul>
 			<li>
+				<!-- убрать картинки из разметки в CSS -->
 				<a href="#"><img src="img/svg/heart.svg" alt="">Для поставщиков</a>
 			</li>
 			<li>
@@ -298,7 +302,8 @@
 			</li>
 		</ul>		
 		<div>
-			<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/svg/logo-htmlacademy.svg" alt="HTML Academy"></a>
+			<!-- убрать картинки из разметки в CSS. Текст ссылк уберу в CSS -->
+			<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/svg/logo-htmlacademy.svg" alt="">Ссылка на сайт HTML Academy</a>
 			<p>Сделано в HTML Academy © 2019</p>
 		</div>
 	</footer>
