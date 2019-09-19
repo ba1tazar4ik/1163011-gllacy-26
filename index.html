@@ -154,11 +154,11 @@
 		<section>
 			<img src="img/background-postal.jpg" alt="">
 			<h2 class="visually-hidden">Рассылка</h2>
-			<form action="gllacyshop.ru" type="post">
-				<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+			<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+			<form action="gllacyshop.ru" type="post">				
 				<label for="email" class="visually-hidden">Введите Ваш e-mail</label>
 				<input type="email" id="email" placeholder="email@example.com">
-				<button type="submit" value="Отправить">Отправить</button>
+				<button type="submit" value="subscribe">Отправить</button>
 			</form>
 		</section>
 		<section>
@@ -170,24 +170,10 @@
 				<p>ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
 				<h2>Для заказов по телефону:</h2>
 				<p>8 812 450-25-25 (с 10 до 20 ежедневно)</p>
-				<button type="button">Форма обратной связи</button>				
+				<a href="#">Форма обратной связи</a>				
 			</div>
 		</section>		
-		<!-- модальное окно Формы обратной связи-->
-		<form action="gllacyshop.ru" type="post">
-			<fieldset>
-				<legend class="visually-hidden">Форма обратной связи</legend>
-				<p>Мы обязательно вам ответим!</p>
-				<button type="button"><img src="img/svg/cross-big.svg" alt="Кнопка закрыть"></button>
-				<label for="user-name" class="visually-hidden">Ваше имя и фамилия</label>
-				<input type="text" name="name" id="user-name" placeholder="Имя Фамилия">
-				<label for="user-email" class="visually-hidden">Ваш e-mail</label>
-				<input type="text" name="email" id="user-email" placeholder="email@example.com">
-				<label for="user-text" class="visually-hidden">Ваш вопрос или пожелание в свободной форме</label>
-				<textarea name="text" id="user-text" cols="100" rows="5" placeholder="В свободной форме"></textarea>
-				<button type="submit" value="send">Отправить</button>
-			</fieldset>
-		</form>
+		
 	</main>
 	<footer>
 		<ul>
@@ -223,5 +209,22 @@
 			<p>Сделано в HTML Academy © 2019</p>
 		</div>
 	</footer>
+	<div class="modal">
+		<!-- модальное окно Формы обратной связи-->
+		<form action="gllacyshop.ru" type="post">
+			<fieldset>
+				<legend class="visually-hidden">Форма обратной связи</legend>
+				<p>Мы обязательно вам ответим!</p>
+				<label for="user-name" class="visually-hidden">Ваше имя и фамилия</label>
+				<input type="text" name="name" id="user-name" placeholder="Имя Фамилия">
+				<label for="user-email" class="visually-hidden">Ваш e-mail</label>
+				<input type="email" name="email" id="user-email" placeholder="email@example.com">
+				<label for="user-text" class="visually-hidden">Ваш вопрос или пожелание в свободной форме</label>
+				<textarea name="text" id="user-text" cols="100" rows="5" placeholder="В свободной форме"></textarea>
+				<button type="submit" value="send">Отправить</button>
+			</fieldset>			
+		</form>
+		<button type="button"><img src="img/svg/cross-big.svg" alt="Кнопка закрыть"></button>
+	</div>
 </body>
 </html>

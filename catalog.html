@@ -29,45 +29,67 @@
 				</li>
 			</ul>
 			<section class="buttons">
-				<button type="button"><img src="img/svg/loupe.svg" alt="Поиск"></button>
-				<!-- Ховер Поиск-->
-				<form action="gllacyshop.ru" type="post" name="search-form">
-					<label for="search" class="visually-hidden">Форма поиска</label>
-					<input type="text" name="search" id="search" placeholder="Крем-брюле">	
-				</form>
-				<button type="button"><img src="img/svg/entrance.svg" alt="Вход">Вход</button>
-				<!-- Ховер Вход в личный кабинет-->
-				<form action="gllacyshop.ru" type="post" name="account-form">
-					<fieldset name="user-data">
-						<legend class="visually-hidden">Личный кабинет</legend>	
-						<label for="user-login-lk" class="visually-hidden">Логин</label>
-						<input type="email" name="user-login" id="user-login-lk" placeholder="email@example.com">
-						<label for="user-password" class="visually-hidden">Пароль</label>
-						<input type="password" name="password" id="user-password" placeholder="••••••••">
-						<button type="submit" value="login">Вход</button>
-						<a href="#">Забыли пароль?</a>
-						<a href="#">Новая регистрация</a>
-					</fieldset>
-				</form>
-				<button type="button"><img src="img/svg/basket-red.svg" alt="Корзина">2 товара</button>
-				<!-- Ховер Корзина-->
-				<form action="gllacyshop.ru" type="post" name="basket-form">
-					<h2 class="visually-hidden">Ваша корзина</h2>
-					<ul>
-						<li>
-							<button type="button" value="delet-item"><img src="img/svg/cross-small.svg" alt=""></button>
-							<img src="img/ice-cream-orange.png" alt="">
-							<p>Пломбир с апельсиновым джемом 1,5 кг х 200 руб. 300 руб.</p>
-						</li>
-						<li>
-							<button type="button" value="delet-item"><img src="img/svg/cross-small.svg" alt=""></button>
-							<img src="img/ice-cream-strawberry.png" alt="">
-							<p>Клубничный пломбир с присыпкой из белого шоколада 1,5 кг х 300 руб. 450 руб.</p>
-						</li>
-					</ul>
-					<p>Итого:750 руб.</p>
-					<a href="#">Оформить заказ</a>
-				</form>
+				<div>
+					<button type="button"><img src="img/svg/loupe.svg" alt="Поиск"></button>
+					<!-- Ховер Поиск-->
+					<form action="gllacyshop.ru" type="post" name="search-form">
+						<fieldset>
+							<legend class="visually-hidden">Форма поиска</legend>
+							<input type="text" name="search" placeholder="Крем-брюле">
+						</fieldset>
+					</form>
+				</div>
+				<div>
+					<button type="button"><img src="img/svg/entrance.svg" alt="Вход">Вход</button>
+					<!-- Ховер Вход в личный кабинет-->
+					<form action="gllacyshop.ru" type="post" name="account-form">
+						<fieldset name="user-data">
+							<legend class="visually-hidden">Личный кабинет</legend>	
+							<label for="user-login-lk" class="visually-hidden">Логин</label>
+							<input type="email" name="user-login" id="user-login-lk" placeholder="email@example.com">
+							<label for="user-password" class="visually-hidden">Пароль</label>
+							<input type="password" name="password" id="user-password" placeholder="••••••••">
+							<button type="submit" value="login">Вход</button>
+							<a href="#">Забыли пароль?</a>
+							<a href="#">Новая регистрация</a>
+						</fieldset>
+					</form>
+				</div>
+				<div>
+					<button type="button"><img src="img/svg/basket-red.svg" alt="Корзина">2 товара</button>
+					<!-- Ховер Корзина-->
+					<form action="gllacyshop.ru" type="post" name="basket-form">
+						<fieldset>
+							<legend class="visually-hidden">Ваша корзина</legend>
+							<table>
+								<caption class="visually-hidden">Товары в корзине</caption>
+								<tr>
+									<th class="visually-hidden">кнопка закрыть</th>
+									<th class="visually-hidden">фото товра</th>
+									<th class="visually-hidden">Название товра</th>
+									<th class="visually-hidden">Цена и вес товара</th>
+									<th class="visually-hidden">Стоимость товара</th>
+								</tr>
+								<tr>
+									<td><button type="button" value="delet-item"><img src="img/svg/cross-small.svg" alt="">удалить товар</button></td>
+									<td><img src="img/ice-cream-orange.png" alt="Фото мороженного"></td>
+									<td><textarea name="basket-item-name"readonly>Пломбир с апельсиновым джемом</textarea></td>
+									<td><input type="number">1,5 <label for=""></label>кг &times; 200 руб.</td>
+									<td>300 руб.</td>
+								</tr>
+								<tr>
+									<td><button type="button" value="delet-item"><img src="img/svg/cross-small.svg" alt="">удалить товар</button></td>
+									<td><img src="img/ice-cream-strawberry.png" alt="Фото мороженного"></td>
+									<td><textarea name="basket-item-name"readonly>Клубничный пломбир с присыпкой из белого шоколада</textarea></td>
+									<td>1,5 кг &times; 300 руб.</td>
+									<td>450 руб.</td>
+								</tr>
+							</table>
+						</fieldset>
+						<p>Итого:750 руб.</p>
+						<a href="#">Оформить заказ</a>
+					</form>
+				</div>
 			</section>
 		</nav>
 		<section>
@@ -92,27 +114,35 @@
 			<h1>Сливочное мороженое</h1>			
 			<form action="gllacyshop.ru" type="get" name="filters">
 				<h2 class="visually-hidden">Фильтр мороженного</h2>
-				<label for="sort-filter">Сортировка:</label>
-				<select name="sort" id="sort-filter">
-					<option value="popularity">по популярности</option>
-					<option value="price-up">сначала недорогие</option>
-					<option value="price-down">сначала дорогие</option>
-					<option value="fatness">по жирности</option>
-				</select>
-				<div>
-					<h2 class="visually-hidden">Цена:</h2>
-					<p>Цена: 100 руб. – 500 руб.</p>
+				<fieldset>
+					<legend>Сортировка:</legend>
+					<select name="sort">
+						<option value="popularity">по популярности</option>
+						<option value="price-up">сначала недорогие</option>
+						<option value="price-down">сначала дорогие</option>
+						<option value="fatness">по жирности</option>
+					</select>
+				</fieldset>
+				<fieldset>
+					<legend>Цена:</legend>
+					<p>
+						<input type="number" id="min-cost" min="50" max="645" step="5" value="100">
+						<label for="min-cost">руб.</label>
+						&mdash;
+						<input type="number" id="max-cost" min="55" max="650" step="5" value="500">
+						<label for="max-cost">руб.</label>
+					</p>
 					<div class="range">
 						<div class="range-line"></div>
 						<div class="range-line-strong"></div>
 						<button type="button"><img src="img/svg/filter-button.svg" alt=""></button>
 						<button type="button"><img src="img/svg/filter-button.svg" alt=""></button>
 					</div>
-				</div>
+				</fieldset>
 				<fieldset name="fatness-filter">
 					<legend>Жирность:</legend>					
 					<label ><input type="radio" name="fatness" value="0%">0%</label>
-					<label ><input type="radio" name="fatness" value="to 10%">до 10%</label>
+					<label ><input type="radio" name="fatness" value="to 10%" checked>до 10%</label>
 					<label ><input type="radio" name="fatness" value="to 30%">до 30%</label>
 					<label ><input type="radio" name="fatness" value="above 30%">выше 30%</label>
 				</fieldset>
