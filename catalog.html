@@ -67,22 +67,58 @@
 									<th class="visually-hidden">кнопка закрыть</th>
 									<th class="visually-hidden">фото товра</th>
 									<th class="visually-hidden">Название товра</th>
-									<th class="visually-hidden">Цена и вес товара</th>
+									<th class="visually-hidden">Вес и цена товара</th>
 									<th class="visually-hidden">Стоимость товара</th>
 								</tr>
 								<tr>
-									<td><button type="button" value="delet-item"><img src="img/svg/cross-small.svg" alt="">удалить товар</button></td>
-									<td><img src="img/ice-cream-orange.png" alt="Фото мороженного"></td>
-									<td><textarea name="basket-item-name"readonly>Пломбир с апельсиновым джемом</textarea></td>
-									<td><input type="number">1,5 <label for=""></label>кг &times; 200 руб.</td>
-									<td>300 руб.</td>
+									<!-- текст и кнопки уберу в CSS считаю не очень логичным если читалка прочитает картинку как кнопка удаления товара(будет непонятно кнопка это или всетаки просто картинка кнопки)-->
+									<td>
+										<button type="button" value="delet-item"><img src="img/svg/cross-small.svg" alt="">удалить товар</button>
+									</td>
+									<td>
+										<img src="img/ice-cream-orange.png" alt="Фото мороженного">
+									</td>
+									<!--Через JS в инпут будем вставлять значение кода товара из базы данных и этот же код будет служить уникальным ID для связки лейбла вставляемый так же с помощью замены ID у элемента через JS. Итак же с остальными полями значения и ID через JS-->
+									<td>
+										<input type="hidden" id="basket-item-000001" value="000001">
+										<label for="basket-item-000001" name="basket-item-name">Пломбир с апельсиновым джемом</label>
+									</td>
+									<td>
+										<input type="number" id="basket-item-w-1" value="1.5">
+										<label for="basket-item-w-1">кг</label>
+										&times;
+										<input type="number" id="basket-item-p-1" value="200">
+										<label for="basket-item-p-1">руб.</label>
+									</td>
+									<td>
+										<input type="number" id="basket-item-c-1" value="300">
+										<label for="basket-item-c-1">руб.</label>
+									</td>
 								</tr>
 								<tr>
-									<td><button type="button" value="delet-item"><img src="img/svg/cross-small.svg" alt="">удалить товар</button></td>
-									<td><img src="img/ice-cream-strawberry.png" alt="Фото мороженного"></td>
-									<td><textarea name="basket-item-name"readonly>Клубничный пломбир с присыпкой из белого шоколада</textarea></td>
-									<td>1,5 кг &times; 300 руб.</td>
-									<td>450 руб.</td>
+									<!-- текст и кнопки уберу в CSS считаю не очень логичным если читалка прочитает картинку как кнопка удаления товара(будет непонятно кнопка это или всетаки просто картинка кнопки)-->
+									<td>
+										<button type="button" value="delet-item"><img src="img/svg/cross-small.svg" alt="">удалить товар</button>
+									</td>
+									<td>
+										<img src="img/ice-cream-strawberry.png" alt="Фото мороженного">
+									</td>
+									<!--Через JS в инпут будем вставлять значение кода товара из базы данных и этот же код будет служить уникальным ID для связки лейбла вставляемый так же с помощью замены ID у элемента через JS. Итак же с остальными полями значения и ID через JS-->
+									<td>
+										<input type="hidden" id="basket-item-000002" value="000002">
+										<label for="basket-item-000002" name="basket-item-name">Клубничный пломбир с присыпкой из белого шоколада</label>
+									</td>
+									<td>
+										<input type="number" id="basket-item-w-1" value="1.5">
+										<label for="basket-item-w-1">кг</label>
+										&times;
+										<input type="number" id="basket-item-p-2" value="300">
+										<label for="basket-item-p-2">руб.</label>
+									</td>
+									<td>
+										<input type="number" id="basket-item-p-2" value="450">
+										<label for="basket-item-p-2">руб.</label>
+									</td>
 								</tr>
 							</table>
 						</fieldset>
