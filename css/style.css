@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto", Arial, sans-serif;
+  color: #ffffff;
+
+  background-color: #849d8f;
+  background-image: url("img/background-jam.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+/*не уверен надо ли дублировать тут фон и цвет текста, 
+он вроде как задан для всего боди и всех ссылок*/
+.main-navigation {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #ffffff;
+
+  background-color: #849d8f;
+}
+
+.main-navigation a{
+	color: #ffffff;
+}
+
+.main-menu,
+.sub-menu{
+	list-style: none;
+}
+
+.sub-menu a{
+	text-decoration: none;
+}
+
+/*в стайл гайде есть состояние нажатие и текущая.
+текущая я так понимаю это :active а нажатие есть псевдокласс?
+аутлайн убрал так как background-color меняется на фокус так же 
+как и при наведении*/
+.sub-menu a:hover,
+.sub-menu a:focus{
+	background-color: #fbded7;
+	outline: 0;
+}
