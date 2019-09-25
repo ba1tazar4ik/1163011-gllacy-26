@@ -6,11 +6,27 @@ body {
   color: #ffffff;
 
   background-color: #849d8f;
-  background-image: url("img/background-jam.jpg");
+  background-image: url("../img/background-jam.jpg");
   background-position: top center;
   background-repeat: no-repeat;
 }
 
+/*изменения курсора при наведении для всех кнопок на сайте
+возможно есть смысл убрать этот пункт в normolize.css*/
+.button:hover{
+  cursor: pointer;
+}
+
+/*класс скрывающий эллементы*/
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+/*ОСНОВНАЯ НАВИГАЦИЯ*/
 /*не уверен надо ли дублировать тут фон и цвет текста, 
 он вроде как задан для всего боди и всех ссылок*/
 .main-navigation {
@@ -26,21 +42,163 @@ body {
 	color: #ffffff;
 }
 
-.main-menu,
-.sub-menu{
+.main-menu{
 	list-style: none;
+}
+.sub-menu{
+  background-color: #f8f7f4;
+
+  list-style: none;
 }
 
 .sub-menu a{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+
+  color: #323232;
+
 	text-decoration: none;
 }
 
 /*в стайл гайде есть состояние нажатие и текущая.
-текущая я так понимаю это :active а нажатие есть псевдокласс?
-аутлайн убрал так как background-color меняется на фокус так же 
-как и при наведении*/
-.sub-menu a:hover,
-.sub-menu a:focus{
+текущая я так понимаю это :active а нажатие есть псевдокласс?*/
+.sub-menu li:hover,
+.sub-menu li:focus{
 	background-color: #fbded7;
-	outline: 0;
+}
+
+/*фокус с клавиатуры стандартный плохо виден,
+сделал фокус по цвету похожий на тот что указан
+для пункта меню при наведении в стайлгайде*/
+.sub-menu a:focus{
+  background-color: #fbded7;
+  outline: 0;
+}
+
+/*КНОПКИ USER-NAVIGATION*/
+/*у всех кнопок в секции с классом user-navigation один шрифт,
+цвет шрифта, одинаковый бекгранунд.*/
+.user-button{
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  vertical-align: middle;
+  color: #ffffff;
+
+  background-color: rgba(255, 255, 255, 0.2); 
+}
+
+/*СОЖЕРЖИМОЕ ФОРМ USER-NAVIGATION*/
+
+.search-form fieldset,
+.account-form fieldset,
+.cart-form fieldset{
+  background-color: #f8f7f4;
+  border: none;
+}
+
+.search-form input,
+.account-form input{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #999999;
+
+  background-color: #ffffff;
+  border: 1px solid #d3d3d2;
+}
+
+.search-form input:hover,
+.account-form input:hover{
+  border: 2px solid rgba(154, 154, 154, 0.52);
+}
+
+.search-form input:focus,
+.account-form input:focus{
+  border: 2px solid rgba(46, 136, 228, 0.52);
+}
+
+/*кнопка Вход на форме входа в личный кабинет*/
+.login-submit{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #fefefe;
+
+  background-color: #e84d37;
+  background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
+  border: none;
+}
+
+/*ссылки на форме входа в личный кабинет*/ 
+.account-form .form-link{
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #323232;
+}
+
+/*вакханалия с корзиной*/
+.delete-item{
+  background-color: transparent;
+  background-image: url("../img/svg/cross-small.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  /*саблим сразу добавил с префиксом CSS стиль
+   не знаю нужен он тут или нетб но где-то в критериях 
+   дополнительных написано что если есть свойство 
+   с префиксом обязательно дублировать значение и без префикса*/
+  -webkit-background-size: 11px 11px;
+  background-size: 11px 11px;
+  border: none;
+}
+.cart-form label,
+.cart-form input,
+.cart-mnemonic{
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #323232;
+}
+
+.cart-form input{
+  border:none;
+  background-color: transparent;
+}
+.cart-form .cart-price{
+  color: #999999;
+}
+
+.cart-form p{
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #323232;
+}
+
+.cart-submit{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #fefefe;
+
+  background-color: #e84d37;
+  background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
+  border: none;
+}
+
+.schedule p{
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.schedule a{
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #ffffff;
+
+  text-decoration: none;
 }
