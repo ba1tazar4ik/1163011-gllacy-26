@@ -31,7 +31,7 @@
 			</ul>
 			<section class="user-navigation">
 				<div>
-					<button class="button user-button button-search" type="button"><img src="img/svg/loupe.svg" width="17" height="17" alt="Поиск">Поиск</button>
+					<button class="button user-button button-search" type="button" aria-label="Поиск"><img src="img/svg/loupe.svg" width="17" height="17" alt="Поиск"></button>
 					<!-- Ховер Поиск-->
 					<form class="search-form" action="gllacyshop.ru" type="post" name="search-form">
 						<fieldset>
@@ -92,14 +92,12 @@
 		<section>
 			<!-- убрать картинки из разметки в CSS -->
 			<h2 class="visually-hidden">Акции</h2>
-			<article>
-				<img src="img/background-raspberry.jpg" alt="">
+			<article class="event raspberry">
 				<h3>Малинка даром!</h3>
 				<p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
 				<a href="#">Хочу варенье!</a>
 			</article>
-			<article>
-				<img src="img/background-choco.jpg" alt="">
+			<article class="event choco">
 				<h3>Шоколадки даром!</h3>
 				<p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
 				<a href="#">Хочу шоколадки!</a>
@@ -107,88 +105,76 @@
 		</section>
 		<section>
 			<h2 class="visually-hidden">Хит продаж</h2>
-			<article>
+			<article class="hit">
 				<img src="img/svg/hit.svg" width="61" height="61" alt="Хит">
 				<img src="img/ice-cream-orange.png" width="267" height="267" alt="Фото мороженного">
-				<span>310 ₽/кг</span>
+				<p>310 ₽<span>/кг</span></p>
 				<a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
 			</article>
-			<article>
+			<article class="hit">
 				<img src="img/svg/hit.svg" width="61" height="61" alt="Хит">
 				<img src="img/ice-cream-choco.png" width="267" height="267" alt="Фото мороженного">
-				<span>380 ₽/кг</span>
+				<p>380 ₽<span>/кг</span></p>
 				<a href="#">Сливочно-кофейное с кусочками шоколада</a>
 			</article>
-			<article>
+			<article class="hit">
 				<img src="img/svg/hit.svg" width="61" height="61" alt="Хит">
 				<img src="img/ice-cream-strawberry.png" width="267" height="267" alt="Фото мороженного">
-				<span>355 ₽/кг</span>
+				<p>355 ₽<span>/кг</span></p>
 				<a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
 			</article>
-			<article>
+			<article class="hit">
 				<img src="img/svg/hit.svg" width="61" height="61" alt="Хит">
 				<img src="img/ice-cream-caramel.png" width="267" height="267" alt="Фото мороженного">
-				<span>415 ₽/кг</span>
+				<p>415 ₽<span>/кг</span></p>
 				<a href="#">Сливочное крем-брюле с карамельной подливкой</a>
 			</article>
 		</section>
-		<section>
-			<!-- убрать картинки из разметки в CSS -->
-			<img src="img/background-waffle.jpg" alt="">
-			<h1>Преимущества магазина</h1>
+		<section class="advantages">
+			<h1 class="visually-hidden">Преимущества магазина</h1>
 			<p>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
-			<ul>
-				<li>
-					<img src="img/svg/ice-cream.svg" alt="">
-					<span>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</span>
+			<ul class="advantages-list">
+				<li class="advantages-item">
+					<p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
 				</li>
-				<li>
-					<img src="img/svg/eco.svg" alt="">
-					<span>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</span>
+				<li class="advantages-item">
+					<p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
 				</li>
-				<li>
-					<img src="img/svg/cow.svg" alt="">
-					<span>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</span>
+				<li class="advantages-item">
+					<p>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
 				</li>
-				<li>
-					<img src="img/svg/thermometer.svg" alt="">
-					<span>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус</span>
+				<li class="advantages-item">
+					<p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус</p>
 				</li>
 			</ul>
 		</section>		
-		<section>
-			<!-- убрать картинки из разметки в CSS -->
-			<img src="img/background-strawberry.jpg" alt="">
-			<h2>Новое в нашем блоге</h2>
-			<a href="#">10 способов сервировки фруктовых щербетов к столу</a>
-		</section>
-		<section>
-			<!-- убрать картинки из разметки в CSS -->
-			<img src="img/background-postal.jpg" alt="">
-			<h2 class="visually-hidden">Рассылка</h2>
-			<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-			<form action="gllacyshop.ru" type="post">				
-				<label for="email" class="visually-hidden">Введите Ваш e-mail</label>
-				<input type="email" id="email" placeholder="email@example.com">
-				<button class="button" type="submit" value="subscribe">Отправить</button>
-			</form>
-		</section>
-		<section>
-			<!--GoogleMap я потом сделаю живую сейчас нет ситлей и вообще контента поэтому пока картинка просто. Для статической картинки (на случай если карта динамическая не прогрузится) я бы маркер сразу сунул бы в картинку карты и через CSS воткнул, но пока не уверен поэтому оставлю тут картинки.-->
-			<img src="img/map.jpg" width="1200" height="430" alt="Адрес главного офиса и офлайн-магазина:ул. Большая Конюшенная 19/8, Санкт-Петербург">
-			<img src="img/svg/pin.svg" width="80" height="140" alt="Маркер магаина на карте">
-			<div>				
+		<div>
+			<section class="new-in-blog">
+				<h2>Новое в нашем блоге</h2>
+				<a href="#">10 способов сервировки фруктовых щербетов к столу</a>
+			</section>
+			<section class="subscribe">
+				<h2 class="visually-hidden">Рассылка</h2>
+				<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+				<form action="gllacyshop.ru" type="post">				
+					<label for="email" class="visually-hidden">Введите Ваш e-mail</label>
+					<input type="email" id="email" placeholder="email@example.com">
+					<button class="button button-subscribe" type="submit" value="subscribe">Отправить</button>
+				</form>
+			</section>
+		</div>
+		<section class="map">
+			<div class="address">				
 				<h2>Адрес главного офиса и офлайн-магазина:</h2>
 				<p>ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
 				<h2>Для заказов по телефону:</h2>
-				<p>8 812 450-25-25 (с 10 до 20 ежедневно)</p>
+				<p>8 812 450-25-25 <span>(с 10 до 20 ежедневно)</span></p>
 				<a href="#">Форма обратной связи</a>				
 			</div>
 		</section>		
-		
 	</main>
 	<footer>
-		<ul>
+		<ul class="social-network">
 			<li>
 				<a href="#"><img src="img/svg/twitter.svg" width="32" height="32" alt="GllacyShop в twitter"></a>
 			</li>
@@ -202,10 +188,9 @@
 				<a href="#"><img src="img/svg/vk.svg" width="32" height="32" alt="GllacyShop во Вконтакте"></a>
 			</li>
 		</ul>		
-		<ul>
+		<ul class="footer-menu">
 			<li>
-				<!-- убрать картинки из разметки в CSS -->
-				<a href="#"><img src="img/svg/heart.svg" alt="">Для поставщиков</a>
+				<a href="#" class="heart">Для поставщиков</a>
 			</li>
 			<li>
 				<a href="#">О производстве</a>
@@ -217,10 +202,9 @@
 				<a href="#">Экологические стандарты</a>
 			</li>
 		</ul>		
-		<div>
-			<!-- убрать картинки из разметки в CSS. Текст ссылк уберу в CSS -->
-			<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/svg/logo-htmlacademy.svg" alt="">Ссылка на сайт HTML Academy</a>
-			<p>Сделано в HTML Academy © 2019</p>
+		<div class="copyright">
+			<a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Ссылка на интенсивный курс HTML Academy"><img src="img/svg/logo-htmlacademy.svg" alt="Логотип HTML Academy" width="108" height="39"></a>
+			<p>Сделано в <u>HTML Academy</u> © 2019</p>
 		</div>
 	</footer>
 	<div class="modal">
@@ -235,11 +219,11 @@
 				<input type="email" name="email" id="user-email" placeholder="email@example.com">
 				<label for="user-text" class="visually-hidden">Ваш вопрос или пожелание в свободной форме</label>
 				<textarea name="text" id="user-text" cols="100" rows="5" placeholder="В свободной форме"></textarea>
-				<button class="button" type="submit" value="send">Отправить</button>
+				<button class="button modal-send" type="submit" value="send">Отправить</button>
 			</fieldset>			
 		</form>
 		<!-- текст и картинку уберу в CSS считаю не очень логичным если читалка прочитает картинку как кнопка удаления товара(будет непонятно кнопка это или всетаки просто картинка кнопки)-->
-		<button class="button" type="button"><img src="img/svg/cross-big.svg" width="18" height="18" alt="">Кнопка закрыть</button>
+		<button class="button modal-close" type="button" aria-label="Кнопка закрыть"><img src="img/svg/cross-big.svg" width="18" height="18" alt=""></button>
 	</div>
 </body>
 </html>

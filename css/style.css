@@ -202,3 +202,349 @@ body {
 
   text-decoration: none;
 }
+
+/*SLIDER*/
+.slider-item{
+  text-align: center;
+}
+
+.slider-item p{
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 60px;
+}
+.slider-item a{
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 44px;
+  color: #ffffff;
+
+  text-decoration: none;
+
+  background-color: #f26843;
+  background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
+}
+
+/*БЛОК АКЦИЯ*/
+.event h3{
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 41px;
+}
+
+.event p{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+.event a{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #ffffff;
+
+  text-decoration: none;
+
+  background-color: #f26843;
+  background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
+}
+
+.raspberry{
+  background-color: #9d0532;
+  background-image: url("../img/background-raspberry.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.choco{
+  background-color: #9d0532;
+  background-image: url("../img/background-choco.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/*БЛОК ХИТ*/
+.hit p{
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 45px;
+}
+
+.hit span{
+  font-size: 30px;
+}
+
+.hit a{
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+/*БЛОК ПРЕИМУЩЕСТВА*/
+.advantages{
+  color: #323232;
+
+  background-color: #ebdcbc;
+  background-image: url("../img/background-waffle.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.advantages p{
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+.advantages-list{
+  list-style: none;
+}
+
+.advantages-item:first-child{
+  background-image: url("../img/svg/ice-cream.svg");
+  background-position: left center;
+  background-repeat: no-repeat;
+  -webkit-background-size: 49px 49px;
+  background-size: 49px 49px;
+}
+
+.advantages-item:nth-child(2){
+  background-image: url("../img/svg/eco.svg");
+  background-position: left center;
+  background-repeat: no-repeat;
+  -webkit-background-size: 49px 49px;
+  background-size: 49px 49px;
+}
+
+.advantages-item:nth-child(3){
+  background-image: url("../img/svg/cow.svg");
+  background-position: left center;
+  background-repeat: no-repeat;
+  -webkit-background-size: 49px 49px;
+  background-size: 49px 49px;
+}
+
+.advantages-item:last-child{
+  background-image: url("../img/svg/thermometer.svg");
+  background-position: left center;
+  background-repeat: no-repeat;
+  -webkit-background-size: 49px 49px;
+  background-size: 49px 49px;
+}
+
+.advantages-item p{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+/*БЛОК НОВОЕ В БЛОГЕ+РАССЫЛКА
+(обединил потому что они составляют один блок)*/
+.new-in-blog{
+  background-color: #ffffff;
+  background-image: url("../img/background-strawberry.jpg");
+  /*после того как появится размер блока 
+  выставлю значение положения*/
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.new-in-blog h2{
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  color: #323232;
+}
+
+.new-in-blog a{
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #323232;
+}
+
+.subscribe{
+  background-color: #f8f7f4;
+  background-image: 
+    url("../img/background-postal.png"),
+    url("../img/svg/background-post.svg");
+  background-position: 
+    center center,
+    center center;
+  /*размеры выставлю вместе с размерами блока
+  сейчас цифры поставил показать что я верхний слой
+  сделаю немного меньше нижнего что бы получить эффект как 
+  в макете*/
+  -webkit-background-size: 
+    100% auto,
+    95% auto;
+  background-size: 
+    100% auto,
+    95% auto;
+  background-repeat: 
+    no-repeat,
+    no-repeat;
+}
+
+.subscribe p{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #5a5a5a;
+}
+
+.subscribe input{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #999999;
+
+  background-color: #ffffff;
+  border: 1px solid #d3d3d2;
+}
+
+.subscribe input:hover{
+  border: 2px solid rgba(154, 154, 154, 0.52);
+}
+
+.subscribe input:focus{
+  border: 2px solid rgba(46, 136, 228, 0.52);
+}
+
+.button-subscribe{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #fefefe;
+
+  background-color: #e84d37;
+  background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
+  border: none;
+}
+
+/*БЛОК С КАРТОЙ*/
+.map{
+  background-image: 
+    url("../img/svg/pin.svg"),
+    url("../img/map.jpg");
+  /*маркер выставлю когда размеры блока будут*/
+  background-position: 
+    center center,
+    center center;
+  background-repeat:
+    no-repeat,
+    no-repeat;
+  -webkit-background-size:
+    80px 140px, 
+    auto auto;
+  background-size:
+    80px 140px, 
+    auto auto;
+}
+
+.address{
+  background-color: #fefefe;
+}
+
+.address h2{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #323232;
+}
+
+.address p{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #323232;
+}
+
+.address span{
+  font-weight: 400;
+}
+
+.address a{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #fefefe;
+
+  text-decoration: none;
+
+  background-color: #e84d37;
+  background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
+  border: none;
+}
+
+/*СОЦСЕТИ*/
+footer ul{
+  list-style: none;
+}
+
+/*обводку для соц сетей не знаю как сделать.
+у меня через брдер радиус почему то блок
+не круглым а овальным становится*/
+
+.footer-menu a{
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #ffffff;
+}
+.footer-menu .heart{
+  background-image: url("../img/svg/heart.svg");
+  background-position: left center;
+  background-repeat: no-repeat;
+  -webkit-background-size: 15px 13px;
+  background-size: 15px 13px;
+}
+
+.copyright p{
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+/*МОДАЛЬНОЕ ОКНО*/
+.modal fieldset{
+  background-color: #f8f7f4;
+  border: none;
+}
+.modal p{
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  color: #323232;
+}
+
+.modal input{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #999999;
+
+  background-color: #ffffff;
+  border: 1px solid #d3d3d2;
+}
+
+.modal input:hover{
+  border: 2px solid rgba(154, 154, 154, 0.52);
+}
+
+.modal input:focus{
+  border: 2px solid rgba(46, 136, 228, 0.52);
+}
+
+.modal-send{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #fefefe;
+
+  background-color: #e84d37;
+  background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
+  border: none;
+}
