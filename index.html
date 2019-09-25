@@ -15,7 +15,7 @@
 				<li>
 					<a href="catalog.html">Каталог</a>
 					<ul class="sub-menu">
-						<li><a href="#"><b>Новинки</b></a></li>
+						<li><a href="#">Новинки</a></li>
 						<li><a href="catalog.html">Сливочное</a></li>
 						<li><a href="#">Щербеты</a></li>
 						<li><a href="#">Фруктовый лед</a></li>
@@ -29,38 +29,31 @@
 					<a href="#">О Компании</a>
 				</li>
 			</ul>
-			<section class="user-navigation">
-				<div>
-					<button class="button user-button button-search" type="button"><img src="img/svg/loupe.svg" width="17" height="17" alt="Поиск">Поиск</button>
-					<!-- Ховер Поиск-->
-					<form class="search-form" action="gllacyshop.ru" type="post" name="search-form">
-						<fieldset>
-							<legend class="visually-hidden">Форма поиска</legend>
-							<input type="search" name="search" placeholder="Крем-брюле">
-						</fieldset>
-					</form>
-				</div>
-				<div>
-					<button class="button user-button button-login" type="button"><img src="img/svg/entrance.svg" width="17" height="17" alt="Вход">Вход</button>
-					<!-- Ховер Вход в личный кабинет-->
-					<form class="account-form" action="gllacyshop.ru" type="post" name="account-form">
-						<fieldset name="user-data">
-							<legend class="visually-hidden">Личный кабинет</legend>	
-							<label for="user-login-lk" class="visually-hidden">Логин</label>
-							<input type="email" name="user-login" id="user-login-lk" placeholder="email@example.com">
-							<label for="user-password" class="visually-hidden">Пароль</label>
-							<input type="password" name="password" id="user-password" placeholder="••••••••">
-							<button class="button login-submit" type="submit" value="login">Войти</button>
-							<a href="#" class="form-link">Забыли пароль?</a>
-							<a href="#" class="form-link">Новая регистрация</a>
-						</fieldset>
-					</form>
-				</div>
-				<button class="button user-button button-cart" type="button"><img src="img/svg/cart.svg" width="17" height="17" alt="Корзина">Пусто</button>
+			<section class="buttons">
+				<button type="button"><img src="img/svg/loupe.svg" width="17" height="17" alt="Поиск"></button>
+				<!-- Ховер Поиск-->
+				<form action="gllacyshop.ru" type="post" name="search-form">
+					<label for="search"class="visually-hidden">Форма поиска</label>
+					<input type="search" name="search" id="search" placeholder="Крем-брюле">	
+				</form>
+				<button type="button"><img src="img/svg/entrance.svg" width="17" height="17" alt="Вход">Вход</button>
+				<!-- Ховер Вход в личный кабинет-->
+				<form action="gllacyshop.ru" type="post" name="account-form">
+					<fieldset name="user-data">
+						<legend class="visually-hidden">Личный кабинет</legend>	
+						<label for="user-login" class="visually-hidden">Логин</label>
+						<input type="email" name="user-login" id="user-login" placeholder="email@example.com">
+						<label for="user-password" class="visually-hidden">Пароль</label>
+						<input type="password" name="password" id="user-password" placeholder="••••••••">
+						<button type="submit" value="login">Вход</button>
+						<a href="#">Забыли пароль?</a>
+						<a href="#">Новая регистрация</a>
+					</fieldset>
+				</form>
+				<button type="button"><img src="img/svg/basket.svg" width="17" height="17" alt="Корзина">Пусто</button>
 			</section>
 		</nav>
-		<section class="schedule">
-			<h2 class="visually-hidden">Режим работы и телефон магазина</h2>
+		<section>
 			<p>С 10 до 20, ежедневно</p>
 			<a href="tel:+78124502525">8 812 450-25-25</a>
 		</section>
@@ -68,25 +61,25 @@
 	<main>
 		<section class="slider">
 			<h2 class="visually-hidden">Слайдер с акциями</h2>
-			<div class="slider-item">
+			<div>
 				<img src="img/ice-cream-jam.png" width="1045" height="881" alt="Фото мороженного">
 				<p>Крем-брюле и пломбир с малиновым джемом</p>
 				<a href="#">Давайте оба!</a>				
 			</div>
-			<div class="slider-item">
+			<div>
 				<img src="img/ice-cream-chocolate.png" width="1045" height="881" alt="Фото мороженного">
 				<p>Шоколадный пломбир и лимонный сорбет </p>
 				<a href="#">Давайте оба!</a>				
 			</div>
-			<div class="slider-item">
+			<div>
 				<img src="img/ice-cream-sherbet.png" width="1045" height="881" alt="Фото мороженного">
 				<p>Пломбир с помадкой и клубничный щербет</p>
 				<a href="#">Давайте оба!</a>				
 			</div>
 			<ul>
-				<li><button class="button" type="button"></button></li>
-				<li><button class="button" type="button"></button></li>
-				<li><button class="button" type="button"></button></li>
+				<li><button type="button"></button></li>
+				<li><button type="button"></button></li>
+				<li><button type="button"></button></li>
 			</ul>
 		</section>
 		<section>
@@ -170,7 +163,7 @@
 			<form action="gllacyshop.ru" type="post">				
 				<label for="email" class="visually-hidden">Введите Ваш e-mail</label>
 				<input type="email" id="email" placeholder="email@example.com">
-				<button class="button" type="submit" value="subscribe">Отправить</button>
+				<button type="submit" value="subscribe">Отправить</button>
 			</form>
 		</section>
 		<section>
@@ -235,11 +228,11 @@
 				<input type="email" name="email" id="user-email" placeholder="email@example.com">
 				<label for="user-text" class="visually-hidden">Ваш вопрос или пожелание в свободной форме</label>
 				<textarea name="text" id="user-text" cols="100" rows="5" placeholder="В свободной форме"></textarea>
-				<button class="button" type="submit" value="send">Отправить</button>
+				<button type="submit" value="send">Отправить</button>
 			</fieldset>			
 		</form>
 		<!-- текст и картинку уберу в CSS считаю не очень логичным если читалка прочитает картинку как кнопка удаления товара(будет непонятно кнопка это или всетаки просто картинка кнопки)-->
-		<button class="button" type="button"><img src="img/svg/cross-big.svg" width="18" height="18" alt="">Кнопка закрыть</button>
+		<button type="button"><img src="img/svg/cross-big.svg" width="18" height="18" alt="">Кнопка закрыть</button>
 	</div>
 </body>
 </html>

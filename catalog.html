@@ -9,13 +9,13 @@
 </head>
 <body>
 	<header>
-		<a><img src="img/svg/logo.svg" width="154" height="64" alt="Логотип магазина Глейси"></a>
+		<a><img src="img/svg/logo.svg" width="100" height="50" alt="Логотип магазина Глейси"></a>
 		<nav class="main-navigation">
 			<ul class="main-menu">
 				<li>
 					<a href="catalog.html">Каталог</a>
 					<ul class="sub-menu">
-						<li><a href="#"><b>Новинки</b></a></li>
+						<li><a href="#">Новинки</a></li>
 						<li><a>Сливочное</a></li>
 						<li><a href="#">Щербеты</a></li>
 						<li><a href="#">Фруктовый лед</a></li>
@@ -29,11 +29,11 @@
 					<a href="#">О Компании</a>
 				</li>
 			</ul>
-			<section class="user-navigation">
+			<section class="buttons">
 				<div>
-					<button class="button user-button button-search" type="button"><img src="img/svg/loupe.svg" width="17" height="17" alt="Поиск">Поиск</button>
+					<button type="button"><img src="img/svg/loupe.svg" width="17" height="17" alt="Поиск"></button>
 					<!-- Ховер Поиск-->
-					<form class="search-form" action="gllacyshop.ru" type="post" name="search-form">
+					<form action="gllacyshop.ru" type="post" name="search-form">
 						<fieldset>
 							<legend class="visually-hidden">Форма поиска</legend>
 							<input type="search" name="search" placeholder="Крем-брюле">
@@ -41,25 +41,25 @@
 					</form>
 				</div>
 				<div>
-					<button class="button user-button button-login" type="button"><img src="img/svg/entrance.svg" width="17" height="17" alt="Вход">Вход</button>
+					<button type="button"><img src="img/svg/entrance.svg" width="17" height="17" alt="Вход">Вход</button>
 					<!-- Ховер Вход в личный кабинет-->
-					<form class="account-form" action="gllacyshop.ru" type="post" name="account-form">
+					<form action="gllacyshop.ru" type="post" name="account-form">
 						<fieldset name="user-data">
 							<legend class="visually-hidden">Личный кабинет</legend>	
 							<label for="user-login-lk" class="visually-hidden">Логин</label>
 							<input type="email" name="user-login" id="user-login-lk" placeholder="email@example.com">
 							<label for="user-password" class="visually-hidden">Пароль</label>
 							<input type="password" name="password" id="user-password" placeholder="••••••••">
-							<button class="button login-submit" type="submit" value="login">Войти</button>
-							<a href="#" class="form-link">Забыли пароль?</a>
-							<a href="#" class="form-link">Новая регистрация</a>
+							<button type="submit" value="login">Вход</button>
+							<a href="#">Забыли пароль?</a>
+							<a href="#">Новая регистрация</a>
 						</fieldset>
 					</form>
 				</div>
 				<div>
-					<button class="button user-button button-cart" type="button"><img src="img/svg/cart-red.svg" width="17" height="17" alt="Корзина">2 товара</button>
+					<button type="button"><img src="img/svg/basket-red.svg" width="17" height="17" alt="Корзина">2 товара</button>
 					<!-- Ховер Корзина-->
-					<form class="cart-form" action="gllacyshop.ru" type="post" name="cart-form">
+					<form action="gllacyshop.ru" type="post" name="basket-form">
 						<fieldset>
 							<legend class="visually-hidden">Ваша корзина</legend>
 							<table>
@@ -72,65 +72,65 @@
 									<th class="visually-hidden">Стоимость товара</th>
 								</tr>
 								<tr>
-									<!-- текст уберу в CSS -->
+									<!-- текст и картинку уберу в CSS считаю не очень логичным если читалка прочитает картинку как кнопка удаления товара(будет непонятно кнопка это или всетаки просто картинка кнопки)-->
 									<td>
-										<button class="button delete-item" type="button" value="delet-item">удалить товар</button>
+										<button type="button" value="delet-item"><img src="img/svg/cross-small.svg" width="11" height="11" alt="">удалить товар</button>
 									</td>
 									<td>
 										<img src="img/ice-cream-orange.png" width="33" height="33" alt="Фото мороженного">
 									</td>
 									<!--Через JS в инпут будем вставлять значение кода товара из базы данных и этот же код будет служить уникальным ID для связки лейбла вставляемый так же с помощью замены ID у элемента через JS. Итак же с остальными полями значения и ID через JS-->
 									<td>
-										<input type="hidden" id="cart-item-000001" value="000001">
-										<label for="cart-item-000001" name="cart-item-name">Пломбир с апельсиновым джемом</label>
+										<input type="hidden" id="basket-item-000001" value="000001">
+										<label for="basket-item-000001" name="basket-item-name">Пломбир с апельсиновым джемом</label>
 									</td>
 									<td>
-										<input type="number" id="cart-item-w-1" value="1.5" disabled>
-										<label for="cart-item-w-1">кг</label>
-										<span class="cart-mnemonic">x</span>
-										<input class="cart-price" type="number" id="cart-item-p-1" value="200" disabled>
-										<label for="cart-item-p-1">руб.</label>
+										<input type="number" id="basket-item-w-1" value="1.5">
+										<label for="basket-item-w-1">кг</label>
+										&times;
+										<input type="number" id="basket-item-p-1" value="200">
+										<label for="basket-item-p-1">руб.</label>
 									</td>
 									<td>
-										<input type="number" id="cart-item-c-1" value="300" disabled>
-										<label for="cart-item-c-1">руб.</label>
+										<input type="number" id="basket-item-c-1" value="300">
+										<label for="basket-item-c-1">руб.</label>
 									</td>
 								</tr>
 								<tr>
-									<!-- текст уберу в CSS -->
+									<!-- текст и картинку уберу в CSS считаю не очень логичным если читалка прочитает картинку как кнопка удаления товара(будет непонятно кнопка это или всетаки просто картинка кнопки)-->
 									<td>
-										<button class="button delete-item" type="button" value="delet-item">удалить товар</button>
+										<button type="button" value="delet-item"><img src="img/svg/cross-small.svg" width="11" height="11" alt="">удалить товар</button>
 									</td>
 									<td>
 										<img src="img/ice-cream-strawberry.png" width="33" height="33" alt="Фото мороженного">
 									</td>
 									<!--Через JS в инпут будем вставлять значение кода товара из базы данных и этот же код будет служить уникальным ID для связки лейбла вставляемый так же с помощью замены ID у элемента через JS. Итак же с остальными полями значения и ID через JS-->
 									<td>
-										<input type="hidden" id="cart-item-000002" value="000002">
-										<label for="cart-item-000002" name="cart-item-name">Клубничный пломбир с присыпкой из белого шоколада</label>
+										<input type="hidden" id="basket-item-000002" value="000002">
+										<label for="basket-item-000002" name="basket-item-name">Клубничный пломбир с присыпкой из белого шоколада</label>
 									</td>
 									<td>
-										<input type="number" id="cart-item-w-1" value="1.5" disabled>
-										<label for="cart-item-w-1">кг</label>
-										<span class="cart-mnemonic">x</span>
-										<input class="cart-price" type="number" id="cart-item-p-2" value="300" disabled>
-										<label for="cart-item-p-2">руб.</label>
+										<input type="number" id="basket-item-w-1" value="1.5">
+										<label for="basket-item-w-1">кг</label>
+										&times;
+										<input type="number" id="basket-item-p-2" value="300">
+										<label for="basket-item-p-2">руб.</label>
 									</td>
 									<td>
-										<input type="number" id="cart-item-p-2" value="450" disabled>
-										<label for="cart-item-p-2">руб.</label>
+										<input type="number" id="basket-item-p-2" value="450">
+										<label for="basket-item-p-2">руб.</label>
 									</td>
 								</tr>
 							</table>
 						</fieldset>
 						<p>Итого:750 руб.</p>
-						<button class="button cart-submit" type="submit">Оформить заказ</button>
+						<button type="submit">Оформить заказ</button>
 					</form>
 				</div>
 			</section>
 		</nav>
-		<section class="schedule">
-			<h2 class="visually-hidden">Режим работы и телефон магазина</h2>
+		<section>
+			<h2 class="visually-hidden"> Режим работы и телефон магазина</h2>
 			<p>С 10 до 20, ежедневно</p>
 			<a href="tel:+78124502525">8 812 450-25-25</a>
 		</section>
@@ -173,8 +173,8 @@
 						<div class="range-line"></div>
 						<div class="range-line-strong"></div>
 						<!-- убрать картинки из разметки в CSS -->
-						<button class="button" type="button"><img src="img/svg/filter-button.svg" alt=""></button>
-						<button class="button" type="button"><img src="img/svg/filter-button.svg" alt=""></button>
+						<button type="button"><img src="img/svg/filter-button.svg" alt=""></button>
+						<button type="button"><img src="img/svg/filter-button.svg" alt=""></button>
 					</div>
 				</fieldset>
 				<fieldset name="fatness-filter">
@@ -192,7 +192,7 @@
 					<label><input type="checkbox" name="filler" value="syrup">сиропы</label>
 					<label><input type="checkbox" name="filler" value="jam">джемы</label>
 				</fieldset>
-				<button class="button" type="submit" value="use-filters">Отправить</button>
+				<button type="submit" value="use-filters">Отправить</button>
 			</form>			
 			<section>
 				<h2 class="visually-hidden">Каталог мороженного</h2>
