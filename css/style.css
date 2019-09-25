@@ -11,8 +11,22 @@ body {
   background-repeat: no-repeat;
 }
 
-/*изменения курсора при наведении для всех кнопок на сайте
-возможно есть смысл убрать этот пункт в normolize.css*/
+/*этот класс унас на всем что выглядит как красная кнопка*/
+.button{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #fefefe;
+
+  vertical-align: middle;
+
+  background-color: #f26843;
+  background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
+  border: none;
+}
+/*делаем лапку при наведени =) 
+почему-то был уверен что на теге button 
+всегда висит курсор поинтер*/
 .button:hover{
   cursor: pointer;
 }
@@ -44,6 +58,12 @@ body {
 
 .main-menu{
 	list-style: none;
+}
+
+.menu-item a:hover{
+  color: #323232;
+
+  background-color: #f8f7f4;
 }
 .sub-menu{
   background-color: #f8f7f4;
@@ -78,7 +98,7 @@ body {
 
 /*КНОПКИ USER-NAVIGATION*/
 /*у всех кнопок в секции с классом user-navigation один шрифт,
-цвет шрифта, одинаковый бекгранунд.*/
+цвет шрифта, одинаковый бекгранунд ховер и т.д.*/
 .user-button{
   font-size: 14px;
   font-weight: 500;
@@ -89,17 +109,26 @@ body {
   background-color: rgba(255, 255, 255, 0.2); 
 }
 
-/*СОЖЕРЖИМОЕ ФОРМ USER-NAVIGATION*/
+.user-button:hover{
+  color: #323232;
+
+  background-color: #f8f7f4;
+}
+
+/*СОЖЕРЖИМОЕ ФОРМ*/
 
 .search-form fieldset,
 .account-form fieldset,
-.cart-form fieldset{
+.cart-form fieldset,
+.modal fieldset{
   background-color: #f8f7f4;
   border: none;
 }
 
 .search-form input,
-.account-form input{
+.account-form input,
+.modal input,
+.modal textarea{
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
@@ -110,12 +139,16 @@ body {
 }
 
 .search-form input:hover,
-.account-form input:hover{
+.account-form input:hover,
+.modal input:hover,
+.modal textarea:hover{
   border: 2px solid rgba(154, 154, 154, 0.52);
 }
 
 .search-form input:focus,
-.account-form input:focus{
+.account-form input:focus,
+.modal input:focus,
+.modal textarea:focus{
   border: 2px solid rgba(46, 136, 228, 0.52);
 }
 
@@ -509,10 +542,6 @@ footer ul{
 }
 
 /*МОДАЛЬНОЕ ОКНО*/
-.modal fieldset{
-  background-color: #f8f7f4;
-  border: none;
-}
 .modal p{
   font-size: 24px;
   font-weight: 500;
@@ -520,31 +549,14 @@ footer ul{
   color: #323232;
 }
 
-.modal input{
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  color: #999999;
-
-  background-color: #ffffff;
-  border: 1px solid #d3d3d2;
-}
-
-.modal input:hover{
-  border: 2px solid rgba(154, 154, 154, 0.52);
-}
-
-.modal input:focus{
-  border: 2px solid rgba(46, 136, 228, 0.52);
-}
-
-.modal-send{
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
-  color: #fefefe;
-
-  background-color: #e84d37;
-  background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
+.modal-close{
+  background-color: transparent;
   border: none;
 }
+
+.modal-close:hover{
+  cursor: pointer;
+}
+
+
+
