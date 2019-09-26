@@ -40,63 +40,64 @@ body {
   margin: -1px;
 }
 
-/*ОСНОВНАЯ НАВИГАЦИЯ*/
-/*не уверен надо ли дублировать тут фон и цвет текста, 
-он вроде как задан для всего боди и всех ссылок*/
-.main-navigation {
+      /*HEADER*/
+/*основная навигация*/
+/*current будет вешаться на элемент JSом видимо
+нужен для подсветки ссылки на 
+ту страницу на котрой мы находимся*/
+.current {
+  background-color: #d07058;
+}
+
+.main-navigation ul{
+  list-style: none;
+}
+
+/*display: block поставил что бы весь ли стал ссылкой
+и было видно работают ховеры с фокусом или нет*/
+.menu a{
+  display: block;
   font-size: 16px;
   font-weight: 700;
   line-height: 18px;
   color: #ffffff;
 
-  background-color: #849d8f;
+  text-decoration: none;
 }
 
-.main-navigation a{
-	color: #ffffff;
-}
-
-.main-menu{
-	list-style: none;
-}
-
-.menu-item a:hover{
+.main.menu-item a:hover,
+.main.menu-item a:focus,
+.main.menu-item a:active{
   color: #323232;
 
-  background-color: #f8f7f4;
-}
-.sub-menu{
-  background-color: #f8f7f4;
+  background-color: #f7f6f3;
 
-  list-style: none;
+  outline: none;
 }
 
-.sub-menu a{
+.sub.menu{
+  background-color: #f8f7f4;
+}
+
+.sub.menu a{
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
-
   color: #323232;
-
-	text-decoration: none;
 }
 
-/*в стайл гайде есть состояние нажатие и текущая.
-текущая я так понимаю это :active а нажатие есть псевдокласс?*/
-.sub-menu li:hover,
-.sub-menu li:focus{
-	background-color: #fbded7;
-}
-
-/*фокус с клавиатуры стандартный плохо виден,
-сделал фокус по цвету похожий на тот что указан
-для пункта меню при наведении в стайлгайде*/
-.sub-menu a:focus{
+.sub.menu-item a:hover,
+.sub.menu-item a:focus{
   background-color: #fbded7;
-  outline: 0;
+
+  outline: none;
 }
 
-/*КНОПКИ USER-NAVIGATION*/
+.sub.menu-item a:active{
+  background-color: #f6b5a5;
+}
+
+/*кнопки user-navigation*/
 /*у всех кнопок в секции с классом user-navigation один шрифт,
 цвет шрифта, одинаковый бекгранунд ховер и т.д.*/
 .user-button{
@@ -115,76 +116,21 @@ body {
   background-color: #f8f7f4;
 }
 
-/*СОЖЕРЖИМОЕ ФОРМ*/
-
-.search-form fieldset,
-.account-form fieldset,
-.cart-form fieldset,
-.modal fieldset{
-  background-color: #f8f7f4;
-  border: none;
-}
-
-.search-form input,
-.account-form input,
-.modal input,
-.modal textarea{
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 24px;
-  color: #999999;
-
-  background-color: #ffffff;
-  border: 1px solid #d3d3d2;
-}
-
-.search-form input:hover,
-.account-form input:hover,
-.modal input:hover,
-.modal textarea:hover{
-  border: 2px solid rgba(154, 154, 154, 0.52);
-}
-
-.search-form input:focus,
-.account-form input:focus,
-.modal input:focus,
-.modal textarea:focus{
-  border: 2px solid rgba(46, 136, 228, 0.52);
-}
-
-/*кнопка Вход на форме входа в личный кабинет*/
-.login-submit{
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
-  color: #fefefe;
-
-  background-color: #e84d37;
-  background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
-  border: none;
-}
-
-/*ссылки на форме входа в личный кабинет*/ 
-.account-form .form-link{
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 24px;
-  color: #323232;
-}
-
-/*вакханалия с корзиной*/
+/*корзина*/
 .delete-item{
   background-color: transparent;
   background-image: url("../img/svg/cross-small.svg");
   background-position: center;
   background-repeat: no-repeat;
   /*саблим сразу добавил с префиксом CSS стиль
-   не знаю нужен он тут или нетб но где-то в критериях 
+   не знаю нужен он тут или нет но где-то в критериях 
    дополнительных написано что если есть свойство 
    с префиксом обязательно дублировать значение и без префикса*/
   -webkit-background-size: 11px 11px;
   background-size: 11px 11px;
   border: none;
+
+  cursor: pointer;
 }
 .cart-form label,
 .cart-form input,
@@ -210,17 +156,6 @@ body {
   color: #323232;
 }
 
-.cart-submit{
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
-  color: #fefefe;
-
-  background-color: #e84d37;
-  background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
-  border: none;
-}
-
 .schedule p{
   font-size: 14px;
   font-weight: 700;
@@ -236,7 +171,56 @@ body {
   text-decoration: none;
 }
 
-/*SLIDER*/
+/*form input textarea*/
+.search-form fieldset,
+.account-form fieldset,
+.cart-form fieldset,
+.modal fieldset{
+  background-color: #f8f7f4;
+  border: none;
+}
+
+.search-form input,
+.account-form input,
+.subscribe input,
+.modal input,
+.modal textarea{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #999999;
+
+  background-color: #ffffff;
+  border: 1px solid #d3d3d2;
+}
+
+.search-form input:hover,
+.account-form input:hover,
+.subscribe input:hover,
+.modal input:hover,
+.modal textarea:hover{
+  border: 2px solid rgba(154, 154, 154, 0.52);
+}
+
+.search-form input:focus,
+.account-form input:focus,
+.subscribe input:focus,
+.modal input:focus,
+.modal textarea:focus{
+  border: 2px solid rgba(46, 136, 228, 0.52);
+}
+
+/*ссылки на форме входа в личный кабинет*/ 
+.account-form .form-link{
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #323232;
+}
+      /*КОНЕЦ HEADER*/
+      
+      /*MAIN*/
+/*блок slider*/
 .slider-item{
   text-align: center;
 }
@@ -250,15 +234,11 @@ body {
   font-size: 32px;
   font-weight: 700;
   line-height: 44px;
-  color: #ffffff;
 
   text-decoration: none;
-
-  background-color: #f26843;
-  background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
 }
 
-/*БЛОК АКЦИЯ*/
+/*блок акция*/
 .event h3{
   font-size: 35px;
   font-weight: 700;
@@ -272,15 +252,7 @@ body {
 }
 
 .event a{
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
-  color: #ffffff;
-
   text-decoration: none;
-
-  background-color: #f26843;
-  background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
 }
 
 .raspberry{
@@ -291,13 +263,13 @@ body {
 }
 
 .choco{
-  background-color: #9d0532;
+  background-color: #412211;
   background-image: url("../img/background-choco.jpg");
   background-position: center;
   background-repeat: no-repeat;
 }
 
-/*БЛОК ХИТ*/
+/*блок хит*/
 .hit p{
   font-size: 45px;
   font-weight: 700;
@@ -315,7 +287,7 @@ body {
   color: #ffffff;
 }
 
-/*БЛОК ПРЕИМУЩЕСТВА*/
+/*блок преимущества*/
 .advantages{
   color: #323232;
 
@@ -373,7 +345,7 @@ body {
   line-height: 22px;
 }
 
-/*БЛОК НОВОЕ В БЛОГЕ+РАССЫЛКА
+/*блок новое в блоге+рассылка
 (обединил потому что они составляют один блок)*/
 .new-in-blog{
   background-color: #ffffff;
@@ -411,11 +383,11 @@ body {
   сделаю немного меньше нижнего что бы получить эффект как 
   в макете*/
   -webkit-background-size: 
-    100% auto,
-    95% auto;
+    250px auto,
+    255px auto;
   background-size: 
-    100% auto,
-    95% auto;
+    250px auto,
+    255px auto;
   background-repeat: 
     no-repeat,
     no-repeat;
@@ -428,36 +400,7 @@ body {
   color: #5a5a5a;
 }
 
-.subscribe input{
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  color: #999999;
-
-  background-color: #ffffff;
-  border: 1px solid #d3d3d2;
-}
-
-.subscribe input:hover{
-  border: 2px solid rgba(154, 154, 154, 0.52);
-}
-
-.subscribe input:focus{
-  border: 2px solid rgba(46, 136, 228, 0.52);
-}
-
-.button-subscribe{
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
-  color: #fefefe;
-
-  background-color: #e84d37;
-  background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
-  border: none;
-}
-
-/*БЛОК С КАРТОЙ*/
+/*блок с картой*/
 .map{
   background-image: 
     url("../img/svg/pin.svg"),
@@ -500,33 +443,73 @@ body {
 }
 
 .address a{
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
-  color: #fefefe;
-
   text-decoration: none;
-
-  background-color: #e84d37;
-  background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
-  border: none;
 }
 
-/*СОЦСЕТИ*/
+/*хлбные крошки*/
+.breadcrumb-menu{
+  list-style: none;
+}
+
+.breadcrumb-menu a{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+/*название текущего раздела каталога*/
+.catalog h1{
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 41px;
+}
+
+/*фильтры каталога*/
+.filters fieldset{
+  border: none;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.filters legend{
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.sort{
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #ffffff;
+
+  border: none;
+  background-color: transparent;
+}
+
+.sort option{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #323232;
+}
+      /*КОНЕЦ MAIN*/
+
+      /*FOOTER*/
+/*соцсети*/
 footer ul{
   list-style: none;
 }
 
 /*обводку для соц сетей не знаю как сделать.
-у меня через брдер радиус почему то блок
+у меня через бордер радиус почему то блок
 не круглым а овальным становится*/
-
 .footer-menu a{
   font-size: 13px;
   font-weight: 700;
   line-height: 18px;
   color: #ffffff;
 }
+
 .footer-menu .heart{
   background-image: url("../img/svg/heart.svg");
   background-position: left center;
@@ -540,8 +523,9 @@ footer ul{
   font-weight: 400;
   line-height: 18px;
 }
+      /*КОНЕЦ FOOTER*/
 
-/*МОДАЛЬНОЕ ОКНО*/
+      /*МОДАЛЬНОЕ ОКНО*/
 .modal p{
   font-size: 24px;
   font-weight: 500;
@@ -557,6 +541,7 @@ footer ul{
 .modal-close:hover{
   cursor: pointer;
 }
+      /*КОНЕЦ МОДАЛЬНОЕ ОКНО*/
 
 
 

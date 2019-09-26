@@ -9,29 +9,29 @@
 </head>
 <body>
 	<header>
-		<a><img src="img/svg/logo.svg" width="154" height="64" alt="Логотип магазина Глейси"></a>
+		<a href="index.html"><img src="img/svg/logo.svg" width="154" height="64" alt="Логотип магазина Глейси"></a>
 		<nav class="main-navigation">
-			<ul class="main-menu">
-				<li>
+			<ul class="main menu">
+				<li class="main menu-item current">
 					<a href="catalog.html">Каталог</a>
-					<ul class="sub-menu">
-						<li><a href="#"><b>Новинки</b></a></li>
-						<li><a>Сливочное</a></li>
-						<li><a href="#">Щербеты</a></li>
-						<li><a href="#">Фруктовый лед</a></li>
-						<li><a href="#">Мелорин</a></li>
+					<ul class="sub menu">
+						<li class="sub menu-item"><a href="#"><b>Новинки</b></a></li>
+						<li class="sub menu-item current"><a href="catalog.html">Сливочное</a></li>
+						<li class="sub menu-item"><a href="#">Щербеты</a></li>
+						<li class="sub menu-item"><a href="#">Фруктовый лед</a></li>
+						<li class="sub menu-item"><a href="#">Мелорин</a></li>
 					</ul>
 				</li>
-				<li>
+				<li class="main menu-item">
 					<a href="#">Доставка и оплата</a>
 				</li>
-				<li>
+				<li class="main menu-item">
 					<a href="#">О Компании</a>
 				</li>
 			</ul>
 			<section class="user-navigation">
 				<div>
-					<button class="button user-button button-search" type="button" aria-label="Поиск"><img src="img/svg/loupe.svg" width="17" height="17" alt="Поиск"></button>
+					<button class="user-button button-search" type="button" aria-label="Поиск"><img src="img/svg/loupe.svg" width="17" height="17" alt="Поиск"></button>
 					<!-- Ховер Поиск-->
 					<form class="search-form" action="gllacyshop.ru" type="post" name="search-form">
 						<fieldset>
@@ -41,7 +41,7 @@
 					</form>
 				</div>
 				<div>
-					<button class="button user-button button-login" type="button"><img src="img/svg/entrance.svg" width="17" height="17" alt="Вход">Вход</button>
+					<button class="user-button button-login" type="button"><img src="img/svg/entrance.svg" width="17" height="17" alt="Вход">Вход</button>
 					<!-- Ховер Вход в личный кабинет-->
 					<form class="account-form" action="gllacyshop.ru" type="post" name="account-form">
 						<fieldset name="user-data">
@@ -74,7 +74,7 @@
 								<tr>
 									<!-- текст уберу в CSS -->
 									<td>
-										<button class="button delete-item" type="button" value="delet-item" aria-label="удалить товар"></button>
+										<button class="delete-item" type="button" value="delet-item" aria-label="удалить товар"></button>
 									</td>
 									<td>
 										<img src="img/ice-cream-orange.png" width="33" height="33" alt="Фото мороженного">
@@ -147,13 +147,13 @@
 				<a>Сливочное</a>
 			</li>
 		</ul>
-		<section>
+		<section class="catalog">
 			<h1>Сливочное мороженое</h1>			
-			<form action="gllacyshop.ru" type="get" name="filters">
+			<form class="filters" action="gllacyshop.ru" type="get" name="filters">
 				<h2 class="visually-hidden">Фильтр мороженного</h2>
 				<fieldset>
 					<legend>Сортировка:</legend>
-					<select name="sort">
+					<select class="sort" name="sort">
 						<option value="popularity">по популярности</option>
 						<option value="price-up">сначала недорогие</option>
 						<option value="price-down">сначала дорогие</option>
