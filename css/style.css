@@ -465,7 +465,9 @@ body {
   line-height: 41px;
 }
 
-/*фильтры каталога*/
+/*фильтры каталога
+я потом доделаю стилизацию всего это добра когда уже
+сетки построим и так далее
 .filters fieldset{
   border: none;
   background-color: rgba(255, 255, 255, 0.2);
@@ -484,12 +486,102 @@ body {
 
   border: none;
   background-color: transparent;
+
+  -ms-appearance: none;
+  appearance: none!important;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.sort::-ms-expand{
+  display: none;
+}
+
+.filter-sort::after{
+  content: "▼";
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
 }
 
 .sort option{
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
+  color: #323232;
+}
+
+.filter-cost p{
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #ffffff;
+}
+.filter-cost input{
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #ffffff;
+
+  border: none;
+  background-color: transparent;
+
+  -moz-appearance: textfield;
+}
+
+.filter-cost input::-webkit-outer-spin-button,
+.filter-cost input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.range-button{
+  background-color: transparent;
+  border: none;
+}
+
+.filter-fatness label{
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.filter-fatness input{
+  font-size: 20px;
+}*/
+/*блок с товарами*/
+.products-item p{
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 45px;
+}
+
+.products-item span{
+  font-size: 30px;
+}
+
+.products-item a{
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+/*блок со страницами каталога*/
+.catalog-navigation ul{
+  list-style: none;
+}
+
+.catalog-navigation a{
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #ffffff;
+
+  text-decoration: none;
+}
+.catalog-navigation a.active{
   color: #323232;
 }
       /*КОНЕЦ MAIN*/

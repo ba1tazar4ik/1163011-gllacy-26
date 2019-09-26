@@ -57,7 +57,7 @@
 					</form>
 				</div>
 				<div>
-					<button class="button user-button button-cart" type="button"><img src="img/svg/cart-red.svg" width="17" height="17" alt="Корзина">2 товара</button>
+					<button class="user-button button-cart" type="button"><img src="img/svg/cart-red.svg" width="17" height="17" alt="Корзина">2 товара</button>
 					<!-- Ховер Корзина-->
 					<form class="cart-form" action="gllacyshop.ru" type="post" name="cart-form">
 						<fieldset>
@@ -151,7 +151,7 @@
 			<h1>Сливочное мороженое</h1>			
 			<form class="filters" action="gllacyshop.ru" type="get" name="filters">
 				<h2 class="visually-hidden">Фильтр мороженного</h2>
-				<fieldset>
+				<fieldset class="filter-sort">
 					<legend>Сортировка:</legend>
 					<select class="sort" name="sort">
 						<option value="popularity">по популярности</option>
@@ -160,7 +160,7 @@
 						<option value="fatness">по жирности</option>
 					</select>
 				</fieldset>
-				<fieldset>
+				<fieldset class="filter-cost">
 					<legend>Цена:</legend>
 					<p>
 						<input type="number" id="min-cost" min="50" max="645" step="5" value="100">
@@ -173,18 +173,18 @@
 						<div class="range-line"></div>
 						<div class="range-line-strong"></div>
 						<!-- убрать картинки из разметки в CSS -->
-						<button class="button" type="button"><img src="img/svg/filter-button.svg" alt=""></button>
-						<button class="button" type="button"><img src="img/svg/filter-button.svg" alt=""></button>
+						<button class="range-button" type="button"><img src="img/svg/filter-button.svg" alt=""></button>
+						<button class="range-button" type="button"><img src="img/svg/filter-button.svg" alt=""></button>
 					</div>
 				</fieldset>
-				<fieldset name="fatness-filter">
+				<fieldset class="filter-fatness" name="fatness-filter">
 					<legend>Жирность:</legend>					
 					<label ><input type="radio" name="fatness" value="0%">0%</label>
 					<label ><input type="radio" name="fatness" value="to 10%" checked>до 10%</label>
 					<label ><input type="radio" name="fatness" value="to 30%">до 30%</label>
 					<label ><input type="radio" name="fatness" value="above 30%">выше 30%</label>
 				</fieldset>
-				<fieldset name="filler-filter">
+				<fieldset class="filter-filler" name="filler-filter">
 					<legend>Наполнители:</legend>					
 					<label><input type="checkbox" name="filler" value="chocolate" checked>шоколадные</label>
 					<label><input type="checkbox" name="filler" value="sugar powder" checked>сахарные присыпки</label>
@@ -192,84 +192,84 @@
 					<label><input type="checkbox" name="filler" value="syrup">сиропы</label>
 					<label><input type="checkbox" name="filler" value="jam">джемы</label>
 				</fieldset>
-				<button class="button" type="submit" value="use-filters">Отправить</button>
+				<button class="filter-button" type="submit" value="use-filters">Применить</button>
 			</form>			
-			<section>
+			<section class="products">
 				<h2 class="visually-hidden">Каталог мороженного</h2>
-				<article>
+				<article class="products-item">
 					<img src="img/ice-cream-orange.png" width="267" height="267" alt="Фото мороженного">
-					<span>310 ₽/кг</span>
+					<p>310 ₽<span>/кг</span></p>
 					<a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
 				</article>
-				<article>
+				<article class="products-item">
 					<img src="img/ice-cream-choco.png" width="267" height="267" alt="Фото мороженного">
-					<span>380 ₽/кг</span>
+					<p>380 ₽<span>/кг</span></p>
 					<a href="#">Сливочно-кофейное с кусочками шоколада</a>
 				</article>
-				<article>
+				<article class="products-item">
 					<img src="img/ice-cream-strawberry.png" width="267" height="267" alt="Фото мороженного">
-					<span>355 ₽/кг</span>
+					<p>355 ₽<span>/кг</span></p>
 					<a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
 				</article>
-				<article>
+				<article class="products-item">
 					<img src="img/ice-cream-caramel.png" width="267" height="267" alt="Фото мороженного">
-					<span>415 ₽/кг</span>
+					<p>415 ₽<span>/кг</span></p>
 					<a href="#">Сливочное крем-брюле с карамельной подливкой</a>
 				</article>
-				<article>
+				<article class="products-item">
 					<img src="img/ice-cream-cowberry.png" width="267" height="267" alt="Фото мороженного">
-					<span>325 ₽/кг</span>
+					<p>325 ₽<span>/кг</span></p>
 					<a href="#">Сливочное с брусничным джемом</a>
 				</article>
-				<article>
+				<article class="products-item">
 					<img src="img/ice-cream-blueberry.png" width="267" height="267" alt="Фото мороженного">
-					<span>410 ₽/кг</span>
+					<p>410 ₽<span>/кг</span></p>
 					<a href="#">Сливочно-черничное с цельными ягодами черники</a>
 				</article>
-				<article>
+				<article class="products-item">
 					<img src="img/ice-cream-lemon.png" width="267" height="267" alt="Фото мороженного">
-					<span>375 ₽/кг</span>
+					<p>375 ₽<span>/кг</span></p>
 					<a href="#">Сливочно-лимонное с карамельной присыпкой</a>
 				</article>
-				<article>
+				<article class="products-item">
 					<img src="img/ice-cream-choco-chip.png" width="267" height="267" alt="Фото мороженного">
-					<span>320 ₽/кг</span>
+					<p>320 ₽<span>/кг</span></p>
 					<a href="#">Сливочное с шоколадной стружкой</a>
 				</article>
-				<article>
+				<article class="products-item">
 					<img src="img/ice-cream-vanilla.png" width="267" height="267" alt="Фото мороженного">
-					<span>440 ₽/кг</span>
+					<p>440 ₽<span>/кг</span></p>
 					<a href="#">Сливочно-ванильное с кусочками шоколада</a>
 				</article>
-				<article>
+				<article class="products-item">
 					<img src="img/ice-cream-menthol.png" width="267" height="267" alt="Фото мороженного">
-					<span>435 ₽/кг</span>
+					<p>435 ₽<span>/кг</span></p>
 					<a href="#">Сливочноe с ментоловым сиропом</a>
 				</article>
-				<article>
+				<article class="products-item">
 					<img src="img/ice-cream-choco-black.png" width="267" height="267" alt="Фото мороженного">
-					<span>355 ₽/кг</span>
+					<p>355 ₽<span>/кг</span></p>
 					<a href="#">Сливочное с кусочками черного шоколада</a>
 				</article>
-				<article>
+				<article class="products-item">
 					<img src="img/ice-cream-mint.png" width="267" height="267" alt="Фото мороженного">
-					<span>420 ₽/кг</span>
+					<p>420 ₽<span>/кг</span></p>
 					<a href="#">Сливочное с мятным сиропом</a>
 				</article>
 			</section>
 		</section>
-		<section>
+		<section class="catalog-navigation">
 			<!-- убрать картинки из разметки в CSS -->
 			<h2 class="visually-hidden">Страницы каталога</h2>
-			<a href="#"><img src="img/svg/icon-right-small.svg" alt=""></a>
+			<a class="previous" href="#"><img src="img/svg/icon-right-small.svg" width="8" height="12" alt="предыдущая страница"></a>
 			<ul>
-				<li><a href="#">1</a></li>
+				<li><a  class="active" href="#">1</a></li>
 				<li><a href="#">2</a></li>
 				<li><a href="#">3</a></li>
 				<li><a href="#">4</a></li>
 				<li><a href="#">5</a></li>
 			</ul>
-			<a href="#"><img src="img/svg/icon-right-small.svg" alt=""></a>
+			<a class="next" href="#"><img src="img/svg/icon-right-small.svg" width="8" height="12" alt="следующая страница"></a>
 		</section>
 	</main>
 	<footer>
