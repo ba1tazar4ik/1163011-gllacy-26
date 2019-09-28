@@ -23,12 +23,13 @@ body {
   background-color: #f26843;
   background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
   border: none;
-}
-/*делаем лапку при наведени =) 
-почему-то был уверен что на теге button 
-всегда висит курсор поинтер*/
-.button:hover{
+
   cursor: pointer;
+}
+
+.button:hover,
+.button:focus{
+  
 }
 
 /*класс скрывающий эллементы*/
@@ -55,7 +56,7 @@ body {
 
 /*display: block поставил что бы весь ли стал ссылкой
 и было видно работают ховеры с фокусом или нет*/
-.menu a{
+.main-menu a{
   display: block;
   font-size: 16px;
   font-weight: 700;
@@ -65,9 +66,8 @@ body {
   text-decoration: none;
 }
 
-.main.menu-item a:hover,
-.main.menu-item a:focus,
-.main.menu-item a:active{
+.main-menu a:hover,
+.main-menu a:focus{
   color: #323232;
 
   background-color: #f7f6f3;
@@ -75,25 +75,31 @@ body {
   outline: none;
 }
 
-.sub.menu{
+.main-menu a:active{
+  color: #323232;
+
+  background-color: #ededed;
+}
+
+.sub-menu{
   background-color: #f8f7f4;
 }
 
-.sub.menu a{
+.sub-menu a{
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
   color: #323232;
 }
 
-.sub.menu-item a:hover,
-.sub.menu-item a:focus{
+.sub-menu a:hover,
+.sub-menu a:focus{
   background-color: #fbded7;
 
   outline: none;
 }
 
-.sub.menu-item a:active{
+.sub-menu a:active{
   background-color: #f6b5a5;
 }
 
@@ -110,10 +116,17 @@ body {
   background-color: rgba(255, 255, 255, 0.2); 
 }
 
+.user-button:hover,
 .user-button:hover{
   color: #323232;
 
   background-color: #f8f7f4;
+}
+
+.user-button a:active{
+  color: #323232;
+
+  background-color: #ededed;
 }
 
 /*корзина*/
@@ -122,19 +135,12 @@ body {
   background-image: url("../img/svg/cross-small.svg");
   background-position: center;
   background-repeat: no-repeat;
-  /*саблим сразу добавил с префиксом CSS стиль
-   не знаю нужен он тут или нет но где-то в критериях 
-   дополнительных написано что если есть свойство 
-   с префиксом обязательно дублировать значение и без префикса*/
-  -webkit-background-size: 11px 11px;
   background-size: 11px 11px;
   border: none;
 
   cursor: pointer;
 }
-.cart-form label,
-.cart-form input,
-.cart-mnemonic{
+.cart-text{
   font-size: 13px;
   font-weight: 400;
   line-height: 16px;
@@ -145,7 +151,7 @@ body {
   border:none;
   background-color: transparent;
 }
-.cart-form .cart-price{
+.cart-price{
   color: #999999;
 }
 
@@ -172,19 +178,12 @@ body {
 }
 
 /*form input textarea*/
-.search-form fieldset,
-.account-form fieldset,
-.cart-form fieldset,
-.modal fieldset{
+.form-fieldset{
   background-color: #f8f7f4;
   border: none;
 }
 
-.search-form input,
-.account-form input,
-.subscribe input,
-.modal input,
-.modal textarea{
+.form-input{
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
@@ -194,24 +193,16 @@ body {
   border: 1px solid #d3d3d2;
 }
 
-.search-form input:hover,
-.account-form input:hover,
-.subscribe input:hover,
-.modal input:hover,
-.modal textarea:hover{
+.form-input:hover{
   border: 2px solid rgba(154, 154, 154, 0.52);
 }
 
-.search-form input:focus,
-.account-form input:focus,
-.subscribe input:focus,
-.modal input:focus,
-.modal textarea:focus{
+.form-input:focus{
   border: 2px solid rgba(46, 136, 228, 0.52);
 }
 
 /*ссылки на форме входа в личный кабинет*/ 
-.account-form .form-link{
+.form-link{
   font-size: 13px;
   font-weight: 400;
   line-height: 24px;
@@ -270,22 +261,6 @@ body {
 }
 
 /*блок хит*/
-.hit p{
-  font-size: 45px;
-  font-weight: 700;
-  line-height: 45px;
-}
-
-.hit span{
-  font-size: 30px;
-}
-
-.hit a{
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 22px;
-  color: #ffffff;
-}
 
 /*блок преимущества*/
 .advantages{

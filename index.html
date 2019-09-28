@@ -11,21 +11,21 @@
 	<header>
 		<a><img src="img/svg/logo.svg" width="154" height="64" alt="Логотип магазина Глейси"></a>
 		<nav class="main-navigation">
-			<ul class="main menu">
-				<li class="main menu-item">
+			<ul class="main-menu">
+				<li>
 					<a href="catalog.html">Каталог</a>
-					<ul class="sub menu">
-						<li class="sub menu-item"><a href="#"><b>Новинки</b></a></li>
-						<li class="sub menu-item"><a href="catalog.html">Сливочное</a></li>
-						<li class="sub menu-item"><a href="#">Щербеты</a></li>
-						<li class="sub menu-item"><a href="#">Фруктовый лед</a></li>
-						<li class="sub menu-item"><a href="#">Мелорин</a></li>
+					<ul class="sub-menu">
+						<li><a href="#"><b>Новинки</b></a></li>
+						<li><a href="catalog.html">Сливочное</a></li>
+						<li><a href="#">Щербеты</a></li>
+						<li><a href="#">Фруктовый лед</a></li>
+						<li><a href="#">Мелорин</a></li>
 					</ul>
 				</li>
-				<li class="main menu-item">
+				<li>
 					<a href="#">Доставка и оплата</a>
 				</li>
-				<li class="main menu-item">
+				<li>
 					<a href="#">О Компании</a>
 				</li>
 			</ul>
@@ -34,9 +34,9 @@
 					<button class="user-button button-search" type="button" aria-label="Поиск"><img src="img/svg/loupe.svg" width="17" height="17" alt="Поиск"></button>
 					<!-- Ховер Поиск-->
 					<form class="search-form" action="gllacyshop.ru" type="post" name="search-form">
-						<fieldset>
+						<fieldset class="form-fieldset">
 							<legend class="visually-hidden">Форма поиска</legend>
-							<input type="search" name="search" placeholder="Крем-брюле">
+							<input class="form-input" type="search" name="search" placeholder="Крем-брюле">
 						</fieldset>
 					</form>
 				</div>
@@ -44,12 +44,12 @@
 					<button class="user-button button-login" type="button"><img src="img/svg/entrance.svg" width="17" height="17" alt="Вход">Вход</button>
 					<!-- Ховер Вход в личный кабинет-->
 					<form class="account-form" action="gllacyshop.ru" type="post" name="account-form">
-						<fieldset name="user-data">
+						<fieldset name="user-data" class="form-fieldset">
 							<legend class="visually-hidden">Личный кабинет</legend>	
 							<label for="user-login-lk" class="visually-hidden">Логин</label>
-							<input type="email" name="user-login" id="user-login-lk" placeholder="email@example.com">
+							<input class="form-input" type="email" name="user-login" id="user-login-lk" placeholder="email@example.com">
 							<label for="user-password" class="visually-hidden">Пароль</label>
-							<input type="password" name="password" id="user-password" placeholder="••••••••">
+							<input class="form-input" type="password" name="password" id="user-password" placeholder="••••••••">
 							<button class="button login-submit" type="submit" value="login">Войти</button>
 							<a href="#" class="form-link">Забыли пароль?</a>
 							<a href="#" class="form-link">Новая регистрация</a>
@@ -107,25 +107,25 @@
 		</section>
 		<section>
 			<h2 class="visually-hidden">Хит продаж</h2>
-			<article class="hit">
+			<article class="products-item">
 				<img src="img/svg/hit.svg" width="61" height="61" alt="Хит">
 				<img src="img/ice-cream-orange.png" width="267" height="267" alt="Фото мороженного">
 				<p>310 ₽<span>/кг</span></p>
 				<a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
 			</article>
-			<article class="hit">
+			<article class="products-item">
 				<img src="img/svg/hit.svg" width="61" height="61" alt="Хит">
 				<img src="img/ice-cream-choco.png" width="267" height="267" alt="Фото мороженного">
 				<p>380 ₽<span>/кг</span></p>
 				<a href="#">Сливочно-кофейное с кусочками шоколада</a>
 			</article>
-			<article class="hit">
+			<article class="products-item">
 				<img src="img/svg/hit.svg" width="61" height="61" alt="Хит">
 				<img src="img/ice-cream-strawberry.png" width="267" height="267" alt="Фото мороженного">
 				<p>355 ₽<span>/кг</span></p>
 				<a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
 			</article>
-			<article class="hit">
+			<article class="products-item">
 				<img src="img/svg/hit.svg" width="61" height="61" alt="Хит">
 				<img src="img/ice-cream-caramel.png" width="267" height="267" alt="Фото мороженного">
 				<p>415 ₽<span>/кг</span></p>
@@ -150,21 +150,21 @@
 				</li>
 			</ul>
 		</section>		
-		<div>
-			<section class="new-in-blog">
+		<section>
+			<article class="new-in-blog">
 				<h2>Новое в нашем блоге</h2>
 				<a href="#">10 способов сервировки фруктовых щербетов к столу</a>
-			</section>
-			<section class="subscribe">
+			</article>
+			<article class="subscribe">
 				<h2 class="visually-hidden">Рассылка</h2>
 				<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
 				<form action="gllacyshop.ru" type="post">				
 					<label for="email" class="visually-hidden">Введите Ваш e-mail</label>
-					<input type="email" id="email" placeholder="email@example.com">
+					<input class="form-input" type="email" id="email" placeholder="email@example.com">
 					<button class="button button-subscribe" type="submit" value="subscribe">Отправить</button>
 				</form>
-			</section>
-		</div>
+			</article>
+		</section>
 		<section class="map">
 			<div class="address">				
 				<h2>Адрес главного офиса и офлайн-магазина:</h2>
@@ -212,15 +212,15 @@
 	<div class="modal">
 		<!-- модальное окно Формы обратной связи-->
 		<form action="gllacyshop.ru" type="post">
-			<fieldset>
+			<fieldset class="form-fieldset">
 				<legend class="visually-hidden">Форма обратной связи</legend>
 				<p>Мы обязательно вам ответим!</p>
 				<label for="user-name" class="visually-hidden">Ваше имя и фамилия</label>
-				<input type="text" name="name" id="user-name" placeholder="Имя Фамилия">
+				<input class="form-input" type="text" name="name" id="user-name" placeholder="Имя Фамилия">
 				<label for="user-email" class="visually-hidden">Ваш e-mail</label>
-				<input type="email" name="email" id="user-email" placeholder="email@example.com">
+				<input class="form-input" type="email" name="email" id="user-email" placeholder="email@example.com">
 				<label for="user-text" class="visually-hidden">Ваш вопрос или пожелание в свободной форме</label>
-				<textarea name="text" id="user-text" cols="100" rows="5" placeholder="В свободной форме"></textarea>
+				<textarea class="form-input" name="text" id="user-text" cols="100" rows="5" placeholder="В свободной форме"></textarea>
 				<button class="button modal-send" type="submit" value="send">Отправить</button>
 			</fieldset>			
 		</form>
