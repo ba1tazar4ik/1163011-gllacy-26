@@ -41,6 +41,16 @@ body {
   background-image: linear-gradient(to top, rgba(231, 74, 53, 0.93) 0%, rgba(242, 104, 67, 0.93) 100%);
 }
 
+/*hover и focuse всех ссылок по умолчанию*/
+.default-link:hover,
+.default-link:focus,
+.default-link:active{
+  color: #ffbc9e;
+  fill: #ffbc9e;
+
+  outline: none;
+}
+
 /*класс скрывающий эллементы*/
 .visually-hidden {
   position: absolute;
@@ -133,16 +143,12 @@ body {
   fill: #323232;
 }
 
-.user-button a:active{
+.user-button:active{
   color: #323232;
 
   background-color: #ededed;
 }
-.button-search,
-.button-login,
-.button-cart{
-  
-}
+
 /*корзина*/
 .delete-item{
   background-color: transparent;
@@ -159,12 +165,17 @@ body {
   font-weight: 400;
   line-height: 16px;
   color: #323232;
-}
 
-.cart-form input{
   border:none;
   background-color: transparent;
+  /*не прячет в мазиле стрелочки почему-то
+  а в IE работает*/
+  appearance: none!important;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
+
 .cart-price{
   color: #999999;
 }
@@ -577,6 +588,20 @@ body {
 }
 
 /*блок со страницами каталога*/
+.button-navigation{
+  background-color: transparent;
+  border: none;
+  fill: #ffffff;
+
+  cursor: pointer;
+}
+
+/* класс через JS будет вешаться если 
+мы находимся на первой или последней странице*/
+.catalog-navigation .disabled{
+  fill: #9db1a5;
+}
+
 .catalog-navigation ul{
   list-style: none;
 }
@@ -589,8 +614,14 @@ body {
 
   text-decoration: none;
 }
+
+.catalog-navigation a:hover{
+  background-color: #9db1a5;
+}
+
 .catalog-navigation a.active{
   color: #323232;
+  background-color: #ffffff;
 }
       /*КОНЕЦ MAIN*/
 
@@ -603,19 +634,25 @@ footer ul{
 /*обводку для соц сетей не знаю как сделать.
 у меня через бордер радиус почему то блок
 не круглым а овальным становится*/
+.social-network a,
+.social-network a:active{
+  fill: #e6ebe9;
+}
+
+.social-network a:hover{
+  fill: #ffffff;
+}
+
 .footer-menu a{
   font-size: 13px;
   font-weight: 700;
   line-height: 18px;
   color: #ffffff;
+  fill: #ffffff;
 }
 
-.footer-menu .heart{
-  background-image: url("../img/svg/heart.svg");
-  background-position: left center;
-  background-repeat: no-repeat;
-  -webkit-background-size: 15px 13px;
-  background-size: 15px 13px;
+.footer-menu a:hover{
+
 }
 
 .copyright p{
