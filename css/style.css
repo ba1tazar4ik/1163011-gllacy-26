@@ -167,13 +167,11 @@ body {
   color: #323232;
 
   border:none;
-  background-color: transparent;
-  /*не прячет в мазиле стрелочки почему-то
-  а в IE работает*/
-  appearance: none!important;
+  background-color: transparent; 
   -ms-appearance: none;
-  -moz-appearance: none;
   -webkit-appearance: none;
+  appearance: none;
+  -moz-appearance:textfield;  
 }
 
 .cart-price{
@@ -293,6 +291,7 @@ body {
 
   background-color: #ebdcbc;
   background-image: url("../img/background-waffle.jpg");
+  background-size: 100% 1;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -307,33 +306,33 @@ body {
   list-style: none;
 }
 
-.advantages-item:first-child{
+.ice-cream{
   background-image: url("../img/svg/ice-cream.svg");
-  background-position: left center;
+  background-position: left top;
   background-repeat: no-repeat;
   -webkit-background-size: 49px 49px;
   background-size: 49px 49px;
 }
 
-.advantages-item:nth-child(2){
+.eco{
   background-image: url("../img/svg/eco.svg");
-  background-position: left center;
+  background-position: left top;
   background-repeat: no-repeat;
   -webkit-background-size: 49px 49px;
   background-size: 49px 49px;
 }
 
-.advantages-item:nth-child(3){
+.cow{
   background-image: url("../img/svg/cow.svg");
-  background-position: left center;
+  background-position: left top;
   background-repeat: no-repeat;
   -webkit-background-size: 49px 49px;
   background-size: 49px 49px;
 }
 
-.advantages-item:last-child{
+.thermometer{
   background-image: url("../img/svg/thermometer.svg");
-  background-position: left center;
+  background-position: left top;
   background-repeat: no-repeat;
   -webkit-background-size: 49px 49px;
   background-size: 49px 49px;
@@ -352,7 +351,7 @@ body {
   background-image: url("../img/background-strawberry.jpg");
   /*после того как появится размер блока 
   выставлю значение положения*/
-  background-position: center center;
+  background-position: 20% 35%;
   background-repeat: no-repeat;
 }
 
@@ -371,26 +370,15 @@ body {
 }
 
 .subscribe{
+  border: 5px solid #92cdff;
+  border-image-source: url("../img/svg/background-post.svg");
+  border-image-slice: 5;
+  border-image-repeat: round;
   background-color: #f8f7f4;
-  background-image: 
-    url("../img/background-postal.png"),
-    url("../img/svg/background-post.svg");
-  background-position: 
-    center center,
-    center center;
-  /*размеры выставлю вместе с размерами блока
-  сейчас цифры поставил показать что я верхний слой
-  сделаю немного меньше нижнего что бы получить эффект как 
-  в макете*/
-  -webkit-background-size: 
-    250px auto,
-    255px auto;
-  background-size: 
-    250px auto,
-    255px auto;
-  background-repeat: 
-    no-repeat,
-    no-repeat;
+  background-image: url("../img/background-postal.png");
+  background-position: center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
 }
 
 .subscribe p{
@@ -679,6 +667,168 @@ footer ul{
   cursor: pointer;
 }
       /*КОНЕЦ МОДАЛЬНОЕ ОКНО*/
+/* ----- Сеточные стили ----- */
 
+html,
+body {
+  min-width: 1200px;
+  min-height: 2416px;
+}
 
+/*ограничивает по ширине и выравнивает по центру*/
+.container {
+  width: 1146px;
+  margin: 0 auto;
+  padding: 0 27px;
+}
 
+/*делает обертки флексом*/
+.wrapper{
+  display: flex;
+}
+
+.main-header{
+  width: 100%;
+  margin-top: 10px;
+}
+
+.header-logo{
+  margin-right: 24px;
+}
+
+.navigation-wrapper{
+  flex-direction: column;
+}
+
+.main-navigation{
+  width: 968px;
+  justify-content: space-between;
+}
+
+.main-navigation ul{
+  margin: 0;
+  padding: 0;
+}
+
+.main-menu li{
+  margin-right: 30px;
+}
+
+.sub-menu li{
+  margin-right: 0;
+}
+
+.user-navigation{
+  justify-content: flex-end;
+}
+.schedule{
+  text-align: end;
+}
+
+.column{
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.event{
+  width: 520px;
+  padding: 25px 20px;
+}
+
+.event h3{
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.event .button{
+  margin-top: 25px;
+}
+
+.products-item{
+  width: 267px;
+  text-align: center;
+}
+
+.advantages{
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 40px;
+}
+
+.advantages-list{
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  /*justify-content: space-between;*/
+}
+
+.advantages-item{
+  width: 540px;
+}
+
+.advantages-item:nth-child(odd){
+  margin-right: 20px;
+}
+
+.advantages-item p{
+  margin-left: 60px;
+}
+
+.new-in-blog{
+  width: 520px;
+  padding: 25px 20px;
+  padding-top: 30px;
+}
+.new-in-blog h2{
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.new-in-blog a{
+  display: block;
+  width: 60%;
+}
+
+.subscribe{
+  width: 520px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.subscribe p{
+  margin: 0;
+}
+
+.subscribe .form-input{
+  margin-top: 45px;
+  height: 45px;
+}
+footer .container{
+  padding-top: 20px;
+  justify-content: space-between;
+}
+footer ul{
+  margin: 0;
+  padding: 0;
+  /*padding-top: 20px;*/
+}
+.social-network{
+  width: 185px;
+}
+.social-network li{
+  margin-right: 15px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.footer-menu{
+  width: 330px;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.footer-menu li{
+  width: 50%;
+}
