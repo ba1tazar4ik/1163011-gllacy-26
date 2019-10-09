@@ -8,13 +8,13 @@
 	<title>GllacyShop</title>
 </head>
 <body>
-	<header class="main-header wrapper">
-		<div class="container wrapper navigation-wrapper">
-			<div class="wrapper">
+	<header class="main-header">
+		<div class="header-wrapper">
+			<div class="navigation-wrapper">
 				<a class="header-logo"><img src="img/svg/logo.svg" width="154" height="64" alt="Логотип магазина Глейси"></a>
-				<nav class="main-navigation wrapper">
-					<ul class="main-menu wrapper">
-						<li>
+				<nav class="main-navigation">
+					<ul class="main-menu">
+						<li class="main-menu-item">
 							<a href="catalog.html">Каталог</a>
 							<ul class="sub-menu">
 								<li><a href="#"><b>Новинки</b></a></li>
@@ -24,14 +24,14 @@
 								<li><a href="#">Мелорин</a></li>
 							</ul>
 						</li>
-						<li>
+						<li class="main-menu-item">
 							<a href="#">Доставка и оплата</a>
 						</li>
-						<li>
+						<li class="main-menu-item">
 							<a href="#">О Компании</a>
 						</li>
 					</ul>
-					<section class="user-navigation wrapper">
+					<section class="user-navigation">
 						<div>
 							<button class="user-button button-search" type="button" aria-label="Поиск">
 								<svg width="17" height="17">
@@ -82,107 +82,111 @@
 			</section>
 		</div>
 	</header>
-	<main class="container">
-		<section class="slider">
-			<h2 class="visually-hidden">Слайдер с акциями</h2>
-			<div class="slider-item">
-				<img src="img/ice-cream-jam.png" width="1045" height="881" alt="Фото мороженного">
-				<p>Крем-брюле и пломбир с малиновым джемом</p>
-				<a class="button" href="#">Давайте оба!</a>				
-			</div>
-			<div class="slider-item">
-				<img src="img/ice-cream-chocolate.png" width="1045" height="881" alt="Фото мороженного">
-				<p>Шоколадный пломбир и лимонный сорбет </p>
-				<a class="button" href="#">Давайте оба!</a>				
-			</div>
-			<div class="slider-item">
-				<img src="img/ice-cream-sherbet.png" width="1045" height="881" alt="Фото мороженного">
-				<p>Пломбир с помадкой и клубничный щербет</p>
-				<a class="button" href="#">Давайте оба!</a>				
-			</div>
-			<ul>
-				<li><button type="button"></button></li>
-				<li><button type="button"></button></li>
-				<li><button type="button"></button></li>
-			</ul>
-		</section>
-		<section class="column wrapper">
-			<h2 class="visually-hidden">Акции</h2>
-			<article class="event raspberry">
-				<h3>Малинка даром!</h3>
-				<p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-				<a class="button" href="#">Хочу варенье!</a>
-			</article>
-			<article class="event choco">
-				<h3>Шоколадки даром!</h3>
-				<p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-				<a class="button" href="#">Хочу шоколадки!</a>
-			</article>
-		</section>
-		<section class="column wrapper">
-			<h2 class="visually-hidden">Хит продаж</h2>
-			<article class="products-item">
-				<img src="img/svg/hit.svg" width="61" height="61" alt="Хит">
-				<img src="img/ice-cream-orange.png" width="267" height="267" alt="Фото мороженного">
-				<p>310 ₽<span>/кг</span></p>
-				<a href="#" class="default-link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-				<a class="button products-button" href="#">Быстрый просмотр</a>
-			</article>
-			<article class="products-item">
-				<img src="img/svg/hit.svg" width="61" height="61" alt="Хит">
-				<img src="img/ice-cream-choco.png" width="267" height="267" alt="Фото мороженного">
-				<p>380 ₽<span>/кг</span></p>
-				<a href="#" class="default-link">Сливочно-кофейное с кусочками шоколада</a>
-				<a class="button products-button" href="#">Быстрый просмотр</a>
-			</article>
-			<article class="products-item">
-				<img src="img/svg/hit.svg" width="61" height="61" alt="Хит">
-				<img src="img/ice-cream-strawberry.png" width="267" height="267" alt="Фото мороженного">
-				<p>355 ₽<span>/кг</span></p>
-				<a href="#" class="default-link">Сливочно-клубничное с присыпкой из белого шоколада</a>
-				<a class="button products-button" href="#">Быстрый просмотр</a>
-			</article>
-			<article class="products-item">
-				<img src="img/svg/hit.svg" width="61" height="61" alt="Хит">
-				<img src="img/ice-cream-caramel.png" width="267" height="267" alt="Фото мороженного">
-				<p>415 ₽<span>/кг</span></p>
-				<a href="#" class="default-link">Сливочное крем-брюле с карамельной подливкой</a>
-				<a class="button products-button" href="#">Быстрый просмотр</a>
-			</article>
-		</section>
-		<section class="advantages">
-			<h1 class="visually-hidden">Преимущества магазина</h1>
-			<p>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
-			<ul class="advantages-list wrapper">
-				<li class="advantages-item ice-cream">
-					<p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
-				</li>
-				<li class="advantages-item cow">
-					<p>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
-				</li>
-				<li class="advantages-item eco">
-					<p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
-				</li>				
-				<li class="advantages-item thermometer">
-					<p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус</p>
-				</li>
-			</ul>
-		</section>		
-		<section class="column wrapper">
-			<article class="new-in-blog">
-				<h2>Новое в нашем блоге</h2>
-				<a href="#">10 способов сервировки фруктовых щербетов к столу</a>
-			</article>
-			<article class="subscribe">
-				<h2 class="visually-hidden">Рассылка</h2>
-				<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-				<form action="gllacyshop.ru" type="post">				
-					<label for="email" class="visually-hidden">Введите Ваш e-mail</label>
-					<input class="form-input" type="email" id="email" placeholder="email@example.com">
-					<button class="button button-subscribe" type="submit" value="subscribe">Отправить</button>
-				</form>
-			</article>
-		</section>
+	<main>
+		<div class="main-content">
+			<section class="slider">
+				<h2 class="visually-hidden">Слайдер с акциями</h2>
+				<div class="slider-item">
+					<img src="img/ice-cream-jam.png" width="1045" height="881" alt="Фото мороженного">
+					<p>Крем-брюле и пломбир с малиновым джемом</p>
+					<a class="button" href="#">Давайте оба!</a>				
+				</div>
+				<div class="slider-item">
+					<img src="img/ice-cream-chocolate.png" width="1045" height="881" alt="Фото мороженного">
+					<p>Шоколадный пломбир и лимонный сорбет </p>
+					<a class="button" href="#">Давайте оба!</a>				
+				</div>
+				<div class="slider-item">
+					<img src="img/ice-cream-sherbet.png" width="1045" height="881" alt="Фото мороженного">
+					<p>Пломбир с помадкой и клубничный щербет</p>
+					<a class="button" href="#">Давайте оба!</a>				
+				</div>
+				<ul>
+					<li><button type="button"></button></li>
+					<li><button type="button"></button></li>
+					<li><button type="button"></button></li>
+				</ul>
+			</section>
+			<!-- это тоже получается усложнение кода и лучше разделить на разные классы на случай если мне надо будет обращаться к каждому section отдельно или так можжно сотавлять?-->
+			<section class="column">
+				<h2 class="visually-hidden">Акции</h2>
+				<article class="promotion raspberry">
+					<h3>Малинка даром!</h3>
+					<p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+					<a class="button" href="#">Хочу варенье!</a>
+				</article>
+				<article class="promotion choco">
+					<h3>Шоколадки даром!</h3>
+					<p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+					<a class="button" href="#">Хочу шоколадки!</a>
+				</article>
+			</section>
+			<!-- это тоже получается усложнение кода и лучше разделить на разные классы на случай если мне надо будет обращаться к каждому section отдельно или так можжно сотавлять? я имею ввиду class="column" он там еще повторяется по коду в нескольких секциях-->
+			<section class="column">
+				<h2 class="visually-hidden">Хит продаж</h2>
+				<article class="products-item">
+					<img src="img/svg/hit.svg" width="61" height="61" alt="Хит">
+					<img src="img/ice-cream-orange.png" width="267" height="267" alt="Фото мороженного">
+					<p>310 ₽<span>/кг</span></p>
+					<a href="#" class="default-link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+					<a class="button products-button" href="#">Быстрый просмотр</a>
+				</article>
+				<article class="products-item">
+					<img src="img/svg/hit.svg" width="61" height="61" alt="Хит">
+					<img src="img/ice-cream-choco.png" width="267" height="267" alt="Фото мороженного">
+					<p>380 ₽<span>/кг</span></p>
+					<a href="#" class="default-link">Сливочно-кофейное с кусочками шоколада</a>
+					<a class="button products-button" href="#">Быстрый просмотр</a>
+				</article>
+				<article class="products-item">
+					<img src="img/svg/hit.svg" width="61" height="61" alt="Хит">
+					<img src="img/ice-cream-strawberry.png" width="267" height="267" alt="Фото мороженного">
+					<p>355 ₽<span>/кг</span></p>
+					<a href="#" class="default-link">Сливочно-клубничное с присыпкой из белого шоколада</a>
+					<a class="button products-button" href="#">Быстрый просмотр</a>
+				</article>
+				<article class="products-item">
+					<img src="img/svg/hit.svg" width="61" height="61" alt="Хит">
+					<img src="img/ice-cream-caramel.png" width="267" height="267" alt="Фото мороженного">
+					<p>415 ₽<span>/кг</span></p>
+					<a href="#" class="default-link">Сливочное крем-брюле с карамельной подливкой</a>
+					<a class="button products-button" href="#">Быстрый просмотр</a>
+				</article>
+			</section>
+			<section class="advantages">
+				<h1 class="visually-hidden">Преимущества магазина</h1>
+				<p>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
+				<ul class="advantages-list wrapper">
+					<li class="advantages-item ice-cream">
+						<p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+					</li>
+					<li class="advantages-item cow">
+						<p>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+					</li>
+					<li class="advantages-item eco">
+						<p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
+					</li>				
+					<li class="advantages-item thermometer">
+						<p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус</p>
+					</li>
+				</ul>
+			</section>		
+			<section class="column">
+				<article class="new-in-blog">
+					<h2>Новое в нашем блоге</h2>
+					<a href="#">10 способов сервировки фруктовых щербетов к столу</a>
+				</article>
+				<article class="subscribe">
+					<h2 class="visually-hidden">Рассылка</h2>
+					<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+					<form action="gllacyshop.ru" type="post">				
+						<label for="email" class="visually-hidden">Введите Ваш e-mail</label>
+						<input class="form-input" type="email" id="email" placeholder="email@example.com">
+						<button class="button button-subscribe" type="submit" value="subscribe">Отправить</button>
+					</form>
+				</article>
+			</section>
+		</div>
 		<section class="map">
 			<div class="address">				
 				<h2>Адрес главного офиса и офлайн-магазина:</h2>
@@ -193,9 +197,9 @@
 			</div>
 		</section>		
 	</main>
-	<footer class="wrapper">
-		<div class="container wrapper">
-			<ul class="social-network wrapper">
+	<footer class="main-footer">
+		<div class="footer-content">
+			<ul class="social-network">
 				<li>
 					<a href="#" aria-label="Ссылка на twitter магазина Gllacy">
 						<svg width="32" height="32"><path d="M16 0C7.164 0 0 7.164 0 16c0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16 0-8.836-7.163-16-16-16zm7.944 12.809c-.251 6.516-3.463 10.832-10.992 10.702h-.486c-.447 0-4.543-.443-5.344-1.823 2.479.19 4.247-.406 5.12-1.136-1.048-.289-2.923-.461-3.251-2.848.384.104.618.221 1.299.113-1.307-.824-2.758-1.519-2.679-3.643.311.317 1.164.518 1.46.457-.768-.233-2.149-3.244-.974-4.781 1.984 1.79 4.075 3.482 7.804 3.643.227-2.214 1.24-3.699 3.168-4.325 1.84-.479 3.255.26 3.901 1.138.737-.224 1.453-.466 2.193-.685-.004.833-.569 1.463-.935 1.709.747.165 1.423-.475 1.423-.475-.184.963-1.094 1.725-1.707 1.954z"/></svg>
@@ -217,7 +221,7 @@
 					</a>
 				</li>
 			</ul>		
-			<ul class="footer-menu wrapper">
+			<ul class="footer-menu">
 				<li>
 					<a href="#" class="default-link">
 						<svg width="15" height="13"><path d="M10.799 0c-1.35 0-2.551.65-3.3 1.661A4.097 4.097 0 0 0 4.199 0C1.875 0 0 1.806 0 4.044 0 7.223 7.499 13 7.499 13s7.499-5.777 7.499-8.956C14.998 1.806 13.123 0 10.799 0z"/></svg>

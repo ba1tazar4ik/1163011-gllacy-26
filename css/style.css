@@ -1,4 +1,5 @@
 body {
+  min-width: 1200px;
   margin: 0;
   padding: 0;
 
@@ -60,6 +61,12 @@ body {
   margin: -1px;
 }
 
+.column{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
       /*HEADER*/
 /*основная навигация*/
 /*current будет вешаться на элемент JSом видимо
@@ -69,10 +76,47 @@ body {
   background-color: #d07058;
 }
 
+.main-header{
+  margin-top: 10px;
+}
+
+.header-wrapper{
+  display: flex;
+  flex-direction: column;
+
+  width: 1146px;
+  margin: 0 auto;
+  padding: 0 27px;
+}
+
+.navigation-wrapper{
+  display: flex;
+}
+
+.header-logo{
+  margin-right: 24px;
+}
+
+.main-navigation{
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
 .main-navigation ul{
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
+.main-menu{
+  display: flex;
+}
+
+.main-menu-item{
+  margin-right: 30px;
+}
 /*display: block поставил что бы весь ли стал ссылкой
 и было видно работают ховеры с фокусом или нет*/
 .main-menu a{
@@ -122,7 +166,12 @@ body {
   background-color: #f6b5a5;
 }
 
-/*кнопки user-navigation*/
+/*user-navigation*/
+.user-navigation{
+  display: flex;
+  justify-content: flex-end;
+}
+
 /*у всех кнопок в секции с классом user-navigation один шрифт,
 цвет шрифта, одинаковый бекгранунд ховер и т.д.*/
 .user-button{
@@ -185,6 +234,9 @@ body {
   color: #323232;
 }
 
+.schedule{
+  text-align: end;
+}
 .schedule p{
   font-size: 14px;
   font-weight: 700;
@@ -234,6 +286,11 @@ body {
       /*КОНЕЦ HEADER*/
       
       /*MAIN*/
+.main-content{
+  width: 1146px;
+  margin: 0 auto;
+  padding: 0 27px;
+}
 /*блок slider*/
 .slider-item{
   text-align: center;
@@ -253,20 +310,41 @@ body {
 }
 
 /*блок акция*/
-.event h3{
+.promotion{
+  display: flex;
+  flex-direction: column;
+  width: 520px;
+  padding: 25px 20px;
+}
+
+.promotion .button{
+  display: block;
+  align-self: flex-end;
+  width: 165px;
+  height: 45px;
+  margin-top: 25px;
+
+  text-align: center;
+  line-height: 45px;
+  text-decoration: none;
+}
+
+
+.promotion h3{
+  margin: 0;
+  margin-bottom: 25px;
+
   font-size: 35px;
   font-weight: 700;
   line-height: 41px;
 }
 
-.event p{
+.promotion p{
+  margin: 0;
+
   font-size: 18px;
   font-weight: 700;
   line-height: 22px;
-}
-
-.event a{
-  text-decoration: none;
 }
 
 .raspberry{
@@ -287,23 +365,45 @@ body {
 
 /*блок преимущества*/
 .advantages{
+  padding: 20px;
+  margin-bottom: 40px;
+
   color: #323232;
 
   background-color: #ebdcbc;
   background-image: url("../img/background-waffle.jpg");
-  background-size: 100% 1;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .advantages p{
+  margin: 0;
+  margin-bottom: 15px;
   font-size: 24px;
   font-weight: 500;
   line-height: 30px;
 }
 
 .advantages-list{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
   list-style: none;
+}
+.advantages-item{
+  width: 540px;
+}
+
+.advantages-item p{
+  margin-left: 60px;
+  padding-top: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
 }
 
 .ice-cream{
@@ -338,31 +438,38 @@ body {
   background-size: 49px 49px;
 }
 
-.advantages-item p{
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
-}
-
 /*блок новое в блоге+рассылка
 (обединил потому что они составляют один блок)*/
 .new-in-blog{
+  width: 520px;
+  padding: 25px 20px;
+  padding-top: 30px;
+
   background-color: #ffffff;
   background-image: url("../img/background-strawberry.jpg");
-  /*после того как появится размер блока 
-  выставлю значение положения*/
   background-position: 20% 35%;
   background-repeat: no-repeat;
 }
 
 .new-in-blog h2{
+  margin: 0;
+  margin-bottom: 20px;
+
   font-size: 16px;
   font-weight: 500;
   line-height: 22px;
   color: #323232;
 }
-
+/*не придумаллучше способа ограничить длинну 
+текста в ссылке кроме как сделать ее блочной
+теперь по ней можно кликнуть дажетам где  текста
+нет в последней строке. второй вариант засунуть 
+h2 и a обернуть в див и его укоротить, но неуверен 
+как лучше делать поэтому оставлю пока так*/
 .new-in-blog a{
+  display: block;
+  width: 60%;
+
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
@@ -370,6 +477,12 @@ body {
 }
 
 .subscribe{
+  width: 520px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+
   border: 5px solid #92cdff;
   border-image-source: url("../img/svg/background-post.svg");
   border-image-slice: 5;
@@ -382,12 +495,18 @@ body {
 }
 
 .subscribe p{
+  margin: 0;
+
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
   color: #5a5a5a;
 }
 
+.subscribe .form-input{
+  margin-top: 45px;
+  height: 45px;
+}
 /*блок с картой*/
 .map{
   background-image: 
@@ -544,6 +663,11 @@ body {
   font-size: 20px;
 }*/
 /*блок с товарами*/
+.products-item{
+  width: 267px;
+  text-align: center;
+}
+
 .products-item p{
   font-size: 45px;
   font-weight: 700;
@@ -614,9 +738,31 @@ body {
       /*КОНЕЦ MAIN*/
 
       /*FOOTER*/
-/*соцсети*/
-footer ul{
+.footer-content{
+  display: flex;
+  padding-top: 20px;
+  justify-content: space-between;
+
+  width: 1146px;
+  margin: 0 auto;
+  padding: 0 27px;
+}
+
+.main-footer ul{
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+/*соцсети*/
+.social-network{
+  display: flex;
+  width: 185px;
+}
+.social-network li{
+  margin-right: 15px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 /*обводку для соц сетей не знаю как сделать.
@@ -631,16 +777,23 @@ footer ul{
   fill: #ffffff;
 }
 
+.footer-menu{
+  display: flex;
+  width: 330px;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.footer-menu li{
+  width: 50%;
+}
+
 .footer-menu a{
   font-size: 13px;
   font-weight: 700;
   line-height: 18px;
   color: #ffffff;
   fill: #ffffff;
-}
-
-.footer-menu a:hover{
-
 }
 
 .copyright p{
@@ -667,168 +820,3 @@ footer ul{
   cursor: pointer;
 }
       /*КОНЕЦ МОДАЛЬНОЕ ОКНО*/
-/* ----- Сеточные стили ----- */
-
-html,
-body {
-  min-width: 1200px;
-  min-height: 2416px;
-}
-
-/*ограничивает по ширине и выравнивает по центру*/
-.container {
-  width: 1146px;
-  margin: 0 auto;
-  padding: 0 27px;
-}
-
-/*делает обертки флексом*/
-.wrapper{
-  display: flex;
-}
-
-.main-header{
-  width: 100%;
-  margin-top: 10px;
-}
-
-.header-logo{
-  margin-right: 24px;
-}
-
-.navigation-wrapper{
-  flex-direction: column;
-}
-
-.main-navigation{
-  width: 968px;
-  justify-content: space-between;
-}
-
-.main-navigation ul{
-  margin: 0;
-  padding: 0;
-}
-
-.main-menu li{
-  margin-right: 30px;
-}
-
-.sub-menu li{
-  margin-right: 0;
-}
-
-.user-navigation{
-  justify-content: flex-end;
-}
-.schedule{
-  text-align: end;
-}
-
-.column{
-  justify-content: space-between;
-  margin-bottom: 40px;
-}
-
-.event{
-  width: 520px;
-  padding: 25px 20px;
-}
-
-.event h3{
-  margin: 0;
-  margin-bottom: 25px;
-}
-
-.event .button{
-  margin-top: 25px;
-}
-
-.products-item{
-  width: 267px;
-  text-align: center;
-}
-
-.advantages{
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-bottom: 40px;
-}
-
-.advantages-list{
-  margin: 0;
-  padding: 0;
-  flex-wrap: wrap;
-  /*justify-content: space-between;*/
-}
-
-.advantages-item{
-  width: 540px;
-}
-
-.advantages-item:nth-child(odd){
-  margin-right: 20px;
-}
-
-.advantages-item p{
-  margin-left: 60px;
-}
-
-.new-in-blog{
-  width: 520px;
-  padding: 25px 20px;
-  padding-top: 30px;
-}
-.new-in-blog h2{
-  margin: 0;
-  margin-bottom: 20px;
-}
-
-.new-in-blog a{
-  display: block;
-  width: 60%;
-}
-
-.subscribe{
-  width: 520px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 35px;
-  padding-bottom: 35px;
-}
-
-.subscribe p{
-  margin: 0;
-}
-
-.subscribe .form-input{
-  margin-top: 45px;
-  height: 45px;
-}
-footer .container{
-  padding-top: 20px;
-  justify-content: space-between;
-}
-footer ul{
-  margin: 0;
-  padding: 0;
-  /*padding-top: 20px;*/
-}
-.social-network{
-  width: 185px;
-}
-.social-network li{
-  margin-right: 15px;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-.footer-menu{
-  width: 330px;
-  flex-wrap: wrap;
-  align-content: center;
-}
-
-.footer-menu li{
-  width: 50%;
-}
