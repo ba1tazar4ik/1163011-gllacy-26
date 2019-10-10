@@ -47,6 +47,7 @@ body {
 .default-link:focus,
 .default-link:active{
   color: #ffbc9e;
+
   fill: #ffbc9e;
 
   outline: none;
@@ -61,10 +62,15 @@ body {
   margin: -1px;
 }
 
+.content-container{
+  width: 1146px;
+  margin: 0 auto;
+  padding: 0 27px;
+}
+
 .column{
   display: flex;
   justify-content: space-between;
-  margin-bottom: 40px;
 }
 
       /*HEADER*/
@@ -83,14 +89,11 @@ body {
 .header-wrapper{
   display: flex;
   flex-direction: column;
-
-  width: 1146px;
-  margin: 0 auto;
-  padding: 0 27px;
 }
 
 .navigation-wrapper{
   display: flex;
+  align-items: center;
 }
 
 .header-logo{
@@ -121,6 +124,7 @@ body {
 и было видно работают ховеры с фокусом или нет*/
 .main-menu a{
   display: block;
+
   font-size: 16px;
   font-weight: 700;
   line-height: 18px;
@@ -145,6 +149,8 @@ body {
 }
 
 .sub-menu{
+  display: none;
+
   background-color: #f8f7f4;
 }
 
@@ -168,8 +174,12 @@ body {
 
 /*user-navigation*/
 .user-navigation{
-  display: flex;
+  display: flex;  
   justify-content: flex-end;
+}
+
+.user-navigation-item{
+  margin-left: 10px;
 }
 
 /*у всех кнопок в секции с классом user-navigation один шрифт,
@@ -197,8 +207,17 @@ body {
 
   background-color: #ededed;
 }
+.search-form{
+  display: none;
+}
+.account-form{
+  display: none;
+}
 
 /*корзина*/
+.cart-form{
+  display: none;
+}
 .delete-item{
   background-color: transparent;
   background-image: url("../img/svg/cross-small.svg");
@@ -215,12 +234,13 @@ body {
   line-height: 16px;
   color: #323232;
 
+  background-color: transparent;
   border:none;
-  background-color: transparent; 
+
   -ms-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  -moz-appearance:textfield;  
+  -moz-appearance:textfield;   
 }
 
 .cart-price{
@@ -234,7 +254,9 @@ body {
   color: #323232;
 }
 
-.schedule{
+.schedule{  
+  margin-bottom: -20px;
+
   text-align: end;
 }
 .schedule p{
@@ -286,12 +308,10 @@ body {
       /*КОНЕЦ HEADER*/
       
       /*MAIN*/
-.main-content{
-  width: 1146px;
-  margin: 0 auto;
-  padding: 0 27px;
-}
 /*блок slider*/
+.slider{
+  margin-top: -125px;
+}
 .slider-item{
   text-align: center;
 }
@@ -313,6 +333,7 @@ body {
 .promotion{
   display: flex;
   flex-direction: column;
+
   width: 520px;
   padding: 25px 20px;
 }
@@ -320,12 +341,14 @@ body {
 .promotion .button{
   display: block;
   align-self: flex-end;
+
   width: 165px;
   height: 45px;
   margin-top: 25px;
 
   text-align: center;
   line-height: 45px;
+
   text-decoration: none;
 }
 
@@ -364,9 +387,10 @@ body {
 /*блок хит*/
 
 /*блок преимущества*/
-.advantages{
-  padding: 20px;
+.advantages{  
+  margin-top: 40px;
   margin-bottom: 40px;
+  padding: 20px;
 
   color: #323232;
 
@@ -380,6 +404,7 @@ body {
 .advantages p{
   margin: 0;
   margin-bottom: 15px;
+
   font-size: 24px;
   font-weight: 500;
   line-height: 30px;
@@ -387,10 +412,11 @@ body {
 
 .advantages-list{
   display: flex;
-  margin: 0;
-  padding: 0;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  margin: 0;
+  padding: 0;
 
   list-style: none;
 }
@@ -401,6 +427,7 @@ body {
 .advantages-item p{
   margin-left: 60px;
   padding-top: 10px;
+
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
@@ -504,11 +531,18 @@ h2 и a обернуть в див и его укоротить, но неуве
 }
 
 .subscribe .form-input{
-  margin-top: 45px;
   height: 45px;
+  margin-top: 45px;  
 }
+
 /*блок с картой*/
 .map{
+  display: flex;
+  align-items: center;
+  
+  height: 430px;
+  margin-top: 40px;
+
   background-image: 
     url("../img/svg/pin.svg"),
     url("../img/map.jpg");
@@ -525,6 +559,11 @@ h2 и a обернуть в див и его укоротить, но неуве
   background-size:
     80px 140px, 
     auto auto;
+}
+
+.map .content-container{
+  display: flex;
+  justify-content: flex-end;
 }
 
 .address{
@@ -559,8 +598,26 @@ h2 и a обернуть в див и его укоротить, но неуве
 }
 
 /*хлбные крошки*/
+.breadcrumb-wrapper{
+  max-width: 900px;
+}
+
 .breadcrumb-menu{
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+
   list-style: none;
+}
+
+.breadcrumb-menu li::after{
+  content: "»";
+  margin-right: 5px;
+}
+
+.breadcrumb-menu li:last-child::after{
+  display: none;
 }
 
 .breadcrumb-menu a{
@@ -662,9 +719,16 @@ h2 и a обернуть в див и его укоротить, но неуве
 .filter-fatness input{
   font-size: 20px;
 }*/
+
 /*блок с товарами*/
+.products{
+  flex-wrap: wrap;
+}
+
 .products-item{
   width: 267px;
+  margin-top: 40px;
+
   text-align: center;
 }
 
@@ -699,13 +763,13 @@ h2 и a обернуть в див и его укоротить, но неуве
   display: block
 }
 
-/*блок со страницами каталога*/
-.button-navigation{
-  background-color: transparent;
-  border: none;
-  fill: #ffffff;
+.catalog-navigation{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 
-  cursor: pointer;
+  margin-top: 90px;
+  padding-bottom: 30px;    
 }
 
 /* класс через JS будет вешаться если 
@@ -735,28 +799,61 @@ h2 и a обернуть в див и его укоротить, но неуве
   color: #323232;
   background-color: #ffffff;
 }
+
+/*блок со страницами каталога*/
+.button-navigation{
+  background-color: transparent;
+  border: none;
+  fill: #ffffff;
+
+  cursor: pointer;
+}
+.catalog-pages{
+  display: flex;
+
+  margin: 0;
+  padding: 0;  
+}
+
+.catalog-pages-item{
+  margin-right: 13px;
+}
+
+.catalog-pages-item:first-child{
+  margin-left: 13px;
+}
+
+.catalog-pages-item a{
+  display: block;  
+  width: 26px;
+  height: 26px;
+
+  text-align: center;
+
+  line-height: 26px;
+}
       /*КОНЕЦ MAIN*/
 
       /*FOOTER*/
-.footer-content{
-  display: flex;
-  padding-top: 20px;
-  justify-content: space-between;
-
-  width: 1146px;
-  margin: 0 auto;
-  padding: 0 27px;
-}
-
 .main-footer ul{
   margin: 0;
   padding: 0;
+
   list-style: none;
+}
+
+.footer-content{
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 20px;
+  padding-bottom: 30px;  
 }
 
 /*соцсети*/
 .social-network{
   display: flex;
+
   width: 185px;
 }
 .social-network li{
@@ -779,9 +876,10 @@ h2 и a обернуть в див и его укоротить, но неуве
 
 .footer-menu{
   display: flex;
-  width: 330px;
   flex-wrap: wrap;
   align-content: center;
+
+  width: 330px;  
 }
 
 .footer-menu li{
@@ -793,6 +891,7 @@ h2 и a обернуть в див и его укоротить, но неуве
   font-weight: 700;
   line-height: 18px;
   color: #ffffff;
+
   fill: #ffffff;
 }
 
