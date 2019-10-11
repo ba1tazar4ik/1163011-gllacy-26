@@ -502,7 +502,10 @@ h2 и a обернуть в див и его укоротить, но неуве
   line-height: 30px;
   color: #323232;
 }
-
+.new-in-blog a:hover,
+.new-in-blog a:focus{
+  color: #e84d37;
+}
 .subscribe{
   width: 520px;
   padding-left: 20px;
@@ -598,11 +601,8 @@ h2 и a обернуть в див и его укоротить, но неуве
 }
 
 /*хлбные крошки*/
-.breadcrumb-wrapper{
-  max-width: 900px;
-}
-
 .breadcrumb-menu{
+  max-width: 900px;
   display: flex;
 
   margin: 0;
@@ -862,9 +862,6 @@ h2 и a обернуть в див и его укоротить, но неуве
   margin-bottom: auto;
 }
 
-/*обводку для соц сетей не знаю как сделать.
-у меня через бордер радиус почему то блок
-не круглым а овальным становится*/
 .social-network a,
 .social-network a:active{
   fill: #e6ebe9;
