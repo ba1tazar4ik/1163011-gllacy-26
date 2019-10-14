@@ -17,6 +17,8 @@ body {
 
 /*этот класс унас на всем что выглядит как красная кнопка*/
 .button{
+  padding: 0;
+
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
@@ -52,7 +54,13 @@ body {
 
   outline: none;
 }
+/*обнуляем отступы в списках*/
+.list{
+  margin: 0;
+  padding: 0;
 
+  list-style: none;
+}
 /*класс скрывающий эллементы*/
 .visually-hidden {
   position: absolute;
@@ -62,6 +70,7 @@ body {
   margin: -1px;
 }
 
+/*ограниччивает ширину и выравнивает*/
 .content-container{
   width: 1146px;
   margin: 0 auto;
@@ -73,57 +82,44 @@ body {
   justify-content: space-between;
 }
 
-      /*HEADER*/
-/*основная навигация*/
-/*current будет вешаться на элемент JSом видимо
-нужен для подсветки ссылки на 
-ту страницу на котрой мы находимся*/
-.current {
-  background-color: #d07058;
-}
-
+     /*HEADER*/
+/*оступ шапки от верха страницы*/
 .main-header{
   margin-top: 10px;
 }
-
+/*блоки хедера выстариваем в столбик*/
 .header-wrapper{
   display: flex;
   flex-direction: column;
 }
-
+/*группируем элементы первойстроки хедера*/
 .navigation-wrapper{
   display: flex;
-  align-items: center;
 }
-
-.header-logo{
-  margin-right: 24px;
-}
-
+/*отделяем блок навигации от логотипа
+разрешаем ему забирать все свобоное пространство
+и рискидываем его содержимое по сторонам*/
 .main-navigation{
   display: flex;
+  align-items: center;
   flex-grow: 1;
   justify-content: space-between;
 }
 
-.main-navigation ul{
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-}
-
+/*делаем основное меню флексовым*/
 .main-menu{
   display: flex;
+  padding-left: 6px;
+  padding-bottom: 12px;
 }
-
-.main-menu-item{
-  margin-right: 30px;
-}
-/*display: block поставил что бы весь ли стал ссылкой
-и было видно работают ховеры с фокусом или нет*/
-.main-menu a{
+/*стилизуем элементы меню*/
+.main-menu-link{
   display: block;
+  position: relative;
+  padding-top: 5px;
+  padding-right: 11px;
+  padding-bottom: 5px;
+  padding-left: 17px;  
 
   font-size: 16px;
   font-weight: 700;
@@ -132,74 +128,145 @@ body {
 
   text-decoration: none;
 }
-
-.main-menu a:hover,
-.main-menu a:focus{
+/*подчеркивание для элементов меню*/
+.main-menu-link::after{
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 9px;
+  width: calc(100% - 28px);
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  right: 0;
+  margin: 0 auto;
+}
+/*эффекты наведения фокусировки и клика*/
+.main-menu-link:hover,
+.main-menu-link:focus{
   color: #323232;
 
+  border-radius: 25px;
   background-color: #f7f6f3;
 
   outline: none;
+  text-decoration: none;
 }
 
-.main-menu a:active{
+.main-menu-link:active{
   color: #323232;
 
+  border-radius: 25px;
   background-color: #ededed;
+
+  outline: none;
+  text-decoration: none;
+}
+/*подсветка текущей страницы*/
+.current {
+  background-color: #d07058;
+  border-radius: 25px;
 }
 
-.sub-menu{
-  display: none;
+.current::after{
+  background-color: transparent;
+}
 
+/*стилизуем меню каталога*/
+.sub-menu{
+  position: absolute;
+  margin-top: 5px;
+  border-radius: 5px;
   background-color: #f8f7f4;
 }
 
-.sub-menu a{
+.sub-menu-link{
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding-top:9px;
+  padding-right: 20px;
+  padding-bottom:9px;  
+  padding-left: 20px;
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
   color: #323232;
+
+  text-decoration: none;
 }
 
-.sub-menu a:hover,
-.sub-menu a:focus{
+/*эффекты наведения фокусировки и клика*/
+.sub-menu-link:hover,
+.sub-menu-link:focus{
   background-color: #fbded7;
 
   outline: none;
 }
 
-.sub-menu a:active{
+.sub-menu-link:active{
   background-color: #f6b5a5;
 }
 
-/*user-navigation*/
+/*после этого элемента рисуется разделитель
+так же увеличивается внутренний отступ*/
+.divider{
+  position: relative;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.divider::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(100% - 20px);
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.2);;
+  right: 0;
+  margin: 0 auto;
+}
+
+/*делаем меню пользователя флексовым
+и прижимаем его элементы к правой стороне*/
 .user-navigation{
   display: flex;  
   justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 10px;
 }
-
 .user-navigation-item{
-  margin-left: 10px;
+  position: relative;
+  margin-left: 8px;
 }
-
 /*у всех кнопок в секции с классом user-navigation один шрифт,
 цвет шрифта, одинаковый бекгранунд ховер и т.д.*/
 .user-button{
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+  padding-right: 16px;
+  padding-bottom: 6px;
+  padding-left: 18px;
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
   color: #ffffff;
 
+  border:none;
+  border-radius: 25px;
   background-color: rgba(255, 255, 255, 0.2);
   fill: #ffffff; 
 }
 
 .user-button:hover,
-.user-button:hover{
+.user-button:focus{
   color: #323232;
 
   background-color: #f8f7f4;
   fill: #323232;
+
+  cursor: pointer;
 }
 
 .user-button:active{
@@ -207,13 +274,117 @@ body {
 
   background-color: #ededed;
 }
-.search-form{
-  display: none;
-}
-.account-form{
-  display: none;
+
+.button-search{
+  padding-top: 6px;
+  padding-right: 6px;
+  padding-bottom: 5px;
+  padding-left: 7px;
 }
 
+.button-login svg,
+.button-cart svg{
+  margin-right: 7px;
+}
+.user-navigation-popup{
+  position: absolute;
+  top: 38px;
+  right: 0;
+}
+
+/*form input textarea*/
+.form-fieldset{
+  background-color: #f8f7f4;
+  border: none;
+  border-radius: 5px;
+}
+
+.form-input{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 7px 15px;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #999999;
+
+  background-color: #ffffff;
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;  
+}
+
+.form-input:hover{
+  box-shadow: 0 0 0 1px rgba(154, 154, 154, 0.52);
+  box-shadow: inset 0 0 0 1px rgba(154, 154, 154, 0.52);
+}
+
+.form-input:focus{
+  box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
+  box-shadow: inset 0 0 0 2px rgba(46, 136, 228, 0.52);
+}
+/*Всплывающее окно поиска*/
+.search-form{
+  display: none;
+  width: 341px;    
+}
+
+.search-fieldset{
+  padding: 15px 20px;
+}
+
+/*Всплывающее окно входа*/
+.account-form{
+  /*display: none;*/
+  width: 277px;
+}
+
+.account-fieldset{
+  padding: 20px;
+}
+.account-input{
+  margin: 0;
+  margin-bottom: 20px;  
+}
+.acount-form-footer{
+  display: flex;
+}
+.login-submit{
+  margin-right: 10px;
+  padding: 10px 25px;
+  border-radius: 25px;
+}
+.account-form-list{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/*ссылки на форме входа в личный кабинет*/ 
+.form-link{
+  position: relative;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #323232;
+  text-decoration: none;
+}
+
+.form-link::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.form-link:hover::after{
+  background-color: rgba(255, 188, 158, 0.3);
+}
 /*корзина*/
 .cart-form{
   display: none;
@@ -254,12 +425,18 @@ body {
   color: #323232;
 }
 
-.schedule{  
-  margin-bottom: -20px;
-
-  text-align: end;
+/*не поняял почему блок не встал впритык
+чисто визуально подогнал отрицательынм маржином
+нотак ведь не правильно.*/
+.schedule{
+  margin-top: -5px;
+  text-align: right;
 }
+
 .schedule p{
+  margin: 0;
+  padding: 0;
+  margin-bottom: 5px;
   font-size: 14px;
   font-weight: 700;
   line-height: 16px;
@@ -268,49 +445,17 @@ body {
 .schedule a{
   font-size: 22px;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 22px;
   color: #ffffff;
 
   text-decoration: none;
-}
-
-/*form input textarea*/
-.form-fieldset{
-  background-color: #f8f7f4;
-  border: none;
-}
-
-.form-input{
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 24px;
-  color: #999999;
-
-  background-color: #ffffff;
-  border: 1px solid #d3d3d2;
-}
-
-.form-input:hover{
-  border: 2px solid rgba(154, 154, 154, 0.52);
-}
-
-.form-input:focus{
-  border: 2px solid rgba(46, 136, 228, 0.52);
-}
-
-/*ссылки на форме входа в личный кабинет*/ 
-.form-link{
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 24px;
-  color: #323232;
 }
       /*КОНЕЦ HEADER*/
       
       /*MAIN*/
 /*блок slider*/
 .slider{
-  margin-top: -125px;
+  /*margin-top: -125px;*/
 }
 .slider-item{
   text-align: center;

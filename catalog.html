@@ -11,57 +11,75 @@
 	<header class="main-header">
 		<div class="header-wrapper content-container">
 			<div class="navigation-wrapper">
-				<a class="header-logo" href="index.html"><img src="img/svg/logo.svg" width="154" height="64" alt="Логотип магазина Глейси"></a>
+				<a class="header-logo"><img src="img/svg/logo.svg" width="154" height="64" alt="Логотип магазина Глейси"></a>
 				<nav class="main-navigation">
-					<ul class="main-menu">
+					<ul class="main-menu list">
 						<li class="main-menu-item">
-							<a class="current" href="catalog.html">Каталог</a>
-							<ul class="sub-menu">
-								<li><a class="" href="#"><b>Новинки</b></a></li>
-								<li><a class="current" href="catalog.html">Сливочное</a></li>
-								<li><a class="" href="#">Щербеты</a></li>
-								<li><a class="" href="#">Фруктовый лед</a></li>
-								<li><a class="" href="#">Мелорин</a></li>
+							<a href="catalog.html" class="main-menu-link current">Каталог</a>
+							<ul class="sub-menu list">
+								<li class="sub-menu-item">
+									<a href="#" class="sub-menu-link divider"><b>Новинки</b></a>
+								</li>
+								<li class="sub-menu-item">
+									<a href="catalog.html" class="sub-menu-link">Сливочное</a>
+								</li>
+								<li class="sub-menu-item">
+									<a href="#" class="sub-menu-link">Щербеты</a>
+								</li>
+								<li class="sub-menu-item">
+									<a href="#" class="sub-menu-link">Фруктовый лед</a>
+								</li>
+								<li class="sub-menu-item">
+									<a href="#" class="sub-menu-link">Мелорин</a>
+								</li>
 							</ul>
 						</li>
 						<li class="main-menu-item">
-							<a class="" href="#">Доставка и оплата</a>
+							<a href="#" class="main-menu-link">Доставка и оплата</a>
 						</li>
 						<li class="main-menu-item">
-							<a class="" href="#">О Компании</a>
+							<a href="#" class="main-menu-link">О Компании</a>
 						</li>
 					</ul>
 					<section class="user-navigation">
 						<div class="user-navigation-item">
 							<button class="user-button button-search" type="button" aria-label="Поиск">
-								<svg width="17" height="17">
+								<svg width="21" height="21">
 									<path d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/>
 								</svg>
 							</button>
 							<!-- Ховер Поиск-->
-							<form class="search-form" action="gllacyshop.ru" type="post" name="search-form">
-								<fieldset class="form-fieldset">
+							<form class="search-form user-navigation-popup" action="gllacyshop.ru" type="post" name="search-form">
+								<fieldset class="form-fieldset search-fieldset">
 									<legend class="visually-hidden">Форма поиска</legend>
-									<input class="form-input" type="search" name="search" placeholder="Крем-брюле">
+									<input class="form-input search-input" type="search" name="search" placeholder="Крем-брюле">
 								</fieldset>
 							</form>
 						</div>
 						<div class="user-navigation-item">
 							<button class="user-button button-login" type="button">
-								<svg width="21" height="19"><g><path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/><path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/></g></svg>
+								<svg width="21" height="21"><g><path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/><path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/></g></svg>
 								Вход
 							</button>
 							<!-- Ховер Вход в личный кабинет-->
-							<form class="account-form" action="gllacyshop.ru" type="post" name="account-form">
-								<fieldset class="form-fieldset">
+							<form class="account-form user-navigation-popup" action="gllacyshop.ru" type="post" name="account-form">
+								<fieldset class="form-fieldset account-fieldset">
 									<legend class="visually-hidden">Личный кабинет</legend>	
 									<label for="user-login-lk" class="visually-hidden">Логин</label>
-									<input class="form-input" type="email" name="user-login" id="user-login-lk" placeholder="email@example.com">
+									<input class="form-input account-input" type="email" name="user-login" id="user-login-lk" placeholder="email@example.com">
 									<label for="user-password" class="visually-hidden">Пароль</label>
-									<input class="form-input" type="password" name="password" id="user-password" placeholder="••••••••">
-									<button class="button login-submit" type="submit" value="login">Войти</button>
-									<a href="#" class="form-link">Забыли пароль?</a>
-									<a href="#" class="form-link">Новая регистрация</a>
+									<input class="form-input account-input" type="password" name="password" id="user-password" placeholder="••••••••">
+									<div class="acount-form-footer">
+										<button class="button login-submit" type="submit" value="login">Войти</button>
+										<ul class="account-form-list">
+											<li>
+												<a href="#" class="form-link default-link">Забыли пароль?</a>
+											</li>
+											<li>												
+												<a href="#" class="form-link default-link">Новая регистрация</a>
+											</li>
+										</ul>
+									</div>
 								</fieldset>
 							</form>
 						</div>
@@ -71,7 +89,7 @@
 								2 товара
 							</button>
 							<!-- Ховер Корзина-->
-							<form class="cart-form form-fieldset" action="gllacyshop.ru" type="post" name="cart-form">
+							<form class="cart-form form-fieldset user-navigation-popup" action="gllacyshop.ru" type="post" name="cart-form">
 								<table>
 									<caption class="visually-hidden">Ваша корзина</caption>
 									<tr>
