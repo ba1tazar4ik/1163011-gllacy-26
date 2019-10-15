@@ -1,5 +1,4 @@
 body {
-  min-width: 1200px;
   margin: 0;
   padding: 0;
 
@@ -11,6 +10,7 @@ body {
 
   background-color: #849d8f;
   background-image: url("../img/background-jam.jpg");
+  /*background-image: url("../img/gllacy-index.jpg");*/
   background-position: top center;
   background-repeat: no-repeat;
 }
@@ -74,7 +74,6 @@ body {
 .content-container{
   width: 1146px;
   margin: 0 auto;
-  padding: 0 27px;
 }
 
 .column{
@@ -96,6 +95,10 @@ body {
 .navigation-wrapper{
   display: flex;
 }
+
+.header-logo{
+  margin-right: 6px;
+}
 /*отделяем блок навигации от логотипа
 разрешаем ему забирать все свобоное пространство
 и рискидываем его содержимое по сторонам*/
@@ -116,10 +119,11 @@ body {
 .main-menu-link{
   display: block;
   position: relative;
+  margin-right: 6px;
   padding-top: 5px;
   padding-right: 11px;
   padding-bottom: 5px;
-  padding-left: 17px;  
+  padding-left: 11px;  
 
   font-size: 16px;
   font-weight: 700;
@@ -133,8 +137,8 @@ body {
   content: "";
   position: absolute;
   bottom: 4px;
-  left: 9px;
-  width: calc(100% - 28px);
+  left: 0px;
+  width: calc(100% - 20px);
   height: 1px;
   background-color: rgba(255, 255, 255, 0.2);
   right: 0;
@@ -174,6 +178,7 @@ body {
 /*стилизуем меню каталога*/
 .sub-menu{
   position: absolute;
+  overflow: hidden;
   margin-top: 5px;
   border-radius: 5px;
   background-color: #f8f7f4;
@@ -301,7 +306,7 @@ body {
 
 .form-input{
   box-sizing: border-box;
-  width: 100%;
+  /*width: 100%;*/
   padding: 7px 15px;
 
   font-size: 14px;
