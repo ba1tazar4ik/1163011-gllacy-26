@@ -249,10 +249,11 @@ body {
 .user-button{
   display: flex;
   align-items: center;
+  margin-left: 2px;
   padding-top: 5px;
   padding-right: 16px;
   padding-bottom: 6px;
-  padding-left: 18px;
+  padding-left: 16px;
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
@@ -306,7 +307,6 @@ body {
 
 .form-input{
   box-sizing: border-box;
-  /*width: 100%;*/
   padding: 7px 15px;
 
   font-size: 14px;
@@ -340,7 +340,7 @@ body {
 
 /*Всплывающее окно входа*/
 .account-form{
-  /*display: none;*/
+  display: none;
   width: 277px;
 }
 
@@ -392,19 +392,35 @@ body {
 }
 /*корзина*/
 .cart-form{
-  display: none;
+  border: 2px solid red;
+  padding: 20px 15px;
+  padding-right: 34px;
+  
 }
+.cart-form table {
+  border-collapse: collapse; /*убираем пустые промежутки между ячейками*/
+  border: 1px solid grey; /*устанавливаем для таблицы внешнюю границу серого цвета толщиной 1px*/
+}
+.cart-form td {
+  /*margin: 0;
+  padding: 0;*/
+  border: 1px solid blue;
+}
+.cart-form td:nth-child(3){  
+  width: 415px;
+  background-color: green;
+}
+
 .delete-item{
   background-color: transparent;
-  background-image: url("../img/svg/cross-small.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 11px 11px;
   border: none;
 
   cursor: pointer;
 }
+
 .cart-text{
+  width: auto;
+  padding-top: 8px;
   font-size: 13px;
   font-weight: 400;
   line-height: 16px;
@@ -415,10 +431,9 @@ body {
 
   -ms-appearance: none;
   -webkit-appearance: none;
-  appearance: none;
-  -moz-appearance:textfield;   
+  -moz-appearance:textfield;
+  appearance: none;     
 }
-
 .cart-price{
   color: #999999;
 }

@@ -100,57 +100,61 @@
 										<th class="visually-hidden">Стоимость товара</th>
 									</tr>
 									<tr>
-										<td>
-											<button class="delete-item" type="button" value="delet-item" aria-label="удалить товар"></button>
+										<td class="cell-delete">
+											<button class="delete-item" type="button" value="delet-item" aria-label="удалить товар">
+												<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path fill="#231F20" d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/></svg>
+											</button>
 										</td>
-										<td>
-											<img src="img/ice-cream-orange.png" width="33" height="33" alt="Фото мороженного">
+										<td class="cell-img">
+											<img class="cart-item-img"src="img/ice-cream-orange.png" width="33" height="33" alt="Фото мороженного">
 										</td>
 										<!--Через JS в инпут будем вставлять значение кода товара из базы данных и этот же код будет служить уникальным ID для связки лейбла вставляемый так же с помощью замены ID у элемента через JS. Итак же с остальными полями значения и ID через JS-->
 										<td>
 											<input class="cart-text" type="hidden" id="cart-item-000001" value="000001">
-											<label class="cart-text" for="cart-item-000001" name="cart-item-name">Пломбир с апельсиновым джемом</label>
+											<span class="cart-text cart-item-name" for="cart-item-000001" name="cart-item-name">Пломбир с апельсиновым джемом</span>
 										</td>
-										<td>
-											<input class="cart-text" type="number" id="cart-item-w-1" value="1.5" readonly>
-											<label class="cart-text" for="cart-item-w-1">кг</label>
+										<td class="cell-prise">
+											<input class="cart-text" type="hidden" id="cart-item-w-1" value="1.5" readonly>
+											<label class="cart-text" for="cart-item-w-1">1,5 кг</label>
 											<span class="cart-text">x</span>
-											<input class="cart-text cart-price" type="number" id="cart-item-p-1" value="200" readonly>
-											<label class="cart-text" for="cart-item-p-1">руб.</label>
+											<input class="cart-text cart-price" type="hidden" id="cart-item-p-1" value="200" readonly>
+											<label class="cart-text cart-price" for="cart-item-p-1">200 руб.</label>
 										</td>
-										<td>
-											<input class="cart-text" type="number" id="cart-item-c-1" value="300" readonly>
-											<label class="cart-text" for="cart-item-c-1">руб.</label>
+										<td class="cell-cost">
+											<input class="cart-text" type="hidden" id="cart-item-c-1" value="300" readonly>
+											<label class="cart-text" for="cart-item-c-1">300 руб.</label>
 										</td>
 									</tr>
 									<tr>
 										<td>
-											<button class="button delete-item" type="button" value="delet-item" aria-label="удалить товар"></button>
+											<button class="delete-item" type="button" value="delet-item" aria-label="удалить товар">
+												<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path fill="#231F20" d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/></svg>
+											</button>
 										</td>
 										<td>
-											<img src="img/ice-cream-strawberry.png" width="33" height="33" alt="Фото мороженного">
+											<img class="cart-item-img"src="img/ice-cream-strawberry.png" width="33" height="33" alt="Фото мороженного">
 										</td>
 										<!--Через JS в инпут будем вставлять значение кода товара из базы данных и этот же код будет служить уникальным ID для связки лейбла вставляемый так же с помощью замены ID у элемента через JS. Итак же с остальными полями значения и ID через JS-->
-										<td>
+										<td >
 											<input class="cart-text" type="hidden" id="cart-item-000002" value="000002">
-											<label class="cart-text" for="cart-item-000002" name="cart-item-name">Клубничный пломбир с присыпкой из белого шоколада</label>
+											<label class="cart-text cart-item-name" for="cart-item-000002" name="cart-item-name">Клубничный пломбир с присыпкой из белого шоколада</label>
 										</td>
 										<td>
-											<input class="cart-text" type="number" id="cart-item-w-1" value="1.5" readonly>
-											<label class="cart-text" for="cart-item-w-1">кг</label>
+											<input class="cart-text" type="hidden" id="cart-item-w-1" value="1.5" readonly>
+											<label class="cart-text" for="cart-item-w-1">1,5 кг</label>
 											<span class="cart-text">x</span>
-											<input class="cart-text cart-price" type="number" id="cart-item-p-2" value="300" readonly>
-											<label class="cart-text" for="cart-item-p-2">руб.</label>
+											<input class="cart-text cart-price" type="hidden" id="cart-item-p-2" value="300" readonly>
+											<label class="cart-text cart-price" for="cart-item-p-2">300 руб.</label>
 										</td>
 										<td>
-											<input class="cart-text" type="number" id="cart-item-p-2" value="450" readonly>
-											<label class="cart-text" for="cart-item-p-2">руб.</label>
+											<input class="cart-text" type="hidden" id="cart-item-p-2" value="450" readonly>
+											<label class="cart-text" for="cart-item-p-2">450 руб.</label>
 										</td>
 									</tr>
 								</table>
-								
 								<p>Итого:750 руб.</p>
 								<button class="button" type="submit">Оформить заказ</button>
+
 							</form>
 						</div>
 					</section>
