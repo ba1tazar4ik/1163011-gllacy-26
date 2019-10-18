@@ -484,7 +484,6 @@ body {
 /*блок slider*/
 .slider{
   position: relative;
-  z-index: -1;
 }
 
 .slider-item{
@@ -495,6 +494,8 @@ body {
   text-align: center;
 }
 .slider-item img{
+  position: relative;
+  z-index: -1;
   width: 647px;
   height: auto;
 }
