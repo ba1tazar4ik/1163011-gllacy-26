@@ -10,7 +10,7 @@ body {
 
   background-color: #849d8f;
   background-image: url("../img/background-jam.jpg");
-  /*background-image: url("../img/gllacy-index.jpg");*/
+  background-image: url("../img/gllacy-index.jpg");
   background-position: top center;
   background-repeat: no-repeat;
 }
@@ -90,6 +90,7 @@ body {
 .header-wrapper{
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 /*группируем элементы первойстроки хедера*/
 .navigation-wrapper{
@@ -177,6 +178,7 @@ body {
 
 /*стилизуем меню каталога*/
 .sub-menu{
+  display: none;
   position: absolute;
   overflow: hidden;
   margin-top: 5px;
@@ -449,7 +451,10 @@ body {
 чисто визуально подогнал отрицательынм маржином
 нотак ведь не правильно.*/
 .schedule{
-  margin-top: -5px;
+  position: absolute;
+  right: 0;
+  top: 90%;
+  
   text-align: right;
 }
 
@@ -475,12 +480,38 @@ body {
       /*MAIN*/
 /*блок slider*/
 .slider{
-  /*margin-top: -125px;*/
-}
-.slider-item{
-  text-align: center;
+  position: relative;
 }
 
+.slider-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+.slider-item img{
+  width: 647px;
+  height: auto;
+}
+.slider-footer{
+  position: absolute;
+  top:313px;
+  width: 675px;
+}
+.slider-footer p{
+  margin: 0;
+  margin-bottom: 30px;
+}
+.slider-button{
+  display: block;
+  width: 280px;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  border-radius: 50px;
+}
 .slider-item p{
   font-size: 60px;
   font-weight: 700;
@@ -492,6 +523,15 @@ body {
   line-height: 44px;
 
   text-decoration: none;
+}
+.slider-navigation-list{
+  position: absolute;
+  left: 0;
+  bottom: 
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: none;
 }
 
 /*блок акция*/
