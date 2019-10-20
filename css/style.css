@@ -9,10 +9,14 @@ body {
   color: #ffffff;
 
   background-color: #849d8f;
-  background-image: url("../img/background-jam.jpg");
   /*background-image: url("../img/gllacy-index.jpg");*/
   background-position: top center;
   background-repeat: no-repeat;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
 }
 
 /*этот класс унас на всем что выглядит как красная кнопка*/
@@ -455,6 +459,7 @@ body {
 нотак ведь не правильно.*/
 .schedule{
   position: absolute;
+  z-index: 1;
   right: 0;
   top: 91%;
   
@@ -494,10 +499,7 @@ body {
   text-align: center;
 }
 .slider-item img{
-  position: relative;
-  z-index: -1;
-  width: 647px;
-  height: auto;
+  margin-top: -80px;
 }
 .slider-footer{
   position: absolute;
@@ -533,7 +535,7 @@ body {
   display: flex;
   position: absolute;
   left: 1px;
-  bottom: 79px; 
+  bottom: 296px; 
   margin: 0;
   padding: 0;
   list-style: none;
@@ -561,7 +563,9 @@ body {
 
 /*блок акция*/
 .promotion-content{
-  margin-top: -15px;
+  position: relative;
+  z-index: 1;
+  margin-top: -232px;
 }
 
 .promotion{
@@ -628,18 +632,20 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
+
 .choco-button{
   padding-left: 20px;
   padding-right: 20px;
 }
 
-/*блок хит*/
-
 /*блок преимущества*/
 .advantages{  
-  margin-top: 40px;
+  margin-top: 36px;
   margin-bottom: 40px;
-  padding: 20px;
+  padding-top: 26px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
 
   color: #323232;
 
@@ -648,11 +654,12 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  border-radius: 15px;
 }
 
 .advantages p{
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 
   font-size: 24px;
   font-weight: 500;
@@ -666,6 +673,7 @@ body {
 
   margin: 0;
   padding: 0;
+  padding-bottom: 5px;
 
   list-style: none;
 }
@@ -674,7 +682,7 @@ body {
 }
 
 .advantages-item p{
-  margin-left: 60px;
+  margin-left: 55px;
   padding-top: 10px;
 
   font-size: 16px;
@@ -717,9 +725,6 @@ body {
 /*блок новое в блоге+рассылка
 (обединил потому что они составляют один блок)*/
 .new-in-blog{
-  width: 520px;
-  padding: 25px 20px;
-  padding-top: 30px;
 
   background-color: #ffffff;
   background-image: url("../img/background-strawberry.jpg");
@@ -751,11 +756,10 @@ body {
   color: #e84d37;
 }
 .subscribe{
-  width: 520px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 35px;
-  padding-bottom: 35px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 
   border: 5px solid #92cdff;
   border-image-source: url("../img/svg/background-post.svg");
@@ -770,6 +774,7 @@ body {
 
 .subscribe p{
   margin: 0;
+  padding-left: 10px;
 
   font-size: 16px;
   font-weight: 400;
@@ -777,35 +782,40 @@ body {
   color: #5a5a5a;
 }
 
-.subscribe .form-input{
-  height: 45px;
-  margin-top: 45px;  
+.subscribe form{
+  display: flex;
+  margin-top: 38px;
+  margin-bottom: 5px;
+  padding-left: 10px;
 }
 
-/*блок с картой*/
-.map{
-  display: flex;
-  align-items: center;
-  
-  height: 430px;
-  margin-top: 40px;
+.subscribe .form-input{
+  width: 100%;
+  height: 45px;
+}
 
-  background-image: 
-    url("../img/svg/pin.svg"),
-    url("../img/map.jpg");
-  /*маркер выставлю когда размеры блока будут*/
-  background-position: 
-    center center,
-    center center;
-  background-repeat:
-    no-repeat,
-    no-repeat;
-  -webkit-background-size:
-    80px 140px, 
-    auto auto;
-  background-size:
-    80px 140px, 
-    auto auto;
+.button-subscribe{
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  margin-left: 10px;
+  margin-right: 5px;
+
+  border-radius: 25px;
+} 
+
+/*блок с картой*/
+.map{  
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 35px;
+
+  background-image: url("../img/map.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
 }
 
 .map .content-container{
@@ -814,10 +824,20 @@ body {
 }
 
 .address{
+  box-sizing: border-box;
+  width: 302px;
+  margin-top: 64px;
+  margin-bottom: 64px;
+  padding-top: 27px;
+  padding-right: 23px;
+  padding-left: 23px;
+  padding-bottom: 27px;
   background-color: #fefefe;
+  border-radius: 12px;
 }
 
 .address h2{
+  margin: 0;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
@@ -825,23 +845,37 @@ body {
 }
 
 .address p{
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
+  margin: 0;
+  margin-top: 3px;
+  margin-bottom: 15px;
+}
+.address-tel{
+  display: block;
+  margin-top: 6px;
+  margin-bottom: 5px;
+}
+.address span{
+  font-weight: 400;
   color: #323232;
 }
 
-.address span{
-  font-weight: 400;
-}
-
-.addres-tel{
+.address-text{
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
   color: #323232;
 
   text-decoration: none;
+}
+.address-button{
+  display: block;
+  margin-top: 23px;
+  padding-top: 12px;  
+  padding-right: 28px;
+  padding-bottom: 12px;
+  padding-left: 28px;
+
+  border-radius: 25px;
 }
 
 /*хлбные крошки*/
@@ -970,23 +1004,67 @@ body {
 }
 
 .products-item{
+  position: relative;
+  z-index: 1;
   width: 267px;
   margin-top: 40px;
 
   text-align: center;
 }
 
+.products-item:hover{
+  z-index: 2;
+}
+
+.products-item:hover::after{
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: -12px;
+  width: calc(100% + 25px);
+  height: calc(100% + 88px);
+  background-color: rgba(248, 247, 244, 0.2);
+  border-radius: 5px;
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  margin: 0 auto;
+}
+
+.image-hit{
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+
+.products-item:hover .products-image{
+  position: relative;
+  z-index: 1;
+}
+
 .products-item p{
+  position: absolute;
+  z-index: 2;
+  top: 210px;
+  left: 0;
+  margin: 0;
+
   font-size: 45px;
   font-weight: 700;
   line-height: 45px;
+
+  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
 .products-item span{
   font-size: 30px;
 }
 
-.products-item a{
+.products-link{
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  margin-top: 11px;
+
   font-size: 16px;
   font-weight: 500;
   line-height: 22px;
@@ -994,17 +1072,19 @@ body {
 }
 
 .products-button{
+  position: absolute;
+  z-index: 3;
+  left: 30px;
+  right: 30px;
+  bottom: -68px;
   display: none;
 
-  font-size: 18px;
-}
-
-.products-item:hover{
-  background-color: rgba(248, 247, 244, 0.2);
+  padding: 17px;
+  border-radius: 25px;
 }
 
 .products-item:hover .products-button{
-  display: block
+  display: block;
 }
 
 .catalog-navigation{
@@ -1097,23 +1177,32 @@ body {
 /*соцсети*/
 .social-network{
   display: flex;
-
-  width: 185px;
-}
-.social-network li{
-  margin-right: 15px;
-  margin-top: auto;
-  margin-bottom: auto;
 }
 
-.social-network a,
-.social-network a:active{
+.social-network a{
+  display: block;
+  
+  width: 32px;
+  height: 32px;
+  margin-top: 17px;
+  margin-right: 11px;
+
   fill: #e6ebe9;
+  border-radius: 50%;
+  border: 3px solid #c2cec7;
 }
 
-.social-network a:hover{
+.social-network a:hover,
+.social-network a:focus{
   fill: #ffffff;
 }
+
+.social-network a:active{
+  fill: #e9e9e9;
+  border: 3px solid #dae2de;
+  box-shadow: inset 0px 2px 1px 0px rgba(136, 136, 136, 0.004);
+}
+
 
 .footer-menu{
   display: flex;
