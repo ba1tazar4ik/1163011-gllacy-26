@@ -102,6 +102,7 @@ img{
 /*группируем элементы первойстроки хедера*/
 .navigation-wrapper{
   display: flex;
+  z-index: 1;
 }
 
 .header-logo{
