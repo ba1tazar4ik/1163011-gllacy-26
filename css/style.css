@@ -121,8 +121,12 @@ img{
 /*делаем основное меню флексовым*/
 .main-menu{
   display: flex;
-  padding-left: 6px;
+  padding-top: 10px;
   padding-bottom: 12px;
+  padding-left: 6px;  
+}
+.main-menu-item{
+  padding-bottom: 20px;
 }
 /*стилизуем элементы меню*/
 .main-menu-link{
@@ -193,7 +197,9 @@ img{
   border-radius: 5px;
   background-color: #f8f7f4;
 }
-
+.main-menu-item:hover .sub-menu{
+  display: block;
+}
 .sub-menu-link{
   display: block;
   margin: 0;
@@ -1269,18 +1275,62 @@ img{
       /*КОНЕЦ FOOTER*/
 
       /*МОДАЛЬНОЕ ОКНО*/
+.modal {
+  display: none;
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+}
+.modal-show{
+  display: block;
+}
+.modal-form{
+  display: flex;
+  flex-direction: column;
+  width: 478px;
+  margin-top: 337px;
+  margin-left: calc(50% - 263px);
+  padding-top: 20px;
+  padding-right: 24px;
+  padding-bottom: 27px;
+  padding-left: 24px;
+}
+
 .modal p{
+  margin: 0;
+  margin-bottom: 24px;
   font-size: 24px;
   font-weight: 500;
   line-height: 28px;
   color: #323232;
 }
-
+.modal-input{
+  width: 50%;
+  margin-bottom: 20px;
+}
+.modal-textarea{
+  margin-bottom: 25px;
+  height: 155px;
+}
+.modal-send{
+  align-self: flex-end;
+  margin-bottom: 10px;
+  padding: 7px 24px;
+  border-radius: 25px;
+}
 .modal-close{
+  position: fixed;
+  top: 356px;
+  right: 50%;
+  margin-right: -223px;
+  padding: 0;
   background-color: transparent;
   border: none;
 }
-
 .modal-close:hover{
   cursor: pointer;
 }
