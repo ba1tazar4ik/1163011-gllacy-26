@@ -83,77 +83,61 @@
 								</fieldset>
 							</form>
 						</div>
-						<div class="user-navigation-item">
+						<div class="user-navigation-item user-cart">
 							<button class="user-button button-cart" type="button">
 								<svg width="21" height="20"><path fill="#E84D37" d="M5.888 4.031L6.922 13h10.45l1.176-8.969z"/><circle fill="#343434" cx="6.984" cy="18" r="2"/><circle fill="#343434" cx="15.984" cy="18" r="2"/><path fill="#343434" d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/></svg>
 								2 товара
 							</button>
 							<!-- Ховер Корзина-->
 							<form class="cart-form form-fieldset user-navigation-popup" action="gllacyshop.ru" type="post" name="cart-form">
-								<table>
-									<caption class="visually-hidden">Ваша корзина</caption>
-									<tr>
-										<th class="visually-hidden">кнопка закрыть</th>
-										<th class="visually-hidden">фото товра</th>
-										<th class="visually-hidden">Название товра</th>
-										<th class="visually-hidden">Вес и цена товара</th>
-										<th class="visually-hidden">Стоимость товара</th>
-									</tr>
-									<tr>
-										<td class="cell-delete">
-											<button class="delete-item" type="button" value="delet-item" aria-label="удалить товар">
-												<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path fill="#231F20" d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/></svg>
-											</button>
-										</td>
-										<td class="cell-img">
-											<img class="cart-item-img"src="img/ice-cream-orange.png" width="33" height="33" alt="Фото мороженного">
-										</td>
-										<!--Через JS в инпут будем вставлять значение кода товара из базы данных и этот же код будет служить уникальным ID для связки лейбла вставляемый так же с помощью замены ID у элемента через JS. Итак же с остальными полями значения и ID через JS-->
-										<td>
-											<input class="cart-text" type="hidden" id="cart-item-000001" value="000001">
-											<span class="cart-text cart-item-name" for="cart-item-000001" name="cart-item-name">Пломбир с апельсиновым джемом</span>
-										</td>
-										<td class="cell-prise">
-											<input class="cart-text" type="hidden" id="cart-item-w-1" value="1.5" readonly>
-											<label class="cart-text" for="cart-item-w-1">1,5 кг</label>
-											<span class="cart-text">x</span>
-											<input class="cart-text cart-price" type="hidden" id="cart-item-p-1" value="200" readonly>
-											<label class="cart-text cart-price" for="cart-item-p-1">200 руб.</label>
-										</td>
-										<td class="cell-cost">
-											<input class="cart-text" type="" id="cart-item-c-1" value="300" readonly>
-											<label class="cart-text" for="cart-item-c-1">300 руб.</label>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<button class="delete-item" type="button" value="delet-item" aria-label="удалить товар">
-												<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path fill="#231F20" d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/></svg>
-											</button>
-										</td>
-										<td>
-											<img class="cart-item-img"src="img/ice-cream-strawberry.png" width="33" height="33" alt="Фото мороженного">
-										</td>
-										<!--Через JS в инпут будем вставлять значение кода товара из базы данных и этот же код будет служить уникальным ID для связки лейбла вставляемый так же с помощью замены ID у элемента через JS. Итак же с остальными полями значения и ID через JS-->
-										<td >
-											<input class="cart-text" type="hidden" id="cart-item-000002" value="000002">
-											<label class="cart-text cart-item-name" for="cart-item-000002" name="cart-item-name">Клубничный пломбир с присыпкой из белого шоколада</label>
-										</td>
-										<td>
-											<input class="cart-text" type="hidden" id="cart-item-w-1" value="1.5" readonly>
-											<label class="cart-text" for="cart-item-w-1">1,5 кг</label>
-											<span class="cart-text">x</span>
-											<input class="cart-text cart-price" type="hidden" id="cart-item-p-2" value="300" readonly>
-											<label class="cart-text cart-price" for="cart-item-p-2">300 руб.</label>
-										</td>
-										<td>
-											<input class="cart-text" type="hidden" id="cart-item-p-2" value="450" readonly>
-											<label class="cart-text" for="cart-item-p-2">450 руб.</label>
-										</td>
-									</tr>
-								</table>
-								<p>Итого:750 руб.</p>
-								<button class="button" type="submit">Оформить заказ</button>
+								<div class="cart-item">
+									<button class="delete-item" type="button" value="delet-item" aria-label="удалить товар">
+										<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path fill="#231F20" d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/></svg>
+									</button>
+									<div class="cart-item-img">
+										<img src="img/ice-cream-orange.png" width="33" height="33" alt="Фото мороженного">
+									</div>
+									<div class="cart-item-name">
+										<input class="cart-text" type="hidden" id="cart-item-000001" value="000001">
+										<label class="cart-text" for="cart-item-000001" name="cart-item-name">Пломбир с апельсиновым джемом</label>
+									</div >
+									<div class="cart-item-prise">
+										<input class="cart-text" type="hidden" id="cart-item-w-1" value="1.5" readonly>
+										<label class="cart-text" for="cart-item-w-1">1,5&nbsp;кг</label>
+										<span class="cart-text">x</span>
+										<input class="cart-text cart-price" type="hidden" id="cart-item-p-1" value="200" readonly>
+										<label class="cart-text cart-price" for="cart-item-p-1">200 руб.</label>
+									</div>
+									<div class="cart-item-cost">
+										<input class="cart-text" type="hidden" type="hidden" id="cart-item-c-1" value="300">
+										<label class="cart-text" for="cart-item-c-1">300 руб.</label>
+									</div>
+								</div>
+								<div class="cart-item">
+									<button class="delete-item" type="button" value="delet-item" aria-label="удалить товар">
+										<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path fill="#231F20" d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/></svg>
+									</button>
+									<div class="cart-item-img">
+										<img src="img/ice-cream-strawberry.png" width="33" height="33" alt="Фото мороженного">
+									</div>
+									<div class="cart-item-name">
+										<input class="cart-text" type="hidden" id="cart-item-000002" value="000002">
+										<label class="cart-text" for="cart-item-000002" name="cart-item-name">Клубничный пломбир с присыпкой из белого шоколада</label>
+									</div >
+									<div class="cart-item-prise">
+										<input class="cart-text" type="hidden" id="cart-item-w-1" value="1.5" readonly>
+										<label class="cart-text" for="cart-item-w-1">1,5&nbsp;кг</label>
+										<span class="cart-text">x</span>
+										<input class="cart-text cart-price" type="hidden" id="cart-item-p-1" value="300">
+										<label class="cart-text cart-price" for="cart-item-p-1">300 руб.</label>
+									</div>
+									<div class="cart-item-cost">
+										<input class="cart-text" type="hidden" id="cart-item-c-1" value="450">
+										<label class="cart-text" for="cart-item-c-1">450 руб.</label>
+									</div>
+								</div>
+								<p class="cart-total">Итого:750 руб.</p>
+								<button class="button cart-button" type="submit">Оформить заказ</button>
 
 							</form>
 						</div>
