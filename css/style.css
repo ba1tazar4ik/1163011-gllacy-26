@@ -102,7 +102,7 @@ img{
 /*группируем элементы первойстроки хедера*/
 .navigation-wrapper{
   display: flex;
-  z-index: 1;
+  z-index: 2;
 }
 
 .header-logo{
@@ -248,11 +248,12 @@ img{
   display: flex;  
   justify-content: flex-end;
   align-items: center;
-  padding-bottom: 10px;
+  padding-top: 10px;
 }
 .user-navigation-item{
   position: relative;
   margin-left: 8px;
+  padding-bottom: 20px;
 }
 /*у всех кнопок в секции с классом user-navigation один шрифт,
 цвет шрифта, одинаковый бекгранунд ховер и т.д.*/
@@ -318,6 +319,7 @@ img{
 .form-input{
   box-sizing: border-box;
   padding: 7px 15px;
+  width: 100%;
 
   font-size: 14px;
   font-weight: 400;
@@ -338,12 +340,16 @@ img{
   box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
   box-shadow: inset 0 0 0 2px rgba(46, 136, 228, 0.52);
 }
+
 /*Всплывающее окно поиска*/
 .search-form{
   display: none;
   width: 341px;    
 }
 
+.user-search:hover .search-form{
+  display: block;
+}
 .search-fieldset{
   padding: 15px 20px;
 }
@@ -352,6 +358,10 @@ img{
 .account-form{
   display: none;
   width: 277px;
+}
+
+.user-login:hover .account-form{
+  display: block;
 }
 
 .account-fieldset{
@@ -455,9 +465,6 @@ img{
   color: #323232;
 }
 
-/*не поняял почему блок не встал впритык
-чисто визуально подогнал отрицательынм маржином
-нотак ведь не правильно.*/
 .schedule{
   position: absolute;
   z-index: 1;
@@ -490,6 +497,7 @@ img{
 /*блок slider*/
 .slider{
   position: relative;
+  margin-top: -80px;
 }
 
 .slider-item{
@@ -499,12 +507,10 @@ img{
   position: relative;
   text-align: center;
 }
-.slider-item img{
-  margin-top: -80px;
-}
+
 .slider-footer{
   position: absolute;
-  top:313px;
+  top:393px;
   width: 675px;
 }
 .slider-footer p{
@@ -723,8 +729,7 @@ img{
   background-size: 49px 49px;
 }
 
-/*блок новое в блоге+рассылка
-(обединил потому что они составляют один блок)*/
+/*блок новое в блоге+рассылка*/
 .new-in-blog{
 
   background-color: #ffffff;
@@ -1080,7 +1085,10 @@ img{
   bottom: -68px;
   display: none;
 
-  padding: 17px;
+  padding-top: 12px;
+  padding-right: 17px;
+  padding-bottom: 12px;
+  padding-left: 12px;
   border-radius: 25px;
 }
 
@@ -1215,15 +1223,42 @@ img{
 
 .footer-menu li{
   width: 50%;
+  margin-bottom: 6px;
 }
 
-.footer-menu a{
+.footer-menu-link{
+  position: relative;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 18px;
-  color: #ffffff;
+  color: #ffffff;  
+  text-decoration: none;
+}
+.bold-link{
+  font-weight: 700;
+}
 
+.footer-heart{
+  position: absolute;
+  left: -20px;
+  top: 2px;
   fill: #ffffff;
+}
+.footer-menu-link:hover .footer-heart{
+  fill: #ffbc9e;
+}
+.footer-menu-link::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 auto;
+}
+.footer-menu-link:hover::after{
+  background-color: rgba(255, 188, 158, 0.2);
 }
 
 .copyright p{
