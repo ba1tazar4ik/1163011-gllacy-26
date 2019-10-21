@@ -196,6 +196,7 @@ img{
   margin-top: 5px;
   border-radius: 5px;
   background-color: #f8f7f4;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 }
 .main-menu-item:hover .sub-menu{
   display: block;
@@ -424,7 +425,7 @@ img{
   flex-direction: column;
   align-items: flex-end;
   width: 555px;
-  padding: 20px 15px;  
+  padding: 15px 15px;  
 }
 .user-cart:hover .cart-form{
   display: flex;
@@ -434,17 +435,17 @@ img{
   position: relative;
   display: flex;
   padding-right: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
-
+/*Не понимаю почему не работает с ласт чайлд*/
 .cart-item:last-child::after{
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -10px;
   left: 0;
-  width: calc(100% - 20px);
+  width: 510px;
   height: 1px;
-  background-color: rgba(0, 0, 0, 1);;
+  background-color: rgba(0, 0, 0, 0.1);;
   right: 0;
   margin: 0 auto;
 }
@@ -493,7 +494,7 @@ img{
 }
 
 .cart-total{
-  margin: 0;
+  margin-top: 10px;
   margin-bottom: 17px;
   font-size: 15px;
   font-weight: 700;
