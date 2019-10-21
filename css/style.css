@@ -320,6 +320,7 @@ img{
   background-color: #f8f7f4;
   border: none;
   border-radius: 5px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 }
 
 .form-input{
@@ -424,16 +425,19 @@ img{
   
 }
 .cart-form table {
-  border-collapse: collapse; /*убираем пустые промежутки между ячейками*/
-  border: 1px solid grey; /*устанавливаем для таблицы внешнюю границу серого цвета толщиной 1px*/
+  width: 1000px;
+  border-collapse: collapse;
+  border-bottom: 1px solid grey;
 }
+
 .cart-form td {
+  display: flex;
   /*margin: 0;
   padding: 0;*/
-  border: 1px solid blue;
+  /*border: 1px solid blue;*/
 }
 .cart-form td:nth-child(3){  
-  width: 415px;
+  /*width: 415px;*/
   background-color: green;
 }
 
@@ -445,7 +449,6 @@ img{
 }
 
 .cart-text{
-  width: auto;
   padding-top: 8px;
   font-size: 13px;
   font-weight: 400;
