@@ -1202,19 +1202,19 @@ img{
   margin-top: 17px;
   margin-right: 11px;
 
-  fill: #e6ebe9;
+  fill: rgba(254,254,254,0.8);
   border-radius: 50%;
-  border: 3px solid #c2cec7;
+  border: 3px solid rgba(254,254,254,0.5);
 }
 
 .social-network a:hover,
 .social-network a:focus{
-  fill: #ffffff;
+  fill: rgba(254,254,254,1);
 }
 
 .social-network a:active{
-  fill: #e9e9e9;
-  border: 3px solid #dae2de;
+  fill: rgba(254,254,254,0.5);
+  border: 3px solid rgba(254,254,254,0.7);
   box-shadow: inset 0px 2px 1px 0px rgba(136, 136, 136, 0.004);
 }
 
