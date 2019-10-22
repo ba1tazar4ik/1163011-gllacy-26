@@ -987,7 +987,7 @@ img{
   
 }
 .filters legend{
-  padding-left: 5px;
+  padding-left: 17px;
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
@@ -998,9 +998,6 @@ img{
   width: 194px;
   margin: 0;
   padding: 0;
-}
-.filter-sort legend{
-  padding-left: 17px;
 }
 .sort{
   height: 36px;
@@ -1042,7 +1039,20 @@ img{
   line-height: 16px;
   color: #323232;
 }
-
+.filter-cost{
+	position: relative;
+	display: flex;
+	margin: 0;
+	margin-left: 13px;
+	padding: 0;
+}
+.filter-cost-value{
+	position: absolute;
+	display: flex;
+	margin: 0;
+	top: -15px;
+	left: 55px;
+}
 .filter-cost p{
   font-size: 14px;
   font-weight: 500;
@@ -1050,10 +1060,12 @@ img{
   color: #ffffff;
 }
 .filter-cost input{
+	width: 28px;
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
   color: #ffffff;
+  color: red;
 
   border: none;
   background-color: transparent;
@@ -1067,7 +1079,13 @@ img{
   appearance: none;
   margin: 0;
 }
-
+.range{
+	width: 220px;
+	height: 36px;
+	margin-top: 9px;
+	border-radius: 25px;
+	background-color: rgba(0, 255, 255, 0.2);
+}
 .range-button{
   background-color: transparent;
   border: none;
