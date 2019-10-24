@@ -168,10 +168,10 @@
 				<h1 class="catalog-tittle">Сливочное мороженое</h1>			
 				<form class="filters" action="gllacyshop.ru" type="get" name="filters">
 					<h2 class="visually-hidden">Фильтр мороженного</h2>
-					<fieldset class="filter-sort">
-						<div class="filter-sort-content">
-							<legend>Сортировка:</legend>
-							<select class="sort" name="sort">
+					<fieldset class="filters-fildset filter-sort">
+						<legend>Сортировка:</legend>
+						<div class="filter-sort-content filters-fildset-wrapper">						
+							<select class="filters-fildset-text filter-sort-select" name="sort">
 								<option value="popularity">по популярности</option>
 								<option value="price-up">сначала недорогие</option>
 								<option value="price-down">сначала дорогие</option>
@@ -179,7 +179,7 @@
 							</select>
 						</div>
 					</fieldset>
-					<fieldset class="filter-cost">
+					<fieldset class="filters-fildset filter-cost">
 						<legend>Цена:</legend>
 						<p class="filter-cost-value">
 							<input type="number" id="min-cost" min="50" max="645" step="5" value="100">
@@ -188,25 +188,31 @@
 							<input type="number" id="max-cost" min="55" max="650" step="5" value="500">
 							<label for="max-cost">руб.</label>
 						</p>
-						<div class="range">
-							<div class="range-line"></div>
-							<div class="range-line-strong"></div>
-							<button class="range-button" type="button">
+						<div class="range filters-fildset-wrapper">
+							<div class="range-line range-line-back"></div>
+							<div class="range-line range-line-front"></div>
+							<button class="range-button range-button-min" type="button">
 								<svg width="20" height="23"><path opacity=".3" fill="#ABABAB" d="M10 20C4.477 20 0 15.522 0 10v2c0 5.522 4.477 10 10 10 5.522 0 10-4.478 10-10v-2c0 5.522-4.478 10-10 10z"/><circle fill="#FFF" cx="10" cy="10" r="10"/><circle fill="#ABABAB" cx="10" cy="10" r="2"/></svg>
 							</button>
-							<button class="range-button" type="button">
+							<button class="range-button range-button-max" type="button">
 								<svg width="20" height="23"><path opacity=".3" fill="#ABABAB" d="M10 20C4.477 20 0 15.522 0 10v2c0 5.522 4.477 10 10 10 5.522 0 10-4.478 10-10v-2c0 5.522-4.478 10-10 10z"/><circle fill="#FFF" cx="10" cy="10" r="10"/><circle fill="#ABABAB" cx="10" cy="10" r="2"/></svg>
 							</button>
 						</div>
 					</fieldset>
-					<fieldset class="filter-fatness">
+					<fieldset class="filters-fildset filter-fatness">
 						<legend>Жирность:</legend>					
-						<label ><input type="radio" name="fatness" value="0%">0%</label>
-						<label ><input type="radio" name="fatness" value="to 10%" checked>до 10%</label>
-						<label ><input type="radio" name="fatness" value="to 30%">до 30%</label>
-						<label ><input type="radio" name="fatness" value="above 30%">выше 30%</label>
+							<div class="filter-fatness-content filters-fildset-wrapper">
+								<input type="radio" id="fat0" name="fat" value="fat0" class="filter-fatness-radio" >
+			            		<label class="filter-fatness-fat0 filters-fildset-text" for="fat0"> 0%</label>
+			            		<input type="radio" id="fat10" name="fat" value="fat10" checked class="filter-fatness-radio">
+			            		<label class="filter-fatness-fat10 filters-fildset-text" for="fat10"> до 10%</label>
+			            		<input type="radio" id="fat30" name="fat" value="fat30" class="filter-fatness-radio">
+			            		<label class="filter-fatness-fat30 filters-fildset-text" for="fat30"> до 30%</label>
+			            		<input type="radio" id="fat30up" name="fat" value="fat30up" class="filter-fatness-radio">
+			            		<label class="filter-fatness-fat30up filters-fildset-text" for="fat30up"> выше 30%</label>
+							</div>
 					</fieldset>
-					<fieldset class="filter-filler">
+					<fieldset class="filters-fildset filter-filler">
 						<legend>Наполнители:</legend>					
 						<label><input type="checkbox" name="filler" value="chocolate" checked>шоколадные</label>
 						<label><input type="checkbox" name="filler" value="sugar powder" checked>сахарные присыпки</label>
