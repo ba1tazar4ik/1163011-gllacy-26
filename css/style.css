@@ -9,8 +9,6 @@ body {
   color: #ffffff;
 
   background-color: #849d8f;
-  /*background-image: url("../img/gllacy-index.jpg");*/
-  /*background-image: url("../img/gllacy-catalog.jpg");*/
   background-position: top center;
   background-repeat: no-repeat;
 }
@@ -975,17 +973,7 @@ img{
   line-height: 41px;
 }
 
-/*фильтры каталога
-я потом доделаю стилизацию всего это добра когда уже
-сетки построим и так далее
--ms-appearance: none;  
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-
-  ::-ms-expand{
-  display: none;
-}*/
+/*фильтры каталога*/
 .filters {
 	display: flex;
 	flex-wrap: wrap;	
@@ -1024,7 +1012,6 @@ img{
 	padding-left: 11px;
 	border-radius: 25px;
 	background-color: rgba(248, 247, 244, 0.2);
-	background-color: rgba(0, 247, 244, 0.2);
 }
 .filter-sort{
 	flex-direction: column;
@@ -1062,19 +1049,12 @@ img{
 .filter-sort-select:hover{
 	color: #323232;
 }
-/*стили для option не работают в IE не знаю что с этим делать
-и еще не знаю как поле с пунктами селекта растянуть в ширину
-и сдвинуть влево. на width реагирует только мазила а 
-на маржины падинги и абсолюты вообще ни кто не реагирует.*/
+
 .filter-sort-select option{
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 16px;
 	color: #323232;
-}
-.filter-sort-select option:selected,
-.filter-sort-select:hover{
-	background-color: #1e90ff;
 }
 .filter-cost-value{
 	position: absolute;
@@ -1198,16 +1178,93 @@ margin: 0;
 .filter-fatness-fat30up{
 	margin-left: 19px;
 }
+.filter-filler{
+  margin-top: 8px;
+}
+.filter-filler-content{
+  display: flex;
+  width: 688px;
+  margin-top: 16px;
+  padding: 0;
+  padding-left: 14px;
+}
+.filters-filler-text{
+  position: relative;
+  margin-top: 10px;
+  padding-left: 32px;
+  cursor: pointer;
+}
+.filter-filler-icon{
+  display: none;
+  position: absolute;
+  top: -3px;
+  left: 0;
+  fill: rgba(255, 255, 255, 0.8);
+}
+.filters-filler-text:hover .filter-filler-icon{
+  fill: rgba(255, 255, 255, 1);
+}
+.filter-filler-sugar{
+  margin-left: 19px;
+}
+.filter-filler-fruit{
+  margin-left: 20px;
+}
+.filter-filler-syrup{
+  margin-left: 24px;
+}
+.filter-filler-jam{
+  margin-left: 20px;
+}
+.filter-filler-checkbox:not(checked) + label > .filter-filler-checkbox-off{
+  display: block;
+}
+.filter-filler-checkbox:checked + label > .filter-filler-checkbox-on{
+  display: none;
+}
+.filter-filler-checkbox:checked + label > .filter-filler-checkbox-off{
+  display: none;
+}
+.filter-filler-checkbox:checked + label > .filter-filler-checkbox-on{
+  display: block;
+}
+.filter-filler-checkbox:disabled + label > .filter-filler-icon{
+  fill: rgba(255, 255, 255, 0.4);
+}
+.filter-button{
+  width: 144px;
+  height: 33px;
+  margin-top: 30px;
+  padding: 0 auto;
+  border: none;
+  border-radius: 25px;
+  border: 2px solid #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+.filter-button:hover{
+  background-color: rgba(255, 255, 255, 1);
+  color: #323232; 
+}
+.filter-button:active{
+  height: 37px;
+  box-shadow: inset 0 2px 1px #696969;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #323232; 
+}
+
 /*блок с товарами*/
 .products{
   flex-wrap: wrap;
+  /*margin-top: -10px;*/
 }
 
 .products-item{
   position: relative;
   z-index: 1;
   width: 267px;
-  margin-top: 40px;
+  margin-top: 34px;
 
   text-align: center;
 }
@@ -1295,14 +1352,15 @@ margin: 0;
   align-items: center;
   justify-content: flex-end;
 
-  margin-top: 90px;
-  padding-bottom: 30px;    
+  margin-top: 80px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);    
 }
 
 /* класс через JS будет вешаться если 
 мы находимся на первой или последней странице*/
 .catalog-navigation .disabled{
-  fill: #9db1a5;
+  border-color: rgba(255,255,255,0.3);
 }
 
 .catalog-navigation ul{
@@ -1314,6 +1372,7 @@ margin: 0;
   font-weight: 500;
   line-height: 18px;
   color: #ffffff;
+  border-radius: 50%;
 
   text-decoration: none;
 }
@@ -1329,12 +1388,23 @@ margin: 0;
 
 /*блок со страницами каталога*/
 .button-navigation{
+  width: 12px;
+  height: 12px;
+  padding: 0;
   background-color: transparent;
   border: none;
-  fill: #ffffff;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
 
   cursor: pointer;
 }
+.button-navigation[role="down"]{  
+  transform: rotate(-45deg);
+}
+.button-navigation[role="up"]{  
+  transform: rotate(135deg);
+}
+
 .catalog-pages{
   display: flex;
 
@@ -1343,11 +1413,14 @@ margin: 0;
 }
 
 .catalog-pages-item{
-  margin-right: 13px;
+  margin-right: 4px;
 }
 
 .catalog-pages-item:first-child{
   margin-left: 13px;
+}
+.catalog-pages-item:last-child{
+  margin-right: 15px;
 }
 
 .catalog-pages-item a{
@@ -1370,11 +1443,12 @@ margin: 0;
 }
 
 .footer-content{
+  position: relative;
   display: flex;
   justify-content: space-between;
 
   padding-top: 20px;
-  padding-bottom: 30px;  
+  padding-bottom: 30px;
 }
 
 /*соцсети*/

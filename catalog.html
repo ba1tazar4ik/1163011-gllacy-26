@@ -201,26 +201,53 @@
 					</fieldset>
 					<fieldset class="filters-fildset filter-fatness">
 						<legend>Жирность:</legend>					
-							<div class="filter-fatness-content filters-fildset-wrapper">
-								<input type="radio" id="fat0" name="fat" value="fat0" class="filter-fatness-radio" >
-			            		<label class="filter-fatness-fat0 filters-fildset-text" for="fat0"> 0%</label>
-			            		<input type="radio" id="fat10" name="fat" value="fat10" checked class="filter-fatness-radio">
-			            		<label class="filter-fatness-fat10 filters-fildset-text" for="fat10"> до 10%</label>
-			            		<input type="radio" id="fat30" name="fat" value="fat30" class="filter-fatness-radio">
-			            		<label class="filter-fatness-fat30 filters-fildset-text" for="fat30"> до 30%</label>
-			            		<input type="radio" id="fat30up" name="fat" value="fat30up" class="filter-fatness-radio">
-			            		<label class="filter-fatness-fat30up filters-fildset-text" for="fat30up"> выше 30%</label>
-							</div>
+						<div class="filter-fatness-content filters-fildset-wrapper">
+							<input class="filter-fatness-radio" type="radio" id="fat0" name="fat" value="fat0">
+							<label class="filter-fatness-fat0 filters-fildset-text" for="fat0"> 0%</label>
+							<input class="filter-fatness-radio" type="radio" id="fat10" name="fat" value="fat10" checked>
+							<label class="filter-fatness-fat10 filters-fildset-text" for="fat10"> до 10%</label>
+							<input class="filter-fatness-radio" type="radio" id="fat30" name="fat" value="fat30">
+							<label class="filter-fatness-fat30 filters-fildset-text" for="fat30"> до 30%</label>
+							<input class="filter-fatness-radio" type="radio" id="fat30up" name="fat" value="fat30up">
+							<label class="filter-fatness-fat30up filters-fildset-text" for="fat30up"> выше 30%</label>
+						</div>
 					</fieldset>
 					<fieldset class="filters-fildset filter-filler">
 						<legend>Наполнители:</legend>					
-						<label><input type="checkbox" name="filler" value="chocolate" checked>шоколадные</label>
-						<label><input type="checkbox" name="filler" value="sugar powder" checked>сахарные присыпки</label>
-						<label><input type="checkbox" name="filler" value="fruit">фрукты</label>
-						<label><input type="checkbox" name="filler" value="syrup">сиропы</label>
-						<label><input type="checkbox" name="filler" value="jam">джемы</label>
+						<div class="filter-filler-content filters-fildset-wrapper">
+							<input class="filter-filler-checkbox" type="checkbox" name="filler" id="chocolate" value="chocolate" checked>
+							<label class="filter-filler-chocolate filters-fildset-text filters-filler-text" for="chocolate">
+								<svg class="filter-filler-icon filter-filler-checkbox-off" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23"><path  d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/></svg>
+								<svg class="filter-filler-icon filter-filler-checkbox-on" xmlns="http://www.w3.org/2000/svg" width="27" height="23" viewBox="0 0 27 23"><path  d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/><path  d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z"/></svg>
+								шоколадные
+							</label>
+							<input class="filter-filler-checkbox" type="checkbox" name="filler" id="sugar" value="sugar powder" checked>
+							<label class="filter-filler-sugar filters-fildset-text filters-filler-text" for="sugar">
+								<svg class="filter-filler-icon filter-filler-checkbox-off" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23"><path  d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/></svg>
+								<svg class="filter-filler-icon filter-filler-checkbox-on" xmlns="http://www.w3.org/2000/svg" width="27" height="23" viewBox="0 0 27 23"><path  d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/><path  d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z"/></svg>
+								сахарные присыпки
+							</label>
+							<input class="filter-filler-checkbox" type="checkbox" name="filler" id="fruit" value="fruit">
+							<label class="filter-filler-fruit filters-fildset-text filters-filler-text" for="fruit">
+								<svg class="filter-filler-icon filter-filler-checkbox-off" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23"><path  d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/></svg>
+								<svg class="filter-filler-icon filter-filler-checkbox-on" xmlns="http://www.w3.org/2000/svg" width="27" height="23" viewBox="0 0 27 23"><path  d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/><path  d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z"/></svg>
+								фрукты
+							</label>
+							<input class="filter-filler-checkbox" type="checkbox" name="filler" id="syrup" value="syrup">
+							<label class="filter-filler-syrup filters-fildset-text filters-filler-text" for="syrup">
+								<svg class="filter-filler-icon filter-filler-checkbox-off" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23"><path  d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/></svg>
+								<svg class="filter-filler-icon filter-filler-checkbox-on" xmlns="http://www.w3.org/2000/svg" width="27" height="23" viewBox="0 0 27 23"><path  d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/><path  d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z"/></svg>
+								сиропы
+							</label>
+							<input class="filter-filler-checkbox" type="checkbox" name="filler" id="jam" value="jam">
+							<label class="filter-filler-jam filters-fildset-text filters-filler-text" for="jam">
+								<svg class="filter-filler-icon filter-filler-checkbox-off" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23"><path  d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/></svg>
+								<svg class="filter-filler-icon filter-filler-checkbox-on" xmlns="http://www.w3.org/2000/svg" width="27" height="23" viewBox="0 0 27 23"><path  d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/><path  d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z"/></svg>
+								джемы
+							</label>
+						</div>
 					</fieldset>
-					<button class="filter-button" type="submit" value="use-filters">Применить</button>
+					<button class="filter-button filters-fildset-text" type="submit" value="use-filters">Применить</button>
 				</form>			
 				<section class="products column">
 					<h2 class="visually-hidden">Каталог мороженного</h2>
@@ -251,7 +278,7 @@
 					<article class="products-item">
 						<img class="products-image" src="img/ice-cream-cowberry.png" width="267" height="267" alt="Фото мороженного">
 						<p>325 ₽<span>/кг</span></p>
-						<a href="#" class="default-link products-link">Сливочное с брусничным джемом</a>
+						<a href="#" class="default-link products-link">Сливочное с брусничным<br> джемом</a>
 						<a class="button products-button" href="#">Быстрый просмотр</a>
 					</article>
 					<article class="products-item">
@@ -275,7 +302,7 @@
 					<article class="products-item">
 						<img class="products-image" src="img/ice-cream-vanilla.png" width="267" height="267" alt="Фото мороженного">
 						<p>440 ₽<span>/кг</span></p>
-						<a href="#" class="default-link products-link">Сливочно-ванильное с кусочками шоколада</a>
+						<a href="#" class="default-link products-link">Сливочно-ванильное с <br>кусочками шоколада</a>
 						<a class="button products-button" href="#">Быстрый просмотр</a>
 					</article>
 					<article class="products-item">
@@ -300,10 +327,7 @@
 			</section>
 			<section class="catalog-navigation">
 				<h2 class="visually-hidden">Перемещение по страницам каталога</h2>
-				<button class="disabled button-navigation" aria-label="предыдущая страница" type="button">
-					<!-- где то прочел что Safari 11 не понимает трансформ так что не факт что так можно			 -->
-					<svg width="8" height="12" transform="rotate(180)"><path d="M7.237 5.642L1.73.132c-.2-.197-.52-.197-.717 0s-.198.52 0 .717L6.163 6l-5.15 5.15c-.2.198-.2.52 0 .717.098.1.228.148.357.148.13 0 .26-.05.358-.148l5.51-5.51c.198-.197.198-.517 0-.715z"/></svg>
-				</button>
+				<button class="disabled button-navigation" aria-label="предыдущая страница" type="button" role="down"></button>
 				<ul class="catalog-pages">
 					<li class="catalog-pages-item"><a  class="active" href="#">1</a></li>
 					<li class="catalog-pages-item"><a href="#">2</a></li>
@@ -311,9 +335,7 @@
 					<li class="catalog-pages-item"><a href="#">4</a></li>
 					<li class="catalog-pages-item"><a href="#">5</a></li>
 				</ul>
-				<button class="button-navigation" aria-label="следующая страница" type="button">
-					<svg width="8" height="12"><path d="M7.237 5.642L1.73.132c-.2-.197-.52-.197-.717 0s-.198.52 0 .717L6.163 6l-5.15 5.15c-.2.198-.2.52 0 .717.098.1.228.148.357.148.13 0 .26-.05.358-.148l5.51-5.51c.198-.197.198-.517 0-.715z"/></svg>
-				</button>
+				<button class="button-navigation" aria-label="следующая страница" type="button" role="up"></button>
 			</section>
 		</div>
 	</main>
