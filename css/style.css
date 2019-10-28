@@ -1104,7 +1104,6 @@ img{
   font-weight: 500;
   line-height: 16px;
   color: #ffffff;
-  color: red;
 
   margin-bottom: 6px;
   margin-left: 14px;
@@ -1133,7 +1132,6 @@ img{
 .filters-fildset-wrapper{
   border-radius: 25px;
   background-color: rgba(248, 247, 244, .2);
-  background-color: rgba(0, 247, 244, .2);
 }
 
 .filter-sort{
