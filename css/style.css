@@ -5,6 +5,8 @@ body{
   line-height: 16px;
   color: #ffffff;
 
+  min-width: 1200px;
+  
   margin: 0;
   padding: 0;
 
@@ -203,6 +205,7 @@ img{
   border-radius: 25px;
   outline: none;
   background-color: #ededed;
+  box-shadow: inset 0px 2px 1px 0px #696969;
 }
 
 /*подсветка текущей страницы*/
@@ -219,11 +222,14 @@ img{
 .sub-menu{
   position: absolute;
   z-index: 2;
+  top: 45px;
+  left: 158px;
 
   display: none;
   overflow: hidden;
 
   margin-top: 5px;
+  padding-bottom: 6px;
 
   border-radius: 5px;
   background-color: #f8f7f4;
@@ -243,10 +249,9 @@ img{
   display: block;
 
   margin: 0;
-  padding: 0;
-  padding-top: 9px;
+  padding-top: 8px;
   padding-right: 20px;
-  padding-bottom: 9px;
+  padding-bottom: 8px;
   padding-left: 20px;
 
   text-decoration: none;
@@ -268,20 +273,18 @@ img{
 .divider{
   position: relative;
 
-  padding-top: 12px;
+  padding-top: 10px;
   padding-bottom: 12px;
 }
 
 .divider::after{
   position: absolute;
-  right: 0;
   bottom: 0;
   left: 0;
 
-  width: calc(100% - 20px);
+  width: calc(100% - 13px);
   height: 1px;
-  margin: 0 auto;
-
+  margin-left: 5px;
   content: '';
 
   background-color: rgba(0, 0, 0, .2);
@@ -344,6 +347,12 @@ img{
   color: #323232;
 
   background-color: #ededed;
+  box-shadow: inset 0px 2px 1px 0px #696969;
+}
+
+.button-cart-full{
+  color: #323232;
+  background-color: #f8f7f4;
 }
 
 .button-search{
@@ -360,12 +369,13 @@ img{
 
 .user-navigation-popup{
   position: absolute;
-  top: 38px;
+  top: 36px;
   right: 0;
 }
 
 /*form input textarea*/
 .form-fieldset{
+  margin: 0;
   border: none;
   border-radius: 5px;
   background-color: #f8f7f4;
@@ -376,15 +386,46 @@ img{
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
-  color: #999999;
+  color: #323232;
 
   box-sizing: border-box;
   width: 100%;
-  padding: 7px 15px;
+  padding: 9px 13px;
 
   border: 1px solid #d3d3d2;
   border-radius: 5px;
   background-color: #ffffff;
+}
+
+.form-input::-moz-placeholder{
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.form-input:-moz-placeholder{
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.form-input:-ms-input-placeholder {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.form-input::-webkit-input-placeholder{
+  color: #999999;
+}
+
+.form-input::-moz-placeholder{
+  color: #999999;
+}
+
+.form-input:-moz-placeholder{
+  color: #999999;
+}
+
+.form-input:-ms-input-placeholder{
+  color: #999999;
 }
 
 .form-input:hover{
@@ -401,7 +442,7 @@ img{
 .search-form{
   display: none;
 
-  width: 341px;
+  width: 342px;
 }
 
 .user-search:hover .search-form{
@@ -409,14 +450,14 @@ img{
 }
 
 .search-fieldset{
-  padding: 15px 20px;
+  padding: 20px 15px;
 }
 
 /*Всплывающее окно входа*/
 .account-form{
   display: none;
 
-  width: 277px;
+  width: 278px;
 }
 
 .user-login:hover .account-form{
@@ -425,6 +466,8 @@ img{
 
 .account-fieldset{
   padding: 20px;
+  padding-right: 18px;
+  background-color: red;
 }
 
 .account-input{
@@ -437,7 +480,7 @@ img{
 }
 
 .login-submit{
-  margin-right: 10px;
+  margin-right: 18px;
   padding: 10px 25px;
 
   border-radius: 25px;
@@ -455,10 +498,10 @@ img{
 }
 
 /*ссылки на форме входа в личный кабинет*/
-.form-link{
+.account-form-link{
   font-size: 13px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 13px;
   color: #323232;
 
   position: relative;
@@ -466,7 +509,7 @@ img{
   text-decoration: none;
 }
 
-.form-link::after{
+.account-form-link::after{
   position: absolute;
   bottom: 0;
   left: 0;
@@ -479,7 +522,7 @@ img{
   background-color: rgba(0, 0, 0, .3);
 }
 
-.form-link:hover::after{
+.account-form-link:hover::after{
   background-color: rgba(255, 188, 158, .3);
 }
 
@@ -1099,16 +1142,6 @@ img{
   flex-wrap: wrap;
 }
 
-.filters legend{
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 16px;
-  color: #ffffff;
-
-  margin-bottom: 6px;
-  margin-left: 14px;
-}
-
 .filters-fildset{
   position: relative;
 
@@ -1120,6 +1153,16 @@ img{
   padding: 0;
 
   border: none;
+}
+
+.filters-fildset-tittle{
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #ffffff;
+
+  margin-bottom: 6px;
+  margin-left: 14px;
 }
 
 .filters-fildset-text{
@@ -1197,16 +1240,26 @@ img{
 }
 
 .filter-cost{
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 209px;
   margin-right: 14px;
   padding-top: 0;
 }
 
 .filter-cost-header{
   display: flex;
+  align-items: flex-start;
+}
+
+.filter-cost-header h3{
+  margin: 0;
+  margin-left: 14px;
 }
 
 .filter-cost-value{
   display: flex;
+  align-items: flex-start;
 
   margin: 0;
   margin-bottom: 5px;
@@ -1289,11 +1342,13 @@ img{
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
+
 .range-button:hover,
 .range-button:focus{
   width: 24px;
   height: 27px;
 }
+
 .range-button-min{
   left: 33px;
 }
@@ -1340,11 +1395,9 @@ img{
   border-radius: 50%;
 }
 
-
 .filter-fatness-radio:not(checked) + label:hover::before{
   opacity: 1;
 }
-
 
 .filter-fatness-radio:not(checked):disabled + label::before{
   opacity: .4;
@@ -1403,11 +1456,12 @@ img{
   display: flex;
   flex-wrap: wrap;
 
-  
+
   padding: 0;
   padding-left: 10px;
   padding-right: 16px;
 }
+
 .filter-filler-content label{
   display: flex;
   align-items: center;
@@ -1427,6 +1481,7 @@ img{
   flex-shrink: 0;
   padding-right: 4px;
 }
+
 .filter-filler-icon{
 
   display: none;
@@ -1453,9 +1508,11 @@ img{
 .filter-filler-jam{
   margin-left: 11px;
 }
+
 .filter-filler-checkbox:focus + label .filter-filler-icon{
-  fill: rgba(255, 255, 255, 1); 
+  fill: rgba(255, 255, 255, 1);
 }
+
 .filter-filler-checkbox:not(checked) + label .filter-filler-checkbox-off{
   display: block;
 }
@@ -1503,10 +1560,11 @@ img{
 .filter-button:active{
   color: #323232;
 
-  height: 37px;
+  height: 36px;
 
   border: none;
   background-color: rgba(255, 255, 255, .8);
+  /*border: 2px solid #ffffff;*/
   box-shadow: inset 0 2px 1px #696969;
 }
 

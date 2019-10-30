@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
-	<link rel="stylesheet" href="css/normalize.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
 	<title>GllacyShop|catalog</title>
 </head>
 <body>
@@ -21,7 +21,7 @@
 									<a href="#" class="sub-menu-link divider"><b>Новинки</b></a>
 								</li>
 								<li class="sub-menu-item">
-									<a href="catalog.html" class="sub-menu-link">Сливочное</a>
+									<a href="catalog.html" class="sub-menu-link last">Слиое</a>
 								</li>
 								<li class="sub-menu-item">
 									<a href="#" class="sub-menu-link">Щербеты</a>
@@ -29,7 +29,7 @@
 								<li class="sub-menu-item">
 									<a href="#" class="sub-menu-link">Фруктовый лед</a>
 								</li>
-								<li class="sub-menu-item">
+								<li class="sub-menu-item ">
 									<a href="#" class="sub-menu-link">Мелорин</a>
 								</li>
 							</ul>
@@ -42,6 +42,7 @@
 						</li>
 					</ul>
 					<section class="user-navigation">
+						<h2 class="visually-hidden">Пользовательское меню</h2>
 						<div class="user-navigation-item user-search">
 							<button class="user-button button-search" type="button" aria-label="Поиск">
 								<svg width="21" height="21">
@@ -49,7 +50,7 @@
 								</svg>
 							</button>
 							<!-- Ховер Поиск-->
-							<form class="search-form user-navigation-popup" action="gllacyshop.ru" type="post" name="search-form">
+							<form class="search-form user-navigation-popup" action="gllacyshop.ru" method="post" name="search-form">
 								<fieldset class="form-fieldset search-fieldset">
 									<legend class="visually-hidden">Форма поиска</legend>
 									<input class="form-input search-input" type="search" name="search" placeholder="Крем-брюле">
@@ -62,7 +63,7 @@
 								Вход
 							</button>
 							<!-- Ховер Вход в личный кабинет-->
-							<form class="account-form user-navigation-popup" action="gllacyshop.ru" type="post" name="account-form">
+							<form class="account-form user-navigation-popup" action="gllacyshop.ru" method="post" name="account-form">
 								<fieldset class="form-fieldset account-fieldset">
 									<legend class="visually-hidden">Личный кабинет</legend>
 									<label for="user-login-lk" class="visually-hidden">Логин</label>
@@ -73,10 +74,10 @@
 										<button class="button login-submit" type="submit" value="login">Войти</button>
 										<ul class="account-form-list">
 											<li>
-												<a href="#" class="form-link default-link">Забыли пароль?</a>
+												<a href="#" class="account-form-link default-link">Забыли пароль?</a>
 											</li>
 											<li>
-												<a href="#" class="form-link default-link">Новая регистрация</a>
+												<a href="#" class="account-form-link default-link">Новая регистрация</a>
 											</li>
 										</ul>
 									</div>
@@ -84,12 +85,12 @@
 							</form>
 						</div>
 						<div class="user-navigation-item user-cart">
-							<button class="user-button button-cart" type="button">
+							<button class="user-button button-cart button-cart-full" type="button">
 								<svg width="21" height="20"><path fill="#E84D37" d="M5.888 4.031L6.922 13h10.45l1.176-8.969z"/><circle fill="#343434" cx="6.984" cy="18" r="2"/><circle fill="#343434" cx="15.984" cy="18" r="2"/><path fill="#343434" d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/></svg>
 								2 товара
 							</button>
 							<!-- Ховер Корзина-->
-							<form class="cart-form form-fieldset user-navigation-popup" action="gllacyshop.ru" type="post" name="cart-form">
+							<form class="cart-form form-fieldset user-navigation-popup" action="gllacyshop.ru" method="post" name="cart-form">
 								<div class="cart-item">
 									<button class="delete-item" type="button" value="delet-item" aria-label="удалить товар">
 										<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path fill="#231F20" d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/></svg>
@@ -166,10 +167,10 @@
 			</ul>
 			<section class="catalog">
 				<h1 class="catalog-tittle">Сливочное мороженое</h1>
-				<form class="filters" action="gllacyshop.ru" type="get" name="filters">
+				<form class="filters" action="gllacyshop.ru" method="get" name="filters">
 					<h2 class="visually-hidden">Фильтр мороженного</h2>
 					<fieldset class="filters-fildset filter-sort">
-						<legend>Сортировка:</legend>
+						<legend class="filters-fildset-tittle">Сортировка:</legend>
 						<div class="filter-sort-content filters-fildset-wrapper">
 							<select class="filters-fildset-text filter-sort-select" name="sort">
 								<option value="popularity">по популярности</option>
@@ -181,7 +182,7 @@
 					</fieldset>
 					<fieldset class="filters-fildset filter-cost">
 						<div class="filter-cost-header">
-							<legend>Цена:</legend>
+							<h3 class="filters-fildset-tittle">Цена:</h3>
 							<p class="filter-cost-value">
 								<input type="number" id="min-cost" min="50" max="645" step="5" value="100">
 								<label for="min-cost">руб.</label>
@@ -200,7 +201,7 @@
 						</div>
 					</fieldset>
 					<fieldset class="filters-fildset filter-fatness">
-						<legend>Жирность:</legend>
+						<legend class="filters-fildset-tittle">Жирность:</legend>
 						<div class="filter-fatness-content filters-fildset-wrapper">
 							<input class="filter-fatness-radio visually-hidden" type="radio" id="fat0" name="fat" value="fat0">
 							<label class="filter-fatness-fat0 filters-fildset-text" for="fat0" > 0%</label>
@@ -213,7 +214,7 @@
 						</div>
 					</fieldset>
 					<fieldset class="filters-fildset filter-filler">
-						<legend>Наполнители:</legend>
+						<legend class="filters-fildset-tittle">Наполнители:</legend>
 						<div class="filter-filler-content filters-fildset-wrapper">
 							<input class="filter-filler-checkbox visually-hidden" type="checkbox" name="filler" id="chocolate" value="chocolate" checked>
 							<label class="filter-filler-chocolate filters-fildset-text filters-filler-label" for="chocolate">
@@ -257,72 +258,84 @@
 				<section class="products column">
 					<h2 class="visually-hidden">Каталог мороженного</h2>
 					<article class="products-item">
+						<h3 class="visually-hidden">Карточка товара</h3>
 						<img class="products-image" src="img/ice-cream-orange.png" width="267" height="267" alt="Фото мороженного">
 						<p>310 ₽<span>/кг</span></p>
 						<a href="#" class="default-link products-link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
 						<a class="button products-button" href="#">Быстрый просмотр</a>
 					</article>
 					<article class="products-item">
+						<h3 class="visually-hidden">Карточка товара</h3>
 						<img class="products-image" src="img/ice-cream-choco.png" width="267" height="267" alt="Фото мороженного">
 						<p>380 ₽<span>/кг</span></p>
 						<a href="#" class="default-link products-link">Сливочно-кофейное с кусочками шоколада</a>
 						<a class="button products-button" href="#">Быстрый просмотр</a>
 					</article>
 					<article class="products-item">
+						<h3 class="visually-hidden">Карточка товара</h3>
 						<img class="products-image" src="img/ice-cream-strawberry.png" width="267" height="267" alt="Фото мороженного">
 						<p>355 ₽<span>/кг</span></p>
 						<a href="#" class="default-link products-link">Сливочно-клубничное с присыпкой из белого шоколада</a>
 						<a class="button products-button" href="#">Быстрый просмотр</a>
 					</article>
 					<article class="products-item">
+						<h3 class="visually-hidden">Карточка товара</h3>
 						<img class="products-image" src="img/ice-cream-caramel.png" width="267" height="267" alt="Фото мороженного">
 						<p>415 ₽<span>/кг</span></p>
 						<a href="#" class="default-link products-link">Сливочное крем-брюле с карамельной подливкой</a>
 						<a class="button products-button" href="#">Быстрый просмотр</a>
 					</article>
 					<article class="products-item">
+						<h3 class="visually-hidden">Карточка товара</h3>
 						<img class="products-image" src="img/ice-cream-cowberry.png" width="267" height="267" alt="Фото мороженного">
 						<p>325 ₽<span>/кг</span></p>
 						<a href="#" class="default-link products-link">Сливочное с брусничным<br> джемом</a>
 						<a class="button products-button" href="#">Быстрый просмотр</a>
 					</article>
 					<article class="products-item">
+						<h3 class="visually-hidden">Карточка товара</h3>
 						<img class="products-image" src="img/ice-cream-blueberry.png" width="267" height="267" alt="Фото мороженного">
 						<p>410 ₽<span>/кг</span></p>
 						<a href="#" class="default-link products-link">Сливочно-черничное с цельными ягодами черники</a>
 						<a class="button products-button" href="#">Быстрый просмотр</a>
 					</article>
 					<article class="products-item">
+						<h3 class="visually-hidden">Карточка товара</h3>
 						<img class="products-image" src="img/ice-cream-lemon.png" width="267" height="267" alt="Фото мороженного">
 						<p>375 ₽<span>/кг</span></p>
 						<a href="#" class="default-link products-link">Сливочно-лимонное с карамельной присыпкой</a>
 						<a class="button products-button" href="#">Быстрый просмотр</a>
 					</article>
 					<article class="products-item">
+						<h3 class="visually-hidden">Карточка товара</h3>
 						<img class="products-image" src="img/ice-cream-choco-chip.png" width="267" height="267" alt="Фото мороженного">
 						<p>320 ₽<span>/кг</span></p>
 						<a href="#" class="default-link products-link">Сливочное с шоколадной стружкой</a>
 						<a class="button products-button" href="#">Быстрый просмотр</a>
 					</article>
 					<article class="products-item">
+						<h3 class="visually-hidden">Карточка товара</h3>
 						<img class="products-image" src="img/ice-cream-vanilla.png" width="267" height="267" alt="Фото мороженного">
 						<p>440 ₽<span>/кг</span></p>
 						<a href="#" class="default-link products-link">Сливочно-ванильное с <br>кусочками шоколада</a>
 						<a class="button products-button" href="#">Быстрый просмотр</a>
 					</article>
 					<article class="products-item">
+						<h3 class="visually-hidden">Карточка товара</h3>
 						<img class="products-image" src="img/ice-cream-menthol.png" width="267" height="267" alt="Фото мороженного">
 						<p>435 ₽<span>/кг</span></p>
 						<a href="#" class="default-link products-link">Сливочноe с ментоловым сиропом</a>
 						<a class="button products-button" href="#">Быстрый просмотр</a>
 					</article>
 					<article class="products-item">
+						<h3 class="visually-hidden">Карточка товара</h3>
 						<img class="products-image" src="img/ice-cream-choco-black.png" width="267" height="267" alt="Фото мороженного">
 						<p>355 ₽<span>/кг</span></p>
 						<a href="#" class="default-link products-link">Сливочное с кусочками черного шоколада</a>
 						<a class="button products-button" href="#">Быстрый просмотр</a>
 					</article>
 					<article class="products-item">
+						<h3 class="visually-hidden">Карточка товара</h3>
 						<img class="products-image" src="img/ice-cream-mint.png" width="267" height="267" alt="Фото мороженного">
 						<p>420 ₽<span>/кг</span></p>
 						<a href="#" class="default-link products-link">Сливочное с мятным сиропом</a>
@@ -332,7 +345,7 @@
 			</section>
 			<section class="catalog-navigation">
 				<h2 class="visually-hidden">Перемещение по страницам каталога</h2>
-				<button class="disabled button-navigation" aria-label="предыдущая страница" type="button" role="down"></button>
+				<button class="disabled button-navigation" type="button"><span class="visually-hidden">Предыдущая страница каталога</span></button>
 				<ul class="catalog-pages">
 					<li class="catalog-pages-item"><a  class="active" href="#">1</a></li>
 					<li class="catalog-pages-item"><a href="#">2</a></li>
@@ -340,7 +353,7 @@
 					<li class="catalog-pages-item"><a href="#">4</a></li>
 					<li class="catalog-pages-item"><a href="#">5</a></li>
 				</ul>
-				<button class="button-navigation" aria-label="следующая страница" type="button" role="up"></button>
+				<button class="button-navigation" type="button"><span class="visually-hidden">следующая страница каталога</span></button>
 			</section>
 		</div>
 	</main>

@@ -42,6 +42,7 @@
 						</li>
 					</ul>
 					<section class="user-navigation">
+						<h2 class="visually-hidden">Пользовательское меню</h2>
 						<div class="user-navigation-item user-search">
 							<button class="user-button button-search" type="button" aria-label="Поиск">
 								<svg width="21" height="21">
@@ -49,7 +50,7 @@
 								</svg>
 							</button>
 							<!-- Ховер Поиск-->
-							<form class="search-form user-navigation-popup" action="gllacyshop.ru" type="post" name="search-form">
+							<form class="search-form user-navigation-popup" action="gllacyshop.ru" method="post" name="search-form">
 								<fieldset class="form-fieldset search-fieldset">
 									<legend class="visually-hidden">Форма поиска</legend>
 									<input class="form-input search-input" type="search" name="search" placeholder="Крем-брюле">
@@ -62,7 +63,7 @@
 								Вход
 							</button>
 							<!-- Ховер Вход в личный кабинет-->
-							<form class="account-form user-navigation-popup" action="gllacyshop.ru" type="post" name="account-form">
+							<form class="account-form user-navigation-popup" action="gllacyshop.ru" method="post" name="account-form">
 								<fieldset class="form-fieldset account-fieldset">
 									<legend class="visually-hidden">Личный кабинет</legend>
 									<label for="user-login-lk" class="visually-hidden">Логин</label>
@@ -73,10 +74,10 @@
 										<button class="button login-submit" type="submit" value="login">Войти</button>
 										<ul class="account-form-list">
 											<li>
-												<a href="#" class="form-link default-link">Забыли пароль?</a>
+												<a href="#" class="account-form-link default-link">Забыли пароль?</a>
 											</li>
 											<li>
-												<a href="#" class="form-link default-link">Новая регистрация</a>
+												<a href="#" class="account-form-link default-link">Новая регистрация</a>
 											</li>
 										</ul>
 									</div>
@@ -120,7 +121,7 @@
 					<p>Пломбир с помадкой и клубничный щербет</p>
 					<a class="button" href="#">Давайте оба!</a>
 				</div>
-				<ul class="slider-navigation-list" role="pagination">
+				<ul class="slider-navigation-list">
 					<li><button class="slider-navigation-item active" type="button"></button></li>
 					<li><button class="slider-navigation-item" type="button"></button></li>
 					<li><button class="slider-navigation-item" type="button"></button></li>
@@ -142,24 +143,28 @@
 			<section class="products column">
 				<h2 class="visually-hidden">Хит продаж</h2>
 				<article class="products-item products-item-hit">
+					<h3 class="visually-hidden">Карточка товара</h3>
 					<img class="products-image" src="img/ice-cream-orange.png" width="267" height="267" alt="Фото мороженного">
 					<p>310 ₽<span>/кг</span></p>
 					<a href="#" class="default-link products-link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
 					<a class="button products-button" href="#">Быстрый просмотр</a>
 				</article>
 				<article class="products-item products-item-hit">
+					<h3 class="visually-hidden">Карточка товара</h3>
 					<img src="img/ice-cream-choco.png" width="267" height="267" alt="Фото мороженного">
 					<p>380 ₽<span>/кг</span></p>
 					<a href="#" class="default-link products-link">Сливочно-кофейное с кусочками шоколада</a>
 					<a class="button products-button" href="#">Быстрый просмотр</a>
 				</article>
 				<article class="products-item products-item-hit">
+					<h3 class="visually-hidden">Карточка товара</h3>
 					<img src="img/ice-cream-strawberry.png" width="267" height="267" alt="Фото мороженного">
 					<p>355 ₽<span>/кг</span></p>
 					<a href="#" class="default-link products-link">Сливочно-клубничное с присыпкой из белого шоколада</a>
 					<a class="button products-button" href="#">Быстрый просмотр</a>
 				</article>
 				<article class="products-item products-item-hit">
+					<h3 class="visually-hidden">Карточка товара</h3>
 					<img src="img/ice-cream-caramel.png" width="267" height="267" alt="Фото мороженного">
 					<p>415 ₽<span>/кг</span></p>
 					<a href="#" class="default-link products-link">Сливочное крем-брюле с карамельной подливкой</a>
@@ -194,7 +199,7 @@
 				<article class="subscribe promotion">
 					<h2 class="visually-hidden">Рассылка</h2>
 					<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-					<form action="gllacyshop.ru" type="post">
+					<form action="gllacyshop.ru" method="post">
 						<label for="email" class="visually-hidden">Введите Ваш e-mail</label>
 						<input class="form-input" type="email" id="email" placeholder="email@example.com">
 						<button class="button button-subscribe" type="submit" value="subscribe">Отправить</button>
@@ -263,7 +268,7 @@
 	<div class="modal">
 		<!-- модальное окно Формы обратной связи-->
 		<div class="modal-wrapper">
-			<form action="gllacyshop.ru" type="post">
+			<form action="gllacyshop.ru" method="post">
 				<fieldset class="form-fieldset modal-form">
 					<legend class="visually-hidden">Форма обратной связи</legend>
 					<p>Мы обязательно вам ответим!</p>
