@@ -387,7 +387,7 @@ img{
 
 .form-input{
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 24px;
   color: #323232;
 
@@ -419,18 +419,22 @@ img{
 }
 
 .form-input::-webkit-input-placeholder{
+  font-weight: 400;
   color: #999999;
 }
 
 .form-input::-moz-placeholder{
+  font-weight: 400;
   color: #999999;
 }
 
 .form-input:-moz-placeholder{
+  font-weight: 400;
   color: #999999;
 }
 
 .form-input:-ms-input-placeholder{
+  font-weight: 400;
   color: #999999;
 }
 
@@ -1023,15 +1027,15 @@ img{
 
 /*блок с картой*/
 .map{
-  width: 1200px;
+  width: 100%;
   margin: 0 auto;
   margin-top: 35px;
 
   background-image: url('../img/map.png');
   background-repeat: no-repeat;
   background-position: center center;
-  -webkit-background-size: auto auto;
-          background-size: auto auto;
+  -webkit-background-size: cover;
+          background-size: cover;
 }
 
 .map .content-container{
@@ -1588,7 +1592,6 @@ img{
   display: flex;
 
   flex-wrap: wrap;
-  /*justify-content: space-around;*/
 }
 
 .products-item{
@@ -2035,7 +2038,7 @@ img{
 
   border-radius: 25px;
 
-  align-self: flex-end;
+  margin-left: auto;
 }
 
 .modal-close{
