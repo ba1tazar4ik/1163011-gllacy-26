@@ -6,7 +6,6 @@ body{
   color: #ffffff;
 
   min-width: 1200px;
-  
   margin: 0;
   padding: 0;
 
@@ -22,7 +21,6 @@ img{
 
 /*этот класс унас на всем что выглядит как красная кнопка*/
 .button{
-  outline: none;
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
@@ -34,20 +32,21 @@ img{
   text-decoration: none;
 
   border: none;
+  outline: none;
   background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
-  box-shadow: 0 2px 2px rgba(172, 16, 0, .64);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
 }
 
 .button:hover,
 .button:focus{
   background-color: #ffffff;
-  background-image: linear-gradient(to top, rgba(231, 74, 53, .8) 0%, rgba(242, 104, 67, .8) 100%);
+  background-image: linear-gradient(to top, rgba(231, 74, 53, 0.8) 0%, rgba(242, 104, 67, 0.8) 100%);
   box-shadow: 0 1px 2px #ac1000;
 }
 
 .button:active{
   background-color: #ffffff;
-  background-image: linear-gradient(to top, rgba(231, 74, 53, .93) 0%, rgba(242, 104, 67, .93) 100%);
+  background-image: linear-gradient(to top, rgba(231, 74, 53, 0.93) 0%, rgba(242, 104, 67, 0.93) 100%);
   box-shadow: inset 0 2px 2px #942718;
 }
 
@@ -182,7 +181,7 @@ img{
 
   content: '';
 
-  background-color: rgba(255, 255, 255, .2);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 /*эффекты наведения фокусировки и клика*/
@@ -233,7 +232,7 @@ img{
 
   border-radius: 5px;
   background-color: #f8f7f4;
-  box-shadow: 0 20px 20px rgba(0, 0, 0, .4);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 }
 
 .main-menu-item:hover .sub-menu{
@@ -285,9 +284,10 @@ img{
   width: calc(100% - 13px);
   height: 1px;
   margin-left: 5px;
+
   content: '';
 
-  background-color: rgba(0, 0, 0, .2);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 /*делаем меню пользователя флексовым
@@ -305,7 +305,8 @@ img{
   position: relative;
 
   margin-left: 8px;
-  padding-bottom: 20px;
+  margin-bottom: 16px;
+  padding-bottom: 4px;
 }
 
 /*у всех кнопок в секции с классом user-navigation один шрифт,
@@ -326,7 +327,7 @@ img{
 
   border: none;
   border-radius: 25px;
-  background-color: rgba(255, 255, 255, .2);
+  background-color: rgba(255, 255, 255, 0.2);
 
   align-items: center;
   fill: #ffffff;
@@ -352,6 +353,7 @@ img{
 
 .button-cart-full{
   color: #323232;
+
   background-color: #f8f7f4;
 }
 
@@ -376,10 +378,11 @@ img{
 /*form input textarea*/
 .form-fieldset{
   margin: 0;
+
   border: none;
   border-radius: 5px;
   background-color: #f8f7f4;
-  box-shadow: 0 20px 20px rgba(0, 0, 0, .4);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 }
 
 .form-input{
@@ -399,16 +402,19 @@ img{
 
 .form-input::-moz-placeholder{
   overflow: hidden;
+
   text-overflow: ellipsis;
 }
 
 .form-input:-moz-placeholder{
   overflow: hidden;
+
   text-overflow: ellipsis;
 }
 
-.form-input:-ms-input-placeholder {
+.form-input:-ms-input-placeholder{
   overflow: hidden;
+
   text-overflow: ellipsis;
 }
 
@@ -429,13 +435,13 @@ img{
 }
 
 .form-input:hover{
-  box-shadow: 0 0 0 1px rgba(154, 154, 154, .52);
-  box-shadow: inset 0 0 0 1px rgba(154, 154, 154, .52);
+  box-shadow: 0 0 0 1px rgba(154, 154, 154, 0.52);
+  box-shadow: inset 0 0 0 1px rgba(154, 154, 154, 0.52);
 }
 
 .form-input:focus{
-  box-shadow: 0 0 0 2px rgba(46, 136, 228, .52);
-  box-shadow: inset 0 0 0 2px rgba(46, 136, 228, .52);
+  box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
+  box-shadow: inset 0 0 0 2px rgba(46, 136, 228, 0.52);
 }
 
 /*Всплывающее окно поиска*/
@@ -467,7 +473,6 @@ img{
 .account-fieldset{
   padding: 20px;
   padding-right: 18px;
-  background-color: red;
 }
 
 .account-input{
@@ -519,11 +524,11 @@ img{
 
   content: '';
 
-  background-color: rgba(0, 0, 0, .3);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .account-form-link:hover::after{
-  background-color: rgba(255, 188, 158, .3);
+  background-color: rgba(255, 188, 158, 0.3);
 }
 
 /*корзина*/
@@ -532,10 +537,11 @@ img{
   flex-direction: column;
 
   box-sizing: border-box;
-  width: 565px;
-  padding: 15px 15px;
-
-  align-items: flex-end;
+  width: 540px;
+  padding-top: 19px;
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-bottom: 19px;
 }
 
 .user-cart:hover .cart-form{
@@ -547,14 +553,13 @@ img{
 
   display: flex;
 
-  margin-bottom: 10px;
+  margin-bottom: 16px;
   padding-right: 15px;
 }
 
 .cart-item:last-of-type::after{
   position: absolute;
-  right: 0;
-  bottom: -10px;
+  bottom: -17px;
   left: 0;
 
   width: 510px;
@@ -563,7 +568,7 @@ img{
 
   content: '';
 
-  background-color: rgba(0, 0, 0, .1);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .delete-item{
@@ -586,15 +591,15 @@ img{
 
 .cart-item-name{
   width: 220px;
-  margin-left: 14px;
+  margin-left: 13px;
 }
 
 .cart-item-prise{
-  margin-left: 32px;
+  margin-left: 28px;
 }
 
 .cart-item-cost{
-  margin-left: 30px;
+  margin-left: 26px;
 }
 
 .cart-text{
@@ -610,10 +615,10 @@ img{
   border: none;
   background-color: transparent;
 
-  -ms-appearance: none;
+      -ms-appearance: none;
   -webkit-appearance: none;
-  -moz-appearance: textfield;
-  appearance: none;
+     -moz-appearance: textfield;
+          appearance: none;
 }
 
 .cart-price{
@@ -621,16 +626,19 @@ img{
 }
 
 .cart-total{
+  align-self: flex-end;
   font-size: 15px;
   font-weight: 700;
   line-height: 18px;
   color: #323232;
 
-  margin-top: 10px;
-  margin-bottom: 17px;
+  margin-top: 16px;
+  margin-right: -2px;
+  margin-bottom: 15px;
 }
 
 .cart-button{
+  align-self: flex-end;
   padding-top: 10px;
   padding-right: 14px;
   padding-bottom: 10px;
@@ -756,7 +764,7 @@ img{
 .slider-navigation-item:focus{
   cursor: pointer;
 
-  background-color: rgba(247, 248, 244, .4);;
+  background-color: rgba(247, 248, 244, 0.4);;
 }
 
 .slider-navigation-list .active{
@@ -901,7 +909,7 @@ img{
   background-repeat: no-repeat;
   background-position: left top;
   -webkit-background-size: 49px 49px;
-  background-size: 49px 49px;
+          background-size: 49px 49px;
 }
 
 .eco{
@@ -909,7 +917,7 @@ img{
   background-repeat: no-repeat;
   background-position: left top;
   -webkit-background-size: 49px 49px;
-  background-size: 49px 49px;
+          background-size: 49px 49px;
 }
 
 .cow{
@@ -917,7 +925,7 @@ img{
   background-repeat: no-repeat;
   background-position: left top;
   -webkit-background-size: 49px 49px;
-  background-size: 49px 49px;
+          background-size: 49px 49px;
 }
 
 .thermometer{
@@ -925,7 +933,7 @@ img{
   background-repeat: no-repeat;
   background-position: left top;
   -webkit-background-size: 49px 49px;
-  background-size: 49px 49px;
+          background-size: 49px 49px;
 }
 
 /*блок новое в блоге+рассылка*/
@@ -1023,7 +1031,7 @@ img{
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-background-size: auto auto;
-  background-size: auto auto;
+          background-size: auto auto;
 }
 
 .map .content-container{
@@ -1174,7 +1182,7 @@ img{
 
 .filters-fildset-wrapper{
   border-radius: 25px;
-  background-color: rgba(248, 247, 244, .2);
+  background-color: rgba(248, 247, 244, 0.2);
 }
 
 .filter-sort{
@@ -1218,10 +1226,10 @@ img{
   border: none;
   background-color: transparent;
 
-  -ms-appearance: none;
-  -moz-appearance: none;
+      -ms-appearance: none;
+     -moz-appearance: none;
   -webkit-appearance: none;
-  appearance: none;
+          appearance: none;
 }
 
 .filter-sort-select::-ms-expand{
@@ -1241,14 +1249,19 @@ img{
 
 .filter-cost{
   flex-direction: row;
-  flex-wrap: wrap;
+
   width: 209px;
   margin-right: 14px;
   padding-top: 0;
+
+  flex-wrap: wrap;
 }
 
 .filter-cost-header{
   display: flex;
+
+  margin-bottom: 2px;
+
   align-items: flex-start;
 }
 
@@ -1259,12 +1272,13 @@ img{
 
 .filter-cost-value{
   display: flex;
-  align-items: flex-start;
 
   margin: 0;
   margin-bottom: 5px;
   margin-left: 5px;
   padding: 0;
+
+  align-items: flex-start;
 }
 
 .filter-cost-value input{
@@ -1312,8 +1326,8 @@ img{
 
   width: 178px;
 
-  opacity: .5;
-  background-color: rgba(255,255,255,.4);
+  opacity: 0.5;
+  background-color: rgba(255,255,255,0.4);
 }
 
 .range-line-front{
@@ -1321,7 +1335,7 @@ img{
 
   width: 107px;
 
-  background-color: rgba(255,255,255,.8);
+  background-color: rgba(255,255,255,0.8);
 }
 
 .range-button{
@@ -1338,9 +1352,9 @@ img{
   border: none;
   background-color: transparent;
   background-image: url('../img/svg/filter-button.svg');
-  background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  background-size: cover;
 }
 
 .range-button:hover,
@@ -1361,10 +1375,10 @@ img{
   display: flex;
 
   padding: 0;
-  padding-right: 12px;
-  padding-left: 8px;
   padding-top: 3px;
+  padding-right: 12px;
   padding-bottom: 2px;
+  padding-left: 8px;
 
   align-items: center;
 }
@@ -1390,7 +1404,7 @@ img{
 
   content: '';
 
-  opacity: .8;
+  opacity: 0.8;
   border: 4px solid #ffffff;
   border-radius: 50%;
 }
@@ -1400,7 +1414,7 @@ img{
 }
 
 .filter-fatness-radio:not(checked):disabled + label::before{
-  opacity: .4;
+  opacity: 0.4;
 }
 
 .filter-fatness-radio:checked + label::after{
@@ -1413,7 +1427,7 @@ img{
 
   content: '';
 
-  opacity: .8;
+  opacity: 0.8;
   border: 2px solid #ffffff;
   border-radius: 50%;
   background-color: #ffffff;
@@ -1429,7 +1443,7 @@ img{
 }
 
 .filter-fatness-radio:checked:disabled + label::after{
-  opacity: .4;
+  opacity: 0.4;
 }
 
 .filter-fatness-fat0::before{
@@ -1454,39 +1468,40 @@ img{
 
 .filter-filler-content{
   display: flex;
-  flex-wrap: wrap;
-
 
   padding: 0;
-  padding-left: 10px;
   padding-right: 16px;
+  padding-left: 10px;
+
+  flex-wrap: wrap;
 }
 
 .filter-filler-content label{
   display: flex;
+
   align-items: center;
 }
 
 .filters-filler-label{
   position: relative;
 
-  cursor: pointer;
-  padding: 5px;
-  margin-bottom: 1px;
   margin-top: 1px;
+  margin-bottom: 1px;
+  padding: 5px;
+
+  cursor: pointer;
 }
 
 .filters-filler-label svg{
+  padding-right: 4px;
 
   flex-shrink: 0;
-  padding-right: 4px;
 }
 
 .filter-filler-icon{
-
   display: none;
 
-  fill: rgba(255, 255, 255, .8);
+  fill: rgba(255, 255, 255, 0.8);
 }
 
 .filters-filler-label:hover .filter-filler-icon{
@@ -1530,30 +1545,30 @@ img{
 }
 
 .filter-filler-checkbox:disabled + label .filter-filler-icon{
-  fill: rgba(255, 255, 255, .4);
+  fill: rgba(255, 255, 255, 0.4);
 }
 
 .filter-button{
   margin-top: 37px;
   margin-left: 15px;
   padding-top: 2px;
+  padding-right: 28px;
   padding-bottom: 2px;
   padding-left: 28px;
-  padding-right: 28px;
 
   cursor: pointer;
 
   border: none;
   border: 2px solid #ffffff;
   border-radius: 25px;
-  background-color: rgba(255, 255, 255, .2);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .filter-button:hover,
 .filter-button:focus{
-  outline: none;
   color: #323232;
 
+  outline: none;
   background-color: rgba(255, 255, 255, 1);
 }
 
@@ -1563,14 +1578,17 @@ img{
   height: 36px;
 
   border: none;
-  background-color: rgba(255, 255, 255, .8);
+  background-color: rgba(255, 255, 255, 0.8);
   /*border: 2px solid #ffffff;*/
   box-shadow: inset 0 2px 1px #696969;
 }
 
 /*блок с товарами*/
 .products{
+  display: flex;
+
   flex-wrap: wrap;
+  /*justify-content: space-around;*/
 }
 
 .products-item{
@@ -1579,8 +1597,19 @@ img{
 
   width: 267px;
   margin-top: 37px;
+  margin-right: 13px;
+  margin-left: 13px;
 
   text-align: center;
+}
+
+.products-item:first-of-type,
+.products-item:nth-of-type(4n+1){
+  margin-left: 0;
+}
+
+.products-item:nth-of-type(4n){
+  margin-right: 0;
 }
 
 .products-item-hit::before{
@@ -1615,8 +1644,8 @@ img{
   content: '';
 
   border-radius: 5px;
-  background-color: rgba(248, 247, 244, .2);
-  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, .4);
+  background-color: rgba(248, 247, 244, 0.2);
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
 .image-hit{
@@ -1643,10 +1672,18 @@ img{
 
   margin: 0;
 
-  text-shadow: 0 1px 3px rgba(49, 50, 53, .5);
+  text-shadow: 0 1px 3px rgba(49, 50, 53, 0.5);
 }
 
 .products-item span{
+  margin-bottom: 2px;
+}
+
+.ruble{
+  margin-left: 2px;
+}
+
+.kilo{
   font-size: 30px;
 }
 
@@ -1692,7 +1729,7 @@ img{
   margin-bottom: -5px;
   padding-bottom: 30px;
 
-  border-bottom: 1px solid rgba(255, 255, 255, .3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
   align-items: center;
   justify-content: flex-end;
@@ -1701,7 +1738,7 @@ img{
 /* класс через JS будет вешаться если
 мы находимся на первой или последней странице*/
 .catalog-navigation .disabled{
-  border-color: rgba(255,255,255,.3);
+  border-color: rgba(255,255,255,0.3);
 }
 
 .catalog-navigation ul{
@@ -1743,11 +1780,11 @@ img{
   background-color: transparent;
 }
 
-.button-navigation[role='down']{
+.left-arrow{
   transform: rotate(-45deg);
 }
 
-.button-navigation[role='up']{
+.right-arrow{
   transform: rotate(135deg);
 }
 
@@ -1815,10 +1852,10 @@ img{
   margin-top: 17px;
   margin-right: 11px;
 
-  border: 3px solid rgba(254,254,254,.5);
+  border: 3px solid rgba(254,254,254,0.5);
   border-radius: 50%;
 
-  fill: rgba(254,254,254,.8);
+  fill: rgba(254,254,254,0.8);
 }
 
 .social-network a:hover,
@@ -1827,10 +1864,10 @@ img{
 }
 
 .social-network a:active{
-  border: 3px solid rgba(254,254,254,.7);
-  box-shadow: inset 0 2px 1px 0 rgba(136, 136, 136, .004);
+  border: 3px solid rgba(254,254,254,0.7);
+  box-shadow: inset 0 2px 1px 0 rgba(136, 136, 136, 0.004);
 
-  fill: rgba(254,254,254,.5);
+  fill: rgba(254,254,254,0.5);
 }
 
 .footer-menu{
@@ -1881,7 +1918,7 @@ img{
 
   content: '';
 
-  background-color: rgba(255, 255, 255, .2);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .footer-menu-item:first-child .footer-menu-link::after{
@@ -1895,11 +1932,11 @@ img{
 
   content: '';
 
-  background-color: rgba(255, 255, 255, .2);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .footer-menu-link:hover::after{
-  background-color: rgba(255, 188, 158, .2);
+  background-color: rgba(255, 188, 158, 0.2);
 }
 
 .footer-menu-link:hover .footer-heart{
@@ -1942,7 +1979,7 @@ img{
   width: 100vw;
   height: 100vh;
 
-  background-color: rgba(0,0,0,.3);
+  background-color: rgba(0,0,0,0.3);
 }
 
 .modal-show{
@@ -1961,11 +1998,13 @@ img{
   display: flex;
   flex-direction: column;
 
-  width: 478px;
-  padding-top: 20px;
+  width: 430px;
+  padding-top: 15px;
   padding-right: 24px;
-  padding-bottom: 27px;
+  padding-bottom: 15px;
   padding-left: 24px;
+
+  border-radius: 10px;
 }
 
 .modal p{
@@ -1975,11 +2014,13 @@ img{
   color: #323232;
 
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .modal-input{
-  width: 50%;
+  font-size: 16px;
+
+  width: 62%;
   margin-bottom: 20px;
 }
 
@@ -1990,7 +2031,7 @@ img{
 
 .modal-send{
   margin-bottom: 10px;
-  padding: 7px 24px;
+  padding: 10px 24px;
 
   border-radius: 25px;
 
@@ -1999,8 +2040,8 @@ img{
 
 .modal-close{
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 15px;
+  right: 15px;
 
   padding: 0;
 
